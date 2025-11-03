@@ -1,0 +1,58 @@
+<section class="thanks-wrap">
+  <div class="thanks-card">
+    <div class="thanks-icon">✓</div>
+    <h1>Thank you!</h1>
+    <p>Your request was received. If your download didn’t start, you can download it again below.</p>
+
+    <div class="thanks-actions">
+      <a id="retryDownload" class="btn btn-primary" href="#" role="button">Download again</a>
+      <a class="btn btn-ghost" href="javascript:history.back()">Go back</a>
+    </div>
+  </div>
+</section>
+
+<style>
+.thanks-wrap {
+  min-height: 60vh;
+  display: grid;
+  place-items: center;
+  padding: 3rem 1rem;
+  background: #f7f9fc;
+}
+.thanks-card {
+  background: #fff;
+  max-width: 640px;
+  width: 100%;
+  padding: 2rem 2.25rem;
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(18, 38, 63, .08);
+  text-align: center;
+}
+.thanks-icon {
+  width: 64px; height: 64px; line-height: 64px;
+  margin: 0 auto 12px;
+  border-radius: 50%;
+  background: #e8f5ed; color: #137a3a; font-size: 28px; font-weight: 700;
+}
+.thanks-actions { display: flex; gap: 12px; justify-content: center; margin-top: 16px; flex-wrap: wrap; }
+.btn { display:inline-block; padding:.7rem 1.1rem; border-radius:10px; text-decoration:none; }
+.btn-primary { background:#0f766e;; color:#fff; }
+.btn-ghost { border:1px solid #cfd6e3; color:#234a85; background:#fff; }
+</style>
+
+<script>
+  // Hook up "Download again" if we have a stored URL
+  (function() {
+    const retry = document.getElementById('retryDownload');
+    const url = sessionStorage.getItem('lastDownloadURL');
+    if (url) {
+      retry.addEventListener('click', (e) => {
+        e.preventDefault();
+        const a = document.createElement('a');
+        a.href = url; a.download = ""; document.body.appendChild(a); a.click(); a.remove();
+      });
+    } else {
+      retry.style.display = 'none';
+    }
+  })();
+</script>

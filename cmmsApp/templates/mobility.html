@@ -1,0 +1,554 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load static %}
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="title" content="CARL Mobility | Mobile CMMS Apps for Technicians, Stores & Requesters">
+    <meta name="description"
+        content="Speed up maintenance with CARL Mobility, mobile apps for work orders, inspections, inventory, and service requests. Android & iOS, offline mode, maps/BIM, and IoT-ready.">
+    <title>CARL Mobility</title>
+   <meta name="description"
+        content="CARL Mobility  cloud CMMS & EAM mobile suite for technicians, stock managers & tenants. Offline work orders, IoT sync & GIS mapping for Australia & NZ.">
+
+    <link rel="stylesheet" href="{% static 'css/home.css' %}">
+      <link rel="stylesheet" href="{% static 'css/mobility.css' %}">
+    <!-- <link rel="stylesheet" href="{% static 'css/factory.css' %}"> -->
+    <link rel="icon" href="{% static 'images/logo1.png' %}">
+    <link rel="stylesheet" href="{% static 'css/footer.css' %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+
+<body>
+    {% include 'header.html' %}
+    {% include 'request_demo_modal.html' %}
+    <main>
+
+        
+    <header class="hero">
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <h1 class="headline">CARL Mobility Applications</h1>
+            <p>Give your maintenance teams everything they need on the move. Plan, execute, and prove maintenance work with mobile apps that sync seamlessly with CARL Source CMMS.</p>
+            <div class="cta-buttons">
+                <a href="#" class="btn btn-primary js-open-demo reveal-apm-section">Request a Demo</a>
+                <!-- <a href="#" class="btn btn-secondary js-open-demo reveal-mobility">Explore Sector Solutions</a> -->
+                <!-- <a href="#" class="btn btn-secondary js-open-demo reveal-apm-section">Download Technical Overview</a> -->
+            </div>
+        </div>
+        
+    </header>
+        <!-- <section c -->
+
+        <section class="features-section">
+            <div class="container reveal-mobility">
+                <h2>Elevator Pitch</h2>
+                <p class="subheading reveal-mobility"><strong>CARL Mobility</strong> is the mobile suite for CARL Source that equips
+                    every role, from requesters to technicians and stock managers, with fast, intuitive apps. Create and
+                    track requests, receive and complete work orders, capture photos and signatures, manage parts, and
+                    sync data in real time or offline. Built for Android and iOS, CARL Mobility accelerates response
+                    times, boosts first-time fix rates, and gives you auditable maintenance records end-to-end.</p>
+
+            </div>
+        </section>
+
+        <section class="who-mobility">
+            <div class="who-wrap-mobility">
+                <h2 class="who-title-mobility reveal-mobility">Who it’s for</h2>
+
+                <div class="who-grid-mobility">
+                    <!-- Card 1 -->
+                    <article class="who-card-mobility reveal-mobility">
+                        <div class="who-icon-mobility">
+                            <!-- Changed icon for Technicians & Crews -->
+                            <i class="fa-solid fa-screwdriver-wrench"></i>
+                        </div>
+                        <h3 class="who-card-title-mobility">Technicians &amp; Crews</h3>
+                        <p class="who-card-text-mobility">
+                            Receive work orders, checklists, meters, capture photos/notes, log time, and collect
+                            e-signatures.
+                        </p>
+                    </article>
+
+                    <!-- Card 2 -->
+                    <article class="who-card-mobility reveal-mobility">
+                        <div class="who-icon-mobility">
+                            <i class="fa-solid fa-people-group"></i>
+                        </div>
+                        <h3 class="who-card-title-mobility">Stock Managers</h3>
+                        <p class="who-card-text-mobility">
+                            Perform receipts, transfers, and inventory counts on the go.
+                        </p>
+                    </article>
+
+                    <!-- Card 3 -->
+                    <article class="who-card-mobility reveal-mobility">
+                        <div class="who-icon-mobility">
+                            <i class="fa-solid fa-building"></i>
+                        </div>
+                        <h3 class="who-card-title-mobility">All Employees &amp; Tenants</h3>
+                        <p class="who-card-text-mobility">
+                            Submit service requests with photos/voice and track status via CARL Flash.
+                        </p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+
+
+        <section class="outcomes-mobility">
+            <div class="outcomes-wrap-mobility">
+                <h2 class="outcomes-title-mobility reveal-mobility">Key Outcomes</h2>
+
+                <div class="outcomes-list-mobility">
+                    <div class="outcome-mobility reveal-mobility">
+                        <span class="outcome-icon-mobility"><i class="fa-solid fa-check"></i></span>
+                        Faster interventions &amp; higher first-time fix with real-time assignments, guided reports, and
+                        checklists.
+                    </div>
+
+                    <div class="outcome-mobility reveal-mobility">
+                        <span class="outcome-icon-mobility"><i class="fa-solid fa-check"></i></span>
+                        Full traceability, digital reports, timestamps, signatures, and geo-context.
+                    </div>
+
+                    <div class="outcome-mobility reveal-mobility">
+                        <span class="outcome-icon-mobility"><i class="fa-solid fa-check"></i></span>
+                        Lower inventory costs via mobile receipts, issues, and cycle counts.
+                    </div>
+
+                    <div class="outcome-mobility reveal-mobility">
+                        <span class="outcome-icon-mobility"><i class="fa-solid fa-check"></i></span>
+                        Fewer duplicate requests with geo-tagged, deduplicated service tickets.
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- ====== HOW WE MAKE WORLD BETTER (mobility) ====== -->
+        <section class="better-mobility">
+            <div class="better-wrap-mobility">
+                <h2 class="better-title-mobility reveal-mobility"><i class="fas fa-mobile-alt icon"></i> The CARL Mobility Apps</h2>
+
+                <!-- Row 1: text left, image right -->
+                <div class="better-row-mobility">
+                    <div class="better-col-mobility reveal-mobility" data-reveal="right">
+                        <h3 class="better-h3-mobility">CARL Touch <i class="fas fa-tools app-icon"></i></h3>
+                        <p class="better-p-mobility">
+                            For Technicians & Stores
+                        </p>
+
+                        <div class="better-pills-mobility">
+                            <span class="better-pill-mobility"><i></i>Work orders in your pocket: See tasks, SLAs,
+                                priorities, and new assignments in real time.</span>
+                            <span class="better-pill-mobility"><i></i>Smart reporting: Complete digital reports, add
+                                spare parts, time, and photos; capture customer e-signatures.</span>
+                        </div>
+                        <div class="better-pills-mobility">
+                            <span class="better-pill-mobility"><i></i>Hardware power: Scan barcodes/QR, use camera, GPS,
+                                NFC, and more; Android & iOS compatible.</span>
+                            <!-- <span class="better-pill-mobility"><i></i>4.9/5 from clients</span> -->
+                        </div>
+                    </div>
+
+                    <figure class="better-media-mobility reveal-mobility" data-reveal="left" >
+                        <img src="{% static 'images/carl-touch.png' %}" style="height: 60%;" alt="carl touch" loading="lazy">
+                    </figure>
+                </div>
+
+                <!-- Row 2: image left, text right -->
+                <div class="better-row-mobility better-row-alt-mobility">
+                    <figure class="better-media-mobility reveal-mobility" data-reveal="right">
+                        <img src="{% static 'images/carl-flash.png' %}" alt="carl flash" loading="lazy">
+                    </figure>
+
+                    <div class="better-col-mobility reveal-mobility" data-reveal="left">
+                        <h3 class="better-h3-mobility">CARL Flash <i class="fas fa-paper-plane app-icon"></i></h3>
+                        <p class="better-p-mobility">
+                            For Requesters & Tenants
+                        </p>
+
+                        <div class="better-pills-mobility">
+                            <span class="better-pill-mobility"><i></i>Create requests in seconds with wizards,
+                                photos/voice, barcode scan, and geolocation.</span>
+                            <span class="better-pill-mobility"><i></i>Avoid duplicates & spot emergencies when multiple
+                                users report the same issue.</span>
+                        </div>
+                        <div class="better-pills-mobility">
+                            <span class="better-pill-mobility"><i></i>Track status from submission to resolution, no
+                                calls required.</span>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="cta-mobility">
+            <div class="cta-wrap-mobility">
+                <h2 class="cta-title-mobility reveal-mobility" style="--delay-mobility: 0ms;">
+                    Works anywhere even with no internet
+                </h2>
+
+                <p class="cta-text-mobility reveal-mobility" style="--delay-mobility: 120ms;">
+                    Keep working offline, create tasks, log activities, add parts and counters; data syncs when back
+                    online. Ideal for plants, remote sites, and basements.
+                </p>
+
+                <a href="/contacts/" class="cta-btn-mobility reveal-mobility" style="--delay-mobility: 220ms;">
+                    <span class="cta-dot-mobility"></span> Contact us
+                </a>
+            </div>
+        </section>
+
+
+
+        <!-- ====== HOW WE MAKE WORLD BETTER (mobility) ====== -->
+        <section class="better-mobility">
+            <div class="better-wrap-mobility">
+                <h2 class="better-title-mobility reveal-mobility">Go beyond mobile: <br>spatial & IoT intelligence (optional add-ons)
+                </h2>
+
+                <!-- Row 1: text left, image right -->
+                <div class="better-row-mobility">
+                    <div class="better-col-mobility reveal-mobility" data-reveal="right">
+                        <h3 class="better-h3-mobility">CARL Maps</h3>
+                        <p class="better-p-mobility">
+                            See assets on 2D/3D maps, plans, BIM, and navigate from site maps down to rooms. Launch
+                            work, inspections, and searches directly from the map; geoposition equipment.
+                        </p>
+
+                        <!-- <div class="better-pills-mobility">
+                            <span class="better-pill-mobility"><i></i>Work orders in your pocket: See tasks, SLAs,
+                                priorities, and new assignments in real time.</span>
+                            <span class="better-pill-mobility"><i></i>Smart reporting: complete digital reports, add
+                                spare parts, time, and photos; capture customer e-signatures.</span>
+                        </div>
+                        <div class="better-pills-mobility">
+                            <span class="better-pill-mobility"><i></i>Hardware power: scan barcodes/QR, use camera, GPS,
+                                NFC, and more; Android & iOS compatible.</span>
+                            <span class="better-pill-mobility"><i></i>4.9/5 from clients</span>
+                        </div> -->
+                    </div>
+
+                    <figure class="better-media-mobility reveal-mobility" data-reveal="left">
+                        <img src="{% static 'images/carl-map.png' %}" alt="carl touch" loading="lazy">
+                    </figure>
+                </div>
+
+                <!-- Row 2: image left, text right -->
+                <div class="better-row-mobility better-row-alt-mobility">
+                    <figure class="better-media-mobility reveal-mobility" data-reveal="right">
+                        <img src="{% static 'images/bl-iot.png' %}" alt="carl flash" loading="lazy">
+                    </figure>
+
+                    <div class="better-col-mobility reveal-mobility" data-reveal="left">
+                        <h3 class="better-h3-mobility">BL.Predict / CARL IoT 
+                        </h3>
+                        <p class="better-p-mobility">
+                            Connect sensors and equipment data to predict failures, trigger preventive work, and improve
+                            uptime.
+                        </p>
+                        <!-- 
+                        <div class="better-pills-mobility">
+                            <span class="better-pill-mobility"><i></i>Create requests in seconds: with wizards,
+                                photos/voice, barcode scan, and geolocation.</span>
+                            <span class="better-pill-mobility"><i></i>Avoid duplicates & spot emergencies: when multiple
+                                users report the same issue.</span>
+                        </div>
+                        <div class="better-pills-mobility">
+                            <span class="better-pill-mobility"><i></i>Track status: from submission to resolution, no
+                                calls required.</span>
+
+                        </div> -->
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"> -->
+
+        <section class="benefits-mobility">
+            <div class="benefits-wrap-mobility">
+                <h2 class="benefits-title-mobility reveal-mobility" style="--delay-mobility:0ms;">
+                    What you can do with CARL Mobility
+                </h2>
+
+                <div class="benefits-grid-mobility">
+                    <!-- Card 1 -->
+                    <article class="benefit-card-mobility reveal-mobility" style="--delay-mobility:100ms;">
+                        <div class="benefit-icon-mobility"><i class="fa-solid fa-right-left"></i></div>
+                        <div class="benefit-body-mobility">
+                            <h3 class="benefit-head-mobility">WO lifecycle on mobile:</h3>
+                            <p class="benefit-text-mobility">
+                                receive → execute → close with full audit trail and signature.
+                            </p>
+                        </div>
+                    </article>
+
+                    <!-- Card 2 -->
+                    <article class="benefit-card-mobility reveal-mobility" style="--delay-mobility:140ms;">
+                        <div class="benefit-icon-mobility"><i class="fa-solid fa-clipboard-check"></i></div>
+                        <div class="benefit-body-mobility">
+                            <h3 class="benefit-head-mobility">Checklists &amp; compliance:</h3>
+                            <p class="benefit-text-mobility">
+                                standardize inspections and record evidence for audits.
+                            </p>
+                        </div>
+                    </article>
+
+                    <!-- Card 3 -->
+                    <article class="benefit-card-mobility reveal-mobility" style="--delay-mobility:180ms;">
+                        <div class="benefit-icon-mobility"><i class="fa-solid fa-camera"></i></div>
+                        <div class="benefit-body-mobility">
+                            <h3 class="benefit-head-mobility">Photos, voice notes, documents:</h3>
+                            <p class="benefit-text-mobility">
+                                capture rich context at the asset.
+                            </p>
+                        </div>
+                    </article>
+
+                    <!-- Card 4 -->
+                    <article class="benefit-card-mobility reveal-mobility" style="--delay-mobility:220ms;">
+                        <div class="benefit-icon-mobility"><i class="fa-solid fa-dolly"></i></div>
+                        <div class="benefit-body-mobility">
+                            <h3 class="benefit-head-mobility">Parts &amp; inventory:</h3>
+                            <p class="benefit-text-mobility">
+                                receive, issue, transfer, and count in the field.
+                            </p>
+                        </div>
+                    </article>
+
+                    <!-- Card 5 -->
+                    <article class="benefit-card-mobility reveal-mobility" style="--delay-mobility:260ms;">
+                        <div class="benefit-icon-mobility"><i class="fa-solid fa-gauge-high"></i></div>
+                        <div class="benefit-body-mobility">
+                            <h3 class="benefit-head-mobility">Meters &amp; readings:</h3>
+                            <p class="benefit-text-mobility">
+                                scan and record counters to drive preventive maintenance.
+                            </p>
+                        </div>
+                    </article>
+
+                    <!-- Card 6 -->
+                    <article class="benefit-card-mobility reveal-mobility" style="--delay-mobility:300ms;">
+                        <div class="benefit-icon-mobility"><i class="fa-solid fa-location-dot"></i></div>
+                        <div class="benefit-body-mobility">
+                            <h3 class="benefit-head-mobility">Geo-context:</h3>
+                            <p class="benefit-text-mobility">
+                                locate assets, requests, and work on a map; reduce duplicates.
+                            </p>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+
+        <section class="outcomes-mobility">
+            <div class="outcomes-wrap-mobility">
+                <h2 class="outcomes-title-mobility reveal-mobility">Proof points you can show on the page</h2>
+
+                <div class="outcomes-list-mobility reveal-mobility">
+                    <div class="outcome-mobility">
+                        <span class="outcome-icon-mobility"><i class="fas fa-shield-alt list-icon"></i> </span>
+                        <strong>Traceability assured:</strong> digital reports + signatures + timestamps.
+                    </div>
+
+                    <div class="outcome-mobility reveal-mobility">
+                        <span class="outcome-icon-mobility"><i class="fas fa-share-alt list-icon"></i></span>
+                        <strong>
+                            Request transparency:
+                        </strong>users track progress in CARL Flash.
+                    </div>
+
+                    <div class="outcome-mobility reveal-mobility">
+                        <span class="outcome-icon-mobility"><i class="fas fa-map-signs list-icon"></i></span>
+                        <strong> Spatial awareness:
+                        </strong>assets and work visualized on GIS/BIM/2D plans.
+                    </div>
+
+                    <div class="outcome-mobility reveal-mobility">
+                        <span class="outcome-icon-mobility"><i class="fas fa-robot list-icon"></i></span>
+                        <strong> Predictive readiness:
+                        </strong>IoT + analytics to anticipate failures.
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="faq-mobility">
+  <div class="faq-wrap-mobility">
+    <h2 class="faq-title-mobility reveal-mobility">
+      <span class="faq-title-icon-mobility"><i class="fas fa-question-circle icon"></i></span> FAQs
+    </h2>
+
+    <!-- Item 1 -->
+    <article class="faq-item-mobility reveal-mobility">
+      <button class="faq-q-mobility " aria-expanded="false">
+        <span>Is CARL Mobility native or web?</span>
+        <span class="faq-toggle-mobility" aria-hidden="true"></span>
+      </button>
+      <div class="faq-a-mobility" hidden>
+        CARL Touch is a native mobile app that uses device hardware (camera, GPS, barcode, NFC).
+        CARL Flash is also a native app.
+      </div>
+    </article>
+
+    <!-- Item 2 -->
+    <article class="faq-item-mobility reveal-mobility">
+      <button class="faq-q-mobility" aria-expanded="false">
+        <span>Does it work offline?</span>
+        <span class="faq-toggle-mobility" aria-hidden="true"></span>
+      </button>
+      <div class="faq-a-mobility" hidden>
+        Yes. Crews can create and complete tasks offline; data syncs when back online. Ideal for
+        remote sites or basements with poor connectivity.
+      </div>
+    </article>
+
+    <!-- Item 3 -->
+    <article class="faq-item-mobility reveal-mobility">
+      <button class="faq-q-mobility" aria-expanded="false">
+        <span>Can non-maintenance staff raise tickets?</span>
+        <span class="faq-toggle-mobility" aria-hidden="true"></span>
+      </button>
+      <div class="faq-a-mobility" hidden>
+        Yes, CARL Flash lets any user submit requests with photos/voice and track status without a
+        maintenance license.
+      </div>
+    </article>
+
+    <!-- Item 4 -->
+    <article class="faq-item-mobility reveal-mobility">
+      <button class="faq-q-mobility" aria-expanded="false">
+        <span>Do we get maps and BIM?</span>
+        <span class="faq-toggle-mobility" aria-hidden="true"></span>
+      </button>
+      <div class="faq-a-mobility" hidden>
+        Yes, via the optional CARL Maps module. It supports GIS, DWG plans, and BIM models with
+        multi-scale navigation.
+      </div>
+    </article>
+
+    <!-- Item 5 -->
+    <article class="faq-item-mobility reveal-mobility">
+      <button class="faq-q-mobility" aria-expanded="false">
+        <span>Can it integrate with our ERP/BMS?</span>
+        <span class="faq-toggle-mobility" aria-hidden="true"></span>
+      </button>
+      <div class="faq-a-mobility" hidden>
+        Yes. CARL Source provides numerous APIs to integrate with enterprise systems, bringing data
+        together in one flow.
+      </div>
+    </article>
+  </div>
+</section>
+  
+    </main>
+    <script>
+        (function () {
+            const targets = document.querySelectorAll('.reveal-mobility');
+            if (!targets.length) return;
+
+            // Fallback if IntersectionObserver is not supported
+            if (!('IntersectionObserver' in window)) {
+                targets.forEach(el => el.classList.add('is-visible-mobility'));
+                return;
+            }
+
+            const io = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('is-visible-mobility');
+                    } else {
+                        // Remove when out of view so it will animate again on scroll-up
+                        entry.target.classList.remove('is-visible-mobility');
+                    }
+                });
+            }, {
+                threshold: 0.2,            // 20% visible to trigger
+                rootMargin: '0px 0px -5% 0px'
+            });
+
+            targets.forEach(el => io.observe(el));
+        })();
+    </script>
+
+
+    <script>
+        /* IntersectionObserver reveal ,  shows elements when they enter the viewport,
+           hides them again when they leave (works on scroll down and up). */
+        (function () {
+            const els = document.querySelectorAll('.reveal-mobility');
+            if (!('IntersectionObserver' in window) || !els.length) {
+                els.forEach(el => el.classList.add('is-visible-mobility'));
+                return;
+            }
+
+            const io = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('is-visible-mobility');
+                    } else {
+                        entry.target.classList.remove('is-visible-mobility');
+                    }
+                });
+            }, { threshold: 0.18 });
+
+            els.forEach(el => io.observe(el));
+        })();
+    </script>
+    <script>
+(function () {
+  const items = document.querySelectorAll('.faq-item-mobility');
+
+  items.forEach(item => {
+    const btn = item.querySelector('.faq-q-mobility');
+    const panel = item.querySelector('.faq-a-mobility');
+
+    // For smooth open/close we animate height via inline style
+    const close = () => {
+      panel.style.maxHeight = null;
+      panel.hidden = true;
+      btn.setAttribute('aria-expanded', 'false');
+    };
+
+    const open = () => {
+      panel.hidden = false;                    // must be visible to measure
+      panel.style.maxHeight = panel.scrollHeight + 'px';
+      btn.setAttribute('aria-expanded', 'true');
+    };
+
+    // initialize closed
+    close();
+
+    btn.addEventListener('click', () => {
+      const expanded = btn.getAttribute('aria-expanded') === 'true';
+      if (expanded) {
+        close();
+      } else {
+        open();
+      }
+    });
+
+    // reset height on resize (content reflow)
+    window.addEventListener('resize', () => {
+      if (btn.getAttribute('aria-expanded') === 'true') {
+        panel.style.maxHeight = panel.scrollHeight + 'px';
+      }
+    });
+  });
+})();
+</script>
+
+    <script defer src="{% static 'js/demo_form.js' %}"></script>
+        <script defer src="{% static 'js/main.js' %}"></script>
+    {% include 'footer.html' %}
+
+</body>
+
+</html>

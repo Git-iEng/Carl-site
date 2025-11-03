@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load static %}
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carl + IoT: The Automated Asset Management Solution</title>
+     <meta name="description"
+        content="Turn data into action. CARL CMMS + IoT software automates work orders, reduces downtime, and keeps every asset running smoothly.">
+    <link rel="stylesheet" href="{% static 'css/iot-scada.css' %}">
+    <!-- <link rel="stylesheet" href="{% static 'css/home.css' %}">
+  <link rel="stylesheet" href="{% static 'css/factory.css' %}"> -->
+    <link rel="icon" href="{% static 'images/logo1.png' %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="{% static 'css/footer.css' %}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+
+
+<body>
+    {% include 'header.html' %}
+
+    {% include 'request_demo_modal.html' %}
+    <header class="hero">
+        
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <h1>CMMS + IoT: The Automated Asset Management Solution</h1>
+            <p>Transform your operations from reactive to predictive with seamless integration of IoT sensors and intelligent maintenance automation.</p>
+            <div class="cta-buttons">
+                <a href="#" class="btn btn-primary js-open-demo reveal-mobility">Request a Demo</a>
+                <!-- <a href="/industries/" class="btn btn-secondary reveal-mobility">Explore Sector Solutions</a>
+                <a href="#" class="btn btn-secondary js-open-demo reveal-mobility">Download Technical Overview</a> -->
+            </div>
+        </div>
+    </header>
+    <section class="challenge-iot">
+      <span class="pill-solution-iot reveal-mobility" style="align-items: center; text-align: center;">The Problem</span>
+    <h2 class="reveal-mobility">Disconnected Operations</h2>
+    <p class="reveal-mobility">Many organizations struggle with scattered data and inefficient workflows. Your maintenance and operations teams often work in silos, relying on manual processes that are prone to errors and delays. This leads to a reactive approach, where you're constantly fixing problems after they've already caused costly downtime.</p>
+
+    <div class="challenge-iot-reality reveal-mobility">
+        <h3>Today's Reality:</h3>
+        <ul>
+            <li class="reveal-mobility">
+                <h4>Manual Data Entry</h4>
+                <p>Your teams are bogged down by time-consuming paperwork, creating inaccurate and duplicate records.</p>
+            </li>
+            <li class="reveal-mobility">
+                <h4>Reactive Repairs</h4>
+                <p>You're in a perpetual "fire-fighting" mode, addressing failures only after they occur, leading to emergency expenses and operational disruptions.</p>
+            </li>
+            <li class="reveal-mobility">
+                <h4>Scattered Data</h4>
+                <p>Critical information is trapped in siloed systems, preventing a unified view of asset health and performance.</p>
+            </li>
+        </ul>
+    </div>
+</section>
+
+<!-- =======================
+     The Solution — Automated Asset Intelligence
+     ======================= -->
+<section class="section-solution-iot">
+  <div class="container-solution-iot">
+    <header class="head-solution-iot">
+      <span class="pill-solution-iot reveal-mobility">The Solution</span>
+      <h2 class="reveal-mobility">Automated Asset Intelligence</h2>
+      <p class="reveal-mobility">
+        Carl’s integrated CMMS + IoT platform streamlines maintenance by
+        automating workflows, surfacing predictive insights, and unifying all
+        asset data into a single, intuitive dashboard.
+      </p>
+    </header>
+
+    <ul class="grid-solution-iot reveal-mobility">
+      <!-- Card 1 -->
+      <li class="card-solution-iot reveal-mobility">
+        <div class="iconwrap-solution-iot reveal-mobility">
+          <!-- lightning bolt -->
+          <svg viewBox="0 0 24 24" width="28" height="28" aria-hidden="true">
+            <path d="M13 2L3 14h7l-1 8 11-14h-7l0-6z" fill="currentColor"/>
+          </svg>
+        </div>
+        <h3 class="reveal-mobility">Automated Workflows</h3>
+        <p class="reveal-mobility">
+          Sensors auto-generate work orders when thresholds are hit—eliminating
+          manual entry and cutting response time.
+        </p>
+      </li>
+
+      <!-- Card 2 -->
+      <li class="card-solution-iot reveal-mobility">
+        <div class="iconwrap-solution-iot reveal-mobility">
+          <!-- radar/predict -->
+          <svg viewBox="0 0 24 24" width="28" height="28" aria-hidden="true">
+            <path d="M12 3a9 9 0 109 9h-2a7 7 0 11-7-7V3zM12 7a5 5 0 105 5h-2a3 3 0 11-3-3V7z" fill="currentColor"/>
+          </svg>
+        </div>
+        <h3 class="reveal-mobility">Predictive Maintenance</h3>
+        <p class="reveal-mobility">
+          AI detects subtle anomalies in real-time data so you can schedule
+          repairs before failures escalate.
+        </p>
+      </li>
+
+      <!-- Card 3 -->
+      <li class="card-solution-iot reveal-mobility">
+        <div class="iconwrap-solution-iot reveal-mobility">
+          <!-- dashboard -->
+          <svg viewBox="0 0 24 24" width="28" height="28" aria-hidden="true">
+            <path d="M3 4h8v7H3V4zm0 9h8v7H3v-7zm10-9h8v11h-8V4zm0 13h8v3h-8v-3z" fill="currentColor"/>
+          </svg>
+        </div>
+        <h3 class="reveal-mobility">Unified Dashboard</h3>
+        <p class="reveal-mobility">
+          One place for KPIs, alarms, and asset health—your single source of
+          truth across the entire team.
+        </p>
+      </li>
+    </ul>
+  </div>
+</section>
+<!-- =======================
+     HOW IT WORKS — Seamless Connection
+     ======================= -->
+<section class="section-how-it-works reveal-mobility" aria-labelledby="how-title">
+  <div class="container-how-it-works">
+    <header class="head-how-it-works">
+      <h2 id="how-title" class="reveal-mobility">How It Works: The Seamless Connection</h2>
+      <p class="reveal-mobility">
+        Our solution is built on a simple yet powerful framework that transforms your operations end-to-end.
+      </p>
+    </header>
+
+    <!-- Timeline / Stepper -->
+    <ol class="timeline-how-it-works">
+      <li class="step-how-it-works">
+        <div class="badge-how-it-works reveal-mobility" aria-hidden="true">1</div>
+        <div class="body-how-it-works">
+          <h3 class="title-how-it-works reveal-mobility">The Signal</h3>
+          <p class="text-how-it-works reveal-mobility">
+            IoT sensors on critical assets continuously collect real-time data on KPIs like temperature, vibration, and pressure.
+          </p>
+        </div>
+      </li>
+
+      <li class="step-how-it-works">
+        <div class="badge-how-it-works reveal-mobility" aria-hidden="true">2</div>
+        <div class="body-how-it-works">
+          <h3 class="title-how-it-works reveal-mobility">The Asset</h3>
+          <p class="text-how-it-works reveal-mobility">
+            This data builds a real-time health profile of your assets, letting them effectively “tell you what they need” before a failure occurs.
+          </p>
+        </div>
+      </li>
+
+      <li class="step-how-it-works">
+        <div class="badge-how-it-works reveal-mobility" aria-hidden="true">3</div>
+        <div class="body-how-it-works">
+          <h3 class="title-how-it-works reveal-mobility">The Action</h3>
+          <p class="text-how-it-works reveal-mobility">
+            When anomalies are detected, actions are triggered automatically—generate a work order, assign the right technician, or alert the maintenance manager.
+          </p>
+        </div>
+      </li>
+    </ol>
+
+    <p class="closing-how-it-works reveal-mobility">
+      This continuous feedback loop—data collection, analysis, and automated action—is the core of our solution, transforming your maintenance strategy.
+    </p>
+  </div>
+</section>
+<!-- =======================
+     USE CASES — Proven Across Industries
+     ======================= -->
+<section class="section-use-cases-iot" aria-labelledby="use-cases-title">
+  <div class="container-use-cases-iot">
+    <header class="head-use-cases-iot">
+      <h2 id="use-cases-title" class="reveal-mobility">Use Cases: Proven Across Industries</h2>
+      <p class="reveal-mobility">
+        Carl’s CMMS + IoT solution is versatile and delivers significant value across a wide range of sectors.
+      </p>
+    </header>
+
+    <!-- Responsive two-column list (no cards) -->
+    <ol class="list-use-cases-iot">
+      <li class="item-use-cases-iot">
+        <h3 class="label-use-cases-iot reveal-mobility">Manufacturing</h3>
+        <p class="desc-use-cases-iot reveal-mobility">
+          Monitor machine health on the factory floor to predict equipment failure and minimize unplanned downtime.
+        </p>
+      </li>
+
+      <li class="item-use-cases-iot">
+        <h3 class="label-use-cases-iot reveal-mobility">Transportation</h3>
+        <p class="desc-use-cases-iot reveal-mobility">
+          Track fleet performance—fuel consumption, engine health, and routes—in real time to optimize schedules.
+        </p>
+      </li>
+
+      <li class="item-use-cases-iot">
+        <h3 class="label-use-cases-iot reveal-mobility">Facility &amp; Utility Management</h3>
+        <p class="desc-use-cases-iot reveal-mobility">
+          Integrate with BMS/SCADA to manage critical infrastructure, control HVAC, and improve energy efficiency.
+        </p>
+      </li>
+
+      <li class="item-use-cases-iot">
+        <h3 class="label-use-cases-iot reveal-mobility">Healthcare</h3>
+        <p class="desc-use-cases-iot reveal-mobility">
+          Track location and maintenance of medical equipment to ensure compliance and availability across sites.
+        </p>
+      </li>
+
+      <li class="item-use-cases-iot">
+        <h3 class="label-use-cases-iot reveal-mobility">Smart Cities</h3>
+        <p class="desc-use-cases-iot reveal-mobility">
+          Oversee water treatment plants and power grids for continuous service and rapid response to issues.
+        </p>
+      </li>
+    </ol>
+  </div>
+</section>
+<!-- =======================
+     PROVEN RESULTS — The Proof in Numbers
+     ======================= -->
+<section class="section-use-cases-iot-num" aria-labelledby="num-title">
+  <div class="container-use-cases-iot-num">
+    <header class="head-use-cases-iot-num">
+      <h2 id="num-title reveal-mobility">Proven Results: The Proof in the Numbers</h2>
+      <p class="reveal-mobility">
+        Implementing our CMMS + IoT solution delivers tangible results that directly impact your bottom line.
+      </p>
+    </header>
+
+    <!-- Responsive metrics list -->
+    <ul class="metrics-use-cases-iot-num">
+      <li class="metric-use-cases-iot-num reveal-mobility">
+        <span class="num-use-cases-iot-num reveal-mobility">10–25%</span>
+        <p class="reveal-mobility">Energy Cost Reduction</p>
+      </li>
+
+      <li class="metric-use-cases-iot-num reveal-mobility">
+        <span class="num-use-cases-iot-num reveal-mobility">50%</span>
+        <p class="reveal-mobility">Less Unplanned Downtime</p>
+      </li>
+
+      <li class="metric-use-cases-iot-num reveal-mobility">
+        <span class="num-use-cases-iot-num reveal-mobility">50%</span>
+        <p class="reveal-mobility">Faster Fault Response</p>
+      </li>
+
+      <li class="metric-use-cases-iot-num reveal-mobility">
+        <span class="num-use-cases-iot-num reveal-mobility">9&nbsp;months</span>
+        <p class="reveal-mobility">Typical ROI</p>
+      </li>
+    </ul>
+  </div>
+</section>
+
+
+<!-- 
+
+    <section class="cta-mobility">
+        <div class="cta-wrap-mobility reveal-mobility">
+            <h2 class="cta-title-mobility reveal-mobility" style="--delay-mobility: 0ms;">
+               Ready to Transform Your Asset Management?
+            </h2>
+
+            <p class="cta-text-mobility reveal-mobility" style="--delay-mobility: 120ms;">
+                Take the first step toward intelligent, automated asset management and move beyond reactive repairs.
+            </p>
+
+            <div class="cta-buttons reveal-mobility">
+                <a href="#" class="btn btn-primary js-open-demo">Start Your 2-Week Pilot Today</a>
+                
+                <a href="#" class="btn btn-secondary js-open-demo">  Explore Integration
+                    Options</a>
+            </div>
+        </div>
+    </section> -->
+
+    <script>
+        // JavaScript for carousel tabs
+        document.addEventListener('DOMContentLoaded', () => {
+            const tabButtons = document.querySelectorAll('.tab-button');
+            const carouselCards = document.querySelectorAll('.carousel-card');
+
+            tabButtons.forEach(button => {
+                button.addEventListener('click', () => {
+                    // Remove 'active' class from all buttons and 'hidden' from all cards
+                    tabButtons.forEach(btn => btn.classList.remove('active'));
+                    carouselCards.forEach(card => card.classList.add('hidden'));
+
+                    // Add 'active' class to the clicked button
+                    button.classList.add('active');
+
+                    // Show the corresponding card
+                    const targetId = button.dataset.tab;
+                    document.getElementById(targetId).classList.remove('hidden');
+                });
+            });
+        });
+    </script>
+    <script>
+        /* IntersectionObserver reveal — shows elements when they enter the viewport,
+           hides them again when they leave (works on scroll down and up). */
+        (function () {
+            const els = document.querySelectorAll('.reveal-mobility');
+            if (!('IntersectionObserver' in window) || !els.length) {
+                els.forEach(el => el.classList.add('is-visible-mobility'));
+                return;
+            }
+
+            const io = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('is-visible-mobility');
+                    } else {
+                        entry.target.classList.remove('is-visible-mobility');
+                    }
+                });
+            }, { threshold: 0.18 });
+
+            els.forEach(el => io.observe(el));
+        })();
+    </script>
+    <script>
+        (function () {
+            const MARGIN = 20;  // viewport gutters
+            const PAD = 12;     // card's inner offset we use for tooltip alignment
+            const MAXW = 520;   // max tooltip width (should match CSS)
+
+            function place(el) {
+                const vw = window.innerWidth || document.documentElement.clientWidth;
+                const rect = el.getBoundingClientRect();
+                const width = Math.min(MAXW, vw - 2 * MARGIN);
+
+                // Can we fit if we align RIGHT?
+                const roomRightOK = (rect.right - PAD - width) >= MARGIN;
+                // Can we fit if we align LEFT?
+                const roomLeftOK = (rect.left + PAD + width) <= (vw - MARGIN);
+
+                el.classList.remove('tip-left', 'tip-full');
+                if (roomRightOK) {
+                    // default (right) – nothing to add
+                } else if (roomLeftOK) {
+                    el.classList.add('tip-left');
+                } else {
+                    el.classList.add('tip-full'); // stretch between margins
+                }
+            }
+
+            const cards = Array.from(document.querySelectorAll('.arch-layer[data-tooltip]'));
+            cards.forEach(el => {
+                el.addEventListener('mouseenter', () => place(el));
+                el.addEventListener('focus', () => place(el), true);
+            });
+            window.addEventListener('resize', () => cards.forEach(place));
+            window.addEventListener('scroll', () => cards.forEach(place), { passive: true });
+        })();
+    </script>
+
+
+    <script src="{% static 'js/header.js'%}"></script>
+    <script defer src="{% static 'js/demo_form.js' %}"></script>
+    {% include 'footer.html' %}
+</body>
+
+</html>

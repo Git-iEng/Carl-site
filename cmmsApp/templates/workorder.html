@@ -1,0 +1,490 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load static %}
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="title" content="CARL Mobility | Mobile CMMS Apps for Technicians, Stores & Requesters">
+  <meta name="description"
+    content="Speed up maintenance with CARL Mobility—mobile apps for work orders, inspections, inventory, and service requests. Android & iOS, offline mode, maps/BIM, and IoT-ready.">
+  <title>CARL Work Orders</title>
+  <link rel="stylesheet" href="{% static 'css/work-order.css' %}">
+  <link rel="stylesheet" href="{% static 'css/home.css' %}">
+  <link rel="stylesheet" href="{% static 'css/factory.css' %}">
+  <link rel="icon" href="{% static 'images/logo1.png' %}">
+  <link rel="stylesheet" href="{% static 'css/footer.css' %}">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+
+<body>
+  {% include 'header.html' %}
+  <main>
+    
+        
+    <header class="hero">
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <h1 class="headline">Work Orders & Maintenance</h1>
+            <p>A quick guide to what a Work Order is, its lifecycle, and how CARL supports preventive, corrective, and predictive maintenance.</p>
+            <div class="cta-buttons">
+                <a href="#" class="btn btn-primary js-open-demo reveal-apm-section">Request a Demo</a>
+                <!-- <a href="#" class="btn btn-secondary js-open-demo reveal-mobility">Explore Sector Solutions</a> -->
+                <!-- <a href="#" class="btn btn-secondary js-open-demo reveal-apm-section">Download Technical Overview</a> -->
+            </div>
+        </div>
+        
+    </header>
+
+    <section class="features-section">
+      <div class="container reveal-mobility">
+        <h2>What is a Work Order?</h2>
+        <p class="subheading">A<strong> Work Order (WO) </strong>is an authorized instruction to perform a maintenance
+          task on an asset, location, or system. It defines what must be done, why it’s needed, who will do it, when
+          it’s due, and the resources (labor, parts, tools) required. In CARL, WOs provide full traceability from
+          request to close-out, with  cost, evidence, and approvals captured along the way.</p>
+
+      </div>
+    </section>
+
+    <!-- ====== HOW WE MAKE WORLD BETTER (mobility) ====== -->
+    <section class="better-mobility">
+      <div class="better-wrap-mobility">
+        <h2 class="better-title-mobility reveal-mobility"> Lifecycle of a Work
+          Order</h2>
+
+        <!-- Row 1: text left, image right -->
+        <div class="better-row-mobility">
+          <div class="better-col-mobility reveal-mobility" data-reveal="right">
+            <h3 class="better-h3-mobility reveal-mobility">Work Order </h3>
+            <p class="better-p-mobility reveal-mobility">
+              For Technicians & Stores
+            </p>
+
+            <div class="better-pills-mobility reveal-mobility">
+              <span class="better-pill-mobility"><i></i>Request : Issue reported or task generated (manual, PM,
+                IoT/condition, meter, inspection).</span>
+              <span class="better-pill-mobility"><i></i>Review & Approve : Screening, priority/SLA set, safety checks,
+                and role-based approval.</span>
+            </div>
+            <div class="better-pills-mobility reveal-mobility">
+              <span class="better-pill-mobility"><i></i>Plan : Scope the job, steps/checklist, parts, tools, permits,
+                skills, estimates.</span>
+              <span class="better-pill-mobility"><i></i>Schedule & Assign : Allocate teams/technicians, align with
+                availability and site windows.</span>
+            </div>
+            <div class="better-pills-mobility reveal-mobility">
+              <span class="better-pill-mobility"><i></i>Execute : Technician completes tasks, captures readings, photos,
+                signatures (online/offline).</span>
+              <span class="better-pill-mobility"><i></i>Close : Record cause/remedy codes, time, parts, and final  cost;
+                verify quality.</span>
+            </div>
+            <div class="better-pills-mobility reveal-mobility">
+              <span class="better-pill-mobility"><i></i>Analyse : Review KPIs (MTBF/MTTR), SLA performance, and
+                improvement actions.</span>
+            </div>
+          </div>
+
+          <figure class="better-media-mobility reveal-mobility" data-reveal="left">
+            <img src="{% static 'images/workorder.png' %}" alt="carl touch" loading="lazy">
+          </figure>
+        </div>
+
+      </div>
+    </section>
+    <section class="workplans-planning">
+      <div class="workplans-wrap-planning">
+        <h2 class="workplans-heading-planning reveal-planning">What’s in CARL Work
+          Plans</h2>
+
+        <!-- Tabs -->
+        <div class="tabs-planning reveal-planning" role="tablist" aria-label="Work Plans tabs">
+          <button class="tab-btn-planning is-active-planning" role="tab" aria-selected="true"
+            aria-controls="panel-mission-planning" id="tab-mission-planning">
+            Preventive Maintenance (PM)
+          </button>
+          <button class="tab-btn-planning" role="tab" aria-selected="false" aria-controls="panel-values-planning"
+            id="tab-values-planning">
+            Corrective Maintenance (CM)
+
+          </button>
+          <button class="tab-btn-planning" role="tab" aria-selected="false" aria-controls="panel-services-planning"
+            id="tab-services-planning">
+            Predictive Maintenance (PdM)
+          </button>
+
+        </div>
+
+        <!-- Panels -->
+        <div class="panels-planning">
+          <!-- Mission -->
+          <article id="panel-mission-planning" class="panel-planning reveal-planning is-visible-panel-planning"
+            role="tabpanel" aria-labelledby="tab-mission-planning">
+            <!-- Plan Design & Automation block -->
+            <div class="planblock-planning">
+              <h3 class="planblock-title-planning">Preventive Maintenance (PM)</h3>
+              <p class="planblock-sub-planning">
+                Planned work performed at time or meter intervals to prevent failures.
+              </p>
+
+              <ul class="planlist-planning">
+                <li class="planitem-planning">
+                  
+                  <p class="planitem-text-planning">
+                    <strong>When to use:</strong>
+                    For critical assets where failure risk/cost is high; OEM-recommended tasks.
+                  </p>
+                </li>
+
+                <li class="planitem-planning">
+                  
+                     <div class="planitem-text-planning">
+                   <strong>Carl Support:</strong>
+                    <ul class="support-sublist">
+                       <li>Time/meter/seasonal PM plans with auto WO generation.</li>
+                <li>Reusable job plans, checklists, and required parts lists.</li>
+                <li>Calendar &amp; crew scheduling; workload levelling across sites.</li>
+                <li>Compliance evidence (photos, readings, signatures) and audit trail.</li>
+                    </ul>
+                     </div>
+                  </div>
+                </li>
+
+
+              </ul>
+            </div>
+
+          </article>
+
+          <!-- Values -->
+          <article id="panel-values-planning" class="panel-planning reveal-planning" role="tabpanel"
+            aria-labelledby="tab-values-planning" hidden>
+            <!-- Scheduling & Capacity (HTML only) -->
+            <div class="planblock-planning">
+              <h3 class="planblock-title-planning">Corrective Maintenance (CM)</h3>
+              <p class="planblock-sub-planning">
+                Reactive work to fix a detected fault or restore function after a failure.
+              </p>
+
+              <ul class="planlist-planning">
+                <li class="planitem-planning">
+            
+                  <p class="planitem-text-planning">
+                    <strong>When to use:</strong>
+                    Non-planned repairs, breakdowns, safety incidents, inspection findings.
+                  </p>
+                </li>
+
+                <li class="planitem-planning">
+              
+                  <div class="planitem-text-planning">
+                  <strong>Carl Support:</strong>
+                    <ul class="support-sublist">
+                       <li>Fast WO creation from requests, inspections, or mobile app.</li>
+                <li>Priorities &amp; SLAs, auto-notifications, and escalation rules.</li>
+                <li>Parts availability checks and substitute suggestions from stores.</li>
+                <li>Root-cause &amp; remedy codes; cost capture (labor/subcontract/parts).</li>
+                    </ul>
+                  </div>
+                  </div>
+                </li>
+
+
+              </ul>
+            </div>
+
+          </article>
+
+
+          <!-- Services -->
+          <article id="panel-services-planning" class="panel-planning reveal-planning" role="tabpanel"
+            aria-labelledby="tab-services-planning" hidden>
+            <!-- Spatial Context (HTML only, uses same -planning classes) -->
+            <div class="planblock-planning">
+              <h3 class="planblock-title-planning">
+                Predictive Maintenance (PdM)
+                <span class="planblock-badge-planning"></span>
+              </h3>
+
+              <p class="planblock-sub-planning">
+                Condition-based interventions triggered by sensor trends, thresholds, or analytics.
+              </p>
+
+              <ul class="planlist-planning">
+                <li class="planitem-planning">
+                  
+                  <p class="planitem-text-planning">
+                    <strong>When to use:</strong>
+                    For assets where data (vibration, temperature, power, oil) is available.
+                  </p>
+                </li>
+
+                <li class="planitem-planning">
+                  
+
+                  <div class="planitem-text-planning">
+                    <strong>Carl Support:</strong>
+                    <ul class="support-sublist">
+                      <li>IoT/SCADA integrations to raise condition alerts and WOs automatically.</li>
+                      <li>Meter points &amp; limits; trend views embedded in the WO.</li>
+                      <li>Risk-based prioritisation and SLA alignment for emerging issues.</li>
+                      <li>Feedback loop: outcomes feed future thresholds and PM optimization.</li>
+                    </ul>
+                  </div>
+
+
+
+                </li>
+              </ul>
+            </div>
+
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+
+
+    <section class="outcomes-mobility">
+      <div class="outcomes-wrap-mobility">
+        <h2 class="outcomes-title-mobility reveal-mobility">Why manage maintenance in CARL?</h2>
+
+        <div class="outcomes-list-mobility">
+          <div class="outcome-mobility reveal-mobility">
+            <span class="outcome-icon-mobility"><i class="fa-solid fa-check"></i></span>
+            <strong>Single source of truth:</strong>
+            Requests, approvals, permits, work evidence, and  cost in one place.
+          </div>
+
+          <div class="outcome-mobility reveal-mobility">
+            <span class="outcome-icon-mobility"><i class="fa-solid fa-check"></i></span>
+            <strong>Mobility-first:</strong>
+            Techs work offline; capture barcodes, photos, readings, and signatures on site
+          </div>
+
+          <div class="outcome-mobility reveal-mobility">
+            <span class="outcome-icon-mobility"><i class="fa-solid fa-check"></i></span>
+            <strong>Compliance & safety:</strong>LOTO/permits, checklists, and full audit history for inspections & ISO
+            standards.
+          </div>
+
+          <div class="outcome-mobility reveal-mobility">
+            <span class="outcome-icon-mobility"><i class="fa-solid fa-check"></i></span>
+            <strong>Insights:
+            </strong>SLA dashboards, MTTR/MTBF, and backlog/overdue views to drive reliability.
+          </div>
+          <div class="outcome-mobility reveal-mobility">
+            <span class="outcome-icon-mobility"><i class="fa-solid fa-check"></i></span>
+            <strong>Integration:
+            </strong>ERP (PO/costing), BMS/SCADA, GIS, and IoT keep data synchronized across systems.
+
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+
+<!-- 
+
+    <section class="cta-mobility">
+      <div class="cta-wrap-mobility">
+        <h2 class="cta-title-mobility reveal-mobility" style="--delay-mobility: 0ms;">
+          Ready to Elevate Your Asset Strategy?
+        </h2>
+
+        <p class="cta-text-mobility reveal-mobility" style="--delay-mobility: 120ms;">
+          Let us help you unlock the full potential of your assets with a suite that’s complete, compliant, and built
+          for your sector.
+        </p>
+
+        <div class="cta-buttons">
+          <a href="#" class="btn btn-primary"><i class="fas fa-hand-point-right"></i> See CARL Mobility in
+                        action</a>
+          <a href="#" class="btn btn-secondary"><i class="fas fa-file-download"></i> Download datasheets</a>
+          <a href="#" class="btn btn-secondary"><i class="fas fa-dollar-sign"></i> Get pricing for your
+            sites</a>
+        </div>
+      </div>
+    </section> -->
+    </section>
+  </main>
+  <script>
+    (function () {
+      const targets = document.querySelectorAll('.reveal-mobility');
+      if (!targets.length) return;
+
+      // Fallback if IntersectionObserver is not supported
+      if (!('IntersectionObserver' in window)) {
+        targets.forEach(el => el.classList.add('is-visible-mobility'));
+        return;
+      }
+
+      const io = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('is-visible-mobility');
+          } else {
+            // Remove when out of view so it will animate again on scroll-up
+            entry.target.classList.remove('is-visible-mobility');
+          }
+        });
+      }, {
+        threshold: 0.2,            // 20% visible to trigger
+        rootMargin: '0px 0px -5% 0px'
+      });
+
+      targets.forEach(el => io.observe(el));
+    })();
+  </script>
+
+
+  <script>
+    /* IntersectionObserver reveal — shows elements when they enter the viewport,
+       hides them again when they leave (works on scroll down and up). */
+    (function () {
+      const els = document.querySelectorAll('.reveal-mobility');
+      if (!('IntersectionObserver' in window) || !els.length) {
+        els.forEach(el => el.classList.add('is-visible-mobility'));
+        return;
+      }
+
+      const io = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('is-visible-mobility');
+          } else {
+            entry.target.classList.remove('is-visible-mobility');
+          }
+        });
+      }, { threshold: 0.18 });
+
+      els.forEach(el => io.observe(el));
+    })();
+  </script>
+  <script>
+    (function () {
+      const items = document.querySelectorAll('.faq-item-mobility');
+
+      items.forEach(item => {
+        const btn = item.querySelector('.faq-q-mobility');
+        const panel = item.querySelector('.faq-a-mobility');
+
+        // For smooth open/close we animate height via inline style
+        const close = () => {
+          panel.style.maxHeight = null;
+          panel.hidden = true;
+          btn.setAttribute('aria-expanded', 'false');
+        };
+
+        const open = () => {
+          panel.hidden = false;                    // must be visible to measure
+          panel.style.maxHeight = panel.scrollHeight + 'px';
+          btn.setAttribute('aria-expanded', 'true');
+        };
+
+        // initialize closed
+        close();
+
+        btn.addEventListener('click', () => {
+          const expanded = btn.getAttribute('aria-expanded') === 'true';
+          if (expanded) {
+            close();
+          } else {
+            open();
+          }
+        });
+
+        // reset height on resize (content reflow)
+        window.addEventListener('resize', () => {
+          if (btn.getAttribute('aria-expanded') === 'true') {
+            panel.style.maxHeight = panel.scrollHeight + 'px';
+          }
+        });
+      });
+    })();
+  </script>
+
+  <script>
+    (function () {
+      // ----- Tabs -----
+      const tabsWrap = document.querySelector('.tabs-planning');
+      if (tabsWrap) {
+        const tabs = Array.from(tabsWrap.querySelectorAll('.tab-btn-planning'));
+        const panels = Array.from(document.querySelectorAll('.panel-planning'));
+
+        function activateTab(tab) {
+          // Update button states
+          tabs.forEach(btn => {
+            const isActive = btn === tab;
+            btn.classList.toggle('is-active-planning', isActive);
+            btn.setAttribute('aria-selected', isActive ? 'true' : 'false');
+          });
+
+          // Show matching panel, hide others
+          const targetId = tab.getAttribute('aria-controls');
+          panels.forEach(p => {
+            if (p.id === targetId) {
+              p.hidden = false;
+              p.classList.add('is-visible-panel-planning');
+            } else {
+              p.hidden = true;
+              p.classList.remove('is-visible-panel-planning');
+            }
+          });
+        }
+
+        // Click handlers
+        tabs.forEach(btn => {
+          btn.addEventListener('click', () => activateTab(btn));
+        });
+
+        // Keyboard support (Left/Right)
+        tabsWrap.addEventListener('keydown', (e) => {
+          const idx = tabs.indexOf(document.activeElement);
+          if (idx === -1) return;
+          if (e.key === 'ArrowRight') {
+            e.preventDefault();
+            const next = tabs[(idx + 1) % tabs.length];
+            next.focus(); activateTab(next);
+          } else if (e.key === 'ArrowLeft') {
+            e.preventDefault();
+            const prev = tabs[(idx - 1 + tabs.length) % tabs.length];
+            prev.focus(); activateTab(prev);
+          }
+        });
+      }
+
+      // ----- Reveal on scroll (down & up) -----
+      const reveals = document.querySelectorAll('.reveal-planning');
+      if (!reveals.length) return;
+
+      if (!('IntersectionObserver' in window)) {
+        reveals.forEach(el => el.classList.add('is-visible-planning'));
+        return;
+      }
+
+      const io = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('is-visible-planning');
+          } else {
+            // remove when out of view so it animates again on scroll-up
+            entry.target.classList.remove('is-visible-planning');
+          }
+        });
+      }, { threshold: 0.2 });
+
+      reveals.forEach(el => io.observe(el));
+    })();
+  </script>
+
+
+  {% include 'footer.html' %}
+
+</body>
+
+</html>

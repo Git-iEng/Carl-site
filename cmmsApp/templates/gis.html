@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load static %}
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CARL: GIS Mapping Integration with CARL</title>
+     <meta name="description"
+        content="Bring mapping into maintenance. CARL GIS integration shows assets, alarms, and WOs on maps for smarter, location based decisions.">
+
+    <link rel="stylesheet" href="{% static 'css/gis.css' %}">
+    <!-- <link rel="stylesheet" href="{% static 'css/home.css' %}">
+  <link rel="stylesheet" href="{% static 'css/factory.css' %}"> -->
+    <link rel="icon" href="{% static 'images/logo1.png' %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="{% static 'css/footer.css' %}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    {% include 'header.html' %}
+    {% include 'request_demo_modal.html' %}
+    {% load static %}
+<header class="hero" style="--hero-bg: url('../images/banner/carl-gis.png');">
+  <div class="hero-overlay"></div>
+  <div class="hero-content">
+    <h1>GIS Mapping Integration with CARL</h1>
+    <p>Make every asset, work order, and meter point location-aware. Our CARL ↔ GIS integrations connect your CMMS/EAM data with interactive maps so teams can plan, execute, and verify work with spatial context.</p>
+    <div class="cta-buttons">
+      <a href="#" class="btn btn-primary js-open-demo reveal-mobility">Request a Demo</a>
+      <!-- <a href="#" class="btn btn-secondary js-open-demo reveal-mobility">Download Technical Overview</a> -->
+    </div>
+  </div>
+</header>
+
+
+
+<!-- =======================
+     WHAT THIS ENABLES — GIS / Map
+     ======================= -->
+<section class="section-gis-map" aria-labelledby="gis-title">
+  <div class="container-gis-map">
+    <header class="head-gis-map">
+      <h2 class="reveal-mobility" id="gis-title">What this enables </h2>
+    </header>
+
+    <ul class="features-gis-map">
+      <li class="item-gis-map reveal-mobility">
+        <h3 class="reveal-mobility"><strong>See assets on a map</strong></h3>
+        <p class="reveal-mobility">
+          Layers for plants, substations, pipelines, buildings, roads, hazards,
+          flood/sea-level zones, easements, and utility corridors.
+        </p>
+      </li>
+
+      <li class="item-gis-map reveal-mobility">
+        <h3 class="reveal-mobility"><strong>Raise or locate Work Orders (WOs)</strong></h3>
+        <p class="reveal-mobility">
+          From a map click, filter by priority/SLA, and route the nearest crew.
+        </p>
+      </li>
+
+      <li class="item-gis-map reveal-mobility">
+        <h3 class="reveal-mobility"><strong>Trend and condition overlays</strong></h3>
+        <p class="reveal-mobility">
+          Vibration, temperature, power, oil; hotspot and cluster views for failures and alarms.
+        </p>
+      </li>
+
+      <li class="item-gis-map reveal-mobility">
+        <h3 class="reveal-mobility"><strong>Regulatory &amp; safety views</strong></h3>
+        <p class="reveal-mobility">
+          Buffer/zone analysis around HV equipment, Lockout/Tagout (LOTO) areas,
+          confined spaces, and exclusion zones.
+        </p>
+      </li>
+
+      <li class="item-gis-map reveal-mobility">
+        <h3 class="reveal-mobility"><strong>Field-ready workflows</strong></h3>
+        <p class="reveal-mobility">
+          Via CARL Flash with offline basemaps, QR/asset lookup, and
+          photo/markup attachments.
+        </p>
+      </li>
+    </ul>
+  </div>
+</section><!-- =======================
+     SUPPORTED PLATFORMS & STANDARDS (GIS)
+     ======================= -->
+<section class="section-gis-standards" aria-labelledby="gis-standards-title">
+  <div class="container-gis-standards">
+    <header class="head-gis-standards">
+      <h2 id="gis-standards-title reveal-mobility">Supported platforms &amp; standards</h2>
+      <p class="reveal-mobility">We support a range of platforms and open standards to ensure seamless integration.</p>
+    </header>
+
+    <!-- SPLIT: IMAGE + PLATFORMS -->
+    <div class="layout-gis-standards">
+      <figure class="figure-gis-standards">
+        <!-- Replace src with your image path; ideal ~1600 × 1000 px -->
+        <img
+          src="../static/images/home/gis-map.png"
+          alt="GIS platforms and open standards illustration"
+          class="img-gis-standards reveal-mobility"
+          loading="lazy"
+        />
+      </figure>
+
+      <div class="content-gis-standards">
+        <!-- <h3 class="ribbon-gis-standards reveal-mobility">Platforms</h3> -->
+
+        <section class="group-gis-standards">
+          <h4 class="group-title-gis-standards reveal-mobility">ArcGIS (Online/ Enterprise)</h4>
+          <ul class="list-gis-standards reveal-mobility">
+            <li>Feature Services, Hosted Layers, Web Maps</li>
+            <li>GeoJSON export and web map embedding</li>
+            <li>Single Sign-On (SSO): SAML / OAuth 2.0</li>
+          </ul>
+        </section>
+
+        <section class="group-gis-standards">
+          <h4 class="group-title-gis-standards reveal-mobility">MapGuide (Open Source / Autodesk)</h4>
+          <ul class="list-gis-standards reveal-mobility">
+            <li>Layer management, Fusion Viewer</li>
+            <li>Web Map Service (WMS) rendering for CARL embeds</li>
+            <li>Public/private layer control</li>
+          </ul>
+        </section>
+
+        <section class="group-gis-standards">
+          <h4 class="group-title-gis-standards reveal-mobility">External GIS / OGC</h4>
+          <ul class="list-gis-standards reveal-mobility">
+            <li>WMS / WFS / WMTS, XYZ tiles</li>
+            <li>GeoServer, QGIS Server compatible</li>
+            <li>GeoJSON &amp; CSV for data exchange</li>
+          </ul>
+        </section>
+      </div>
+    </div><!-- /layout -->
+
+  </div>
+</section>
+<!-- =======================
+     SECTION SEPARATOR with CTA buttons
+     ======================= -->
+<!-- <section class="section-cta-sep" aria-label="CTA separator">
+  <div class="wrap-cta-sep">
+    <div class="media-cta-sep">
+      <img
+        src="../static/images/gis.png"
+        alt="Operational insights and GIS integration"
+        loading="lazy"
+      />
+
+      overlay with buttons
+      <div class="overlay-cta-sep">
+        <div class="btns-cta-sep">
+          <a href="#" class="btn btn-primary js-open-demo">Request a Demo</a>
+          <a href="#" class="btn btn-secondary js-open-demo">Download Technical Datasheet</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section> -->
+
+<!-- =======================
+     STANDARDS — separate section
+     ======================= -->
+<section class="section-standards-gis-standards" aria-labelledby="standards-title">
+  <div class="container-gis-standards">
+    <h3 id="standards-title" class="ribbon-gis-standards reveal-mobility">Standards</h3>
+
+    <ul class="list-standards-gis-standards reveal-mobility">
+      <li>
+        <strong>Coordinate Systems:</strong> EPSG:4326 (WGS84), EPSG:3857 (Web Mercator),
+        and regional systems (e.g., GDA2020).
+      </li>
+      <li>
+        <strong>Identity &amp; Security:</strong> SSO via SAML 2.0 / OAuth 2.0 / OIDC,
+        Role-Based Access Control (RBAC), audit logs, and least-privilege tokens.
+      </li>
+    </ul>
+  </div>
+</section>
+<!-- =======================
+     INTEGRATION PATTERNS — GIS x CARL
+     ======================= -->
+<section class="section-gis-pattern" aria-labelledby="gis-pattern-title">
+  <div class="container-gis-pattern">
+    <header class="head-gis-pattern">
+      <h2 id="gis-pattern-title" class="reveal-mobility">Integration patterns </h2>
+      <p class="reveal-mobility">Our integration patterns enable a flexible and powerful connection between CARL and your GIS.</p>
+    </header>
+
+    <!-- Pattern grid -->
+    <ul class="patterns-gis-pattern">
+      <!-- 1 -->
+      <li class="pattern-gis-pattern">
+     
+        <h3 class="reveal-mobility">Embedded Map in CARL</h3>
+        <p class="reveal-mobility">Display ArcGIS/MapGuide or external WMS/WFS inside CARL records and dashboards.</p>
+      </li>
+
+      <!-- 2 -->
+      <li class="pattern-gis-pattern">
+       
+        <h3 class="reveal-mobility">Deep Links from Map to CARL</h3>
+        <p class="reveal-mobility">Click a feature to open the Asset, Location, or WO via Feature ID or custom keys.</p>
+      </li>
+
+      <!-- 3 -->
+      <li class="pattern-gis-pattern">
+       
+        <h3 class="reveal-mobility">Data Sync (one-way or two-way)</h3>
+        <p class="reveal-mobility">Periodic or event-driven sync for geometry and attributes (status, access notes, ownership).</p>
+      </li>
+
+      <!-- 4 -->
+      <li class="pattern-gis-pattern">
+        
+        <h3 class="reveal-mobility">Event/Webhook Triggers</h3>
+        <p class="reveal-mobility">GIS events (e.g., threshold within a polygon) create Work Requests/Orders with map snapshots.</p>
+      </li>
+
+      <!-- 5 -->
+      <li class="pattern-gis-pattern">
+        
+        <h3 class="reveal-mobility">Mobile &amp; Offline</h3>
+        <p class="reveal-mobility">CARL Flash uses offline basemaps and cached layers; queued sync resumes when network returns.</p>
+      </li>
+    </ul>
+  </div>
+</section>
+
+
+<!-- =======================
+     CORE CAPABILITIES — GIS
+     ======================= -->
+<section class="section-core-gis" aria-labelledby="core-gis-title">
+  <div class="container-core-gis">
+    <header class="head-core-gis">
+      <h2 id="core-gis-title reveal-mobility">Core capabilities <span aria-hidden="true"></span></h2>
+    </header>
+
+    <ul class="list-core-gis">
+      <li class="item-core-gis reveal-mobility">
+        <span class="label-core-gis reveal-mobility">Asset geocoding &amp; validation:</span>
+        <span class="desc-core-gis reveal-mobility">Store coordinates with accuracy source; validate against site boundaries.</span>
+      </li>
+
+      <li class="item-core-gis reveal-mobility">
+        <span class="label-core-gis reveal-mobility">Work order mapping:</span>
+        <span class="desc-core-gis reveal-mobility">Draw polygons, lines, or points, attach redlines, and store extents on each WO.</span>
+      </li>
+
+      <li class="item-core-gis reveal-mobility">
+        <span class="label-core-gis reveal-mobility">Proximity &amp; network analysis:</span>
+        <span class="desc-core-gis reveal-mobility">Find the nearest depot, crew, or spare part; calculate drive-time polygons and response radius.</span>
+      </li>
+
+      <li class="item-core-gis reveal-mobility">
+        <span class="label-core-gis reveal-mobility">Condition overlays:</span>
+        <span class="desc-core-gis reveal-mobility">Layer live meter points and alarms on the map; drill into trends directly from the WO.</span>
+      </li>
+
+      <li class="item-core-gis reveal-mobility">
+        <span class="label-core-gis reveal-mobility">Bulk actions:</span>
+        <span class="desc-core-gis reveal-mobility">Select multiple features to raise batch WOs or schedule PMs across a corridor or zone.</span>
+      </li>
+
+      <li class="item-core-gis reveal-mobility">
+        <span class="label-core-gis reveal-mobility">Security &amp; governance:</span>
+        <span class="desc-core-gis reveal-mobility">RBAC, GIS group mapping, least-privilege tokens, IP allow-lists, and a full audit trail.</span>
+      </li>
+    </ul>
+  </div>
+</section>
+
+<!-- 
+    <section class="cta-mobility">
+        <div class="cta-wrap-mobility">
+            <h2 class="cta-title-mobility reveal-mobility" style="--delay-mobility: 0ms;">
+                Ready to Elevate Your Asset Strategy?
+            </h2>
+
+            <p class="cta-text-mobility reveal-mobility" style="--delay-mobility: 120ms;">
+                CARL isn’t just software—it’s your strategic partner in operational excellence. Let us help you unlock
+                the full potential of your assets with a suite that’s complete, compliant, and built for your sector.
+            </p>
+
+            <div class="cta-buttons reveal-mobility">
+                <a href="#" class="btn btn-primary js-open-demo">Request a Demo</a>
+                <a href="#" class="btn btn-secondary js-open-demo"> Download Technical Datasheet</a>
+                <a href="#" class="btn btn-secondary js-open-demo"> Explore Integration
+                    Options</a>
+            </div>
+        </div>
+    </section> -->
+
+    
+        <section class="faq-mobility">
+  <div class="faq-wrap-mobility">
+    <h2 class="faq-title-mobility reveal-mobility">
+      <span class="faq-title-icon-mobility"><i class="fas fa-question-circle icon"></i></span> FAQs
+    </h2>
+
+    <!-- Item 1 -->
+    <article class="faq-item-mobility reveal-mobility">
+      <button class="faq-q-mobility " aria-expanded="false">
+        <span>Does it work with existing GIS?</span>
+        <span class="faq-toggle-mobility" aria-hidden="true"></span>
+      </button>
+      <div class="faq-a-mobility" hidden>
+        Yes, it integrates with ArcGIS, MapGuide, and any WMS/WFS-capable server (e.g., GeoServer, QGIS Server).
+      </div>
+    </article>
+
+    <!-- Item 2 -->
+    <article class="faq-item-mobility reveal-mobility">
+      <button class="faq-q-mobility" aria-expanded="false">
+        <span>How are records linked?</span>
+        <span class="faq-toggle-mobility" aria-hidden="true"></span>
+      </button>
+      <div class="faq-a-mobility" hidden>
+        We store a GIS Feature ID on Assets, Locations, Meter points, and Work Orders to create reliable deep links.
+      </div>
+    </article>
+
+    <!-- Item 3 -->
+    <article class="faq-item-mobility reveal-mobility">
+      <button class="faq-q-mobility" aria-expanded="false">
+        <span>Can crews work offline?</span>
+        <span class="faq-toggle-mobility" aria-hidden="true"></span>
+      </button>
+      <div class="faq-a-mobility" hidden>
+        Yes, CARL Flash supports offline basemaps, cached layers, and queues data sync for when coverage is restored.
+      </div>
+    </article>
+
+    <!-- Item 4 -->
+    <article class="faq-item-mobility reveal-mobility">
+      <button class="faq-q-mobility" aria-expanded="false">
+        <span>What about security?</span>
+        <span class="faq-toggle-mobility" aria-hidden="true"></span>
+      </button>
+      <div class="faq-a-mobility" hidden>
+        Security is managed through SSO, role-based permissions, API tokens with scoped access, audit logging, and IP allow-lists.
+      </div>
+    </article>
+
+    
+  </div>
+</section>
+  
+    <script>
+(function () {
+  const items = document.querySelectorAll('.faq-item-mobility');
+
+  items.forEach(item => {
+    const btn = item.querySelector('.faq-q-mobility');
+    const panel = item.querySelector('.faq-a-mobility');
+
+    // For smooth open/close we animate height via inline style
+    const close = () => {
+      panel.style.maxHeight = null;
+      panel.hidden = true;
+      btn.setAttribute('aria-expanded', 'false');
+    };
+
+    const open = () => {
+      panel.hidden = false;                    // must be visible to measure
+      panel.style.maxHeight = panel.scrollHeight + 'px';
+      btn.setAttribute('aria-expanded', 'true');
+    };
+
+    // initialize closed
+    close();
+
+    btn.addEventListener('click', () => {
+      const expanded = btn.getAttribute('aria-expanded') === 'true';
+      if (expanded) {
+        close();
+      } else {
+        open();
+      }
+    });
+
+    // reset height on resize (content reflow)
+    window.addEventListener('resize', () => {
+      if (btn.getAttribute('aria-expanded') === 'true') {
+        panel.style.maxHeight = panel.scrollHeight + 'px';
+      }
+    });
+  });
+})();
+</script>
+
+    <script>
+        /* IntersectionObserver reveal — shows elements when they enter the viewport,
+           hides them again when they leave (works on scroll down and up). */
+        (function () {
+            const els = document.querySelectorAll('.reveal-mobility');
+            if (!('IntersectionObserver' in window) || !els.length) {
+                els.forEach(el => el.classList.add('is-visible-mobility'));
+                return;
+            }
+
+            const io = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('is-visible-mobility');
+                    } else {
+                        entry.target.classList.remove('is-visible-mobility');
+                    }
+                });
+            }, { threshold: 0.18 });
+
+            els.forEach(el => io.observe(el));
+        })();
+    </script>
+
+
+    <script src="{% static 'js/header.js'%}"></script>
+    <script defer src="{% static 'js/demo_form.js' %}"></script>
+    {% include 'footer.html' %}
+</body>
+
+</html>

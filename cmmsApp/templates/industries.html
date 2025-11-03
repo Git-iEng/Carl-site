@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load static %}
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CARL: Smarter Asset Management</title>
+    <link rel="stylesheet" href="{% static 'css/industries.css' %}">
+     <meta name="description"
+        content="Enterprise asset management for every sector across Asia-Pacific. CARL combines compliance, performance, and predictive maintenance in one trusted platform.">
+
+    <!-- <link rel="stylesheet" href="{% static 'css/home.css' %}">
+  <link rel="stylesheet" href="{% static 'css/factory.css' %}"> -->
+    <link rel="icon" href="{% static 'images/logo1.png' %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="{% static 'css/footer.css' %}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    {% include 'header.html' %}
+    {% include 'request_demo_modal.html' %}
+    <header class="hero">
+        <video autoplay muted loop class="hero-video">
+            <source
+                src="https://assets.mixkit.co/videos/preview/mixkit-circuit-board-with-chips-and-electronic-paths-31835-large.mp4"
+                type="video/mp4">
+            <source
+                src="https://assets.mixkit.co/videos/preview/mixkit-circuit-board-with-chips-and-electronic-paths-31835-large.webm"
+                type="video/webm">
+        </video>
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <h1>CARL: Industries</h1>
+            <p>Built for compliance. Engineered for uptime.</p>
+            <div class="cta-buttons">
+                <a href="#" class="btn btn-primary js-open-demo reveal-mobility">Request a Demo</a>
+                <!-- <a href="#" class="btn btn-secondary js-open-demo reveal-mobility">Explore Sector Solutions</a> -->
+                <!-- <a href="#" class="btn btn-secondary js-open-demo reveal-mobility">Download Technical Overview</a> -->
+            </div>
+        </div>
+    </header>
+<section class="carl-verticalizations-section">
+  <div class="container">
+    <div class="carl-cards-grid">
+
+         <a href="/factory" class="carl-card">
+        <img src="{% static 'images/banner/carl-factory.png' %}" alt="Factory" class="carl-card-img">
+        <div class="carl-card-content">
+          <h3>FACTORY</h3>
+        </div>
+      </a>
+
+      <a href="/facility" class="carl-card">
+        <img src="{% static 'images/home/facilitynew.png' %}" alt="Facility" class="carl-card-img">
+        <div class="carl-card-content">
+          <h3>FACILITY</h3>
+        </div>
+      </a>
+
+      <a href="/transport" class="carl-card">
+        <img src="{% static 'images/banner/carl-transport.png' %}" alt="Transport" class="carl-card-img">
+        <div class="carl-card-content">
+          <h3>TRANSPORT</h3>
+        </div>
+      </a>
+
+   
+
+      <a href="/healthcare" class="carl-card">
+        <img src="{% static 'images/banner/carl-healthcare.png' %}" alt="BuHEALTHCARE" class="carl-card-img">
+        <div class="carl-card-content">
+          <h3>HEALTHCARE</h3>
+        </div>
+      </a>
+      
+      <a href="/city" class="carl-card">
+        <img src="{% static 'images/banner/carl-city.png' %}" alt="City" class="carl-card-img">
+        <div class="carl-card-content">
+          <h3>CITY</h3>
+        </div>
+      </a>
+
+
+    </div>
+  </div>
+</section>
+
+    <section class="cta-mobility">
+        <div class="cta-wrap-mobility">
+            <h2 class="cta-title-mobility reveal-mobility" style="--delay-mobility: 0ms;">
+                Ready to Elevate Your Asset Strategy?
+            </h2>
+
+            <p class="cta-text-mobility reveal-mobility" style="--delay-mobility: 120ms;">
+                CARL isn’t just software—it’s your strategic partner in operational excellence. Let us help you unlock
+                the full potential of your assets with a suite that’s complete, compliant, and built for your sector.
+            </p>
+
+            <div class="cta-buttons reveal-mobility">
+                <a href="#" class="btn btn-primary js-open-demo">Request a Demo</a>
+                <!-- <a href="#" class="btn btn-secondary js-open-demo"> Download Technical Datasheet</a>
+                <a href="#" class="btn btn-secondary js-open-demo"> Explore Integration -->
+                    <!-- Options</a> -->
+            </div>
+        </div>
+    </section>
+
+    <script>
+        /* IntersectionObserver reveal — shows elements when they enter the viewport,
+           hides them again when they leave (works on scroll down and up). */
+        (function () {
+            const els = document.querySelectorAll('.reveal-mobility');
+            if (!('IntersectionObserver' in window) || !els.length) {
+                els.forEach(el => el.classList.add('is-visible-mobility'));
+                return;
+            }
+
+            const io = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('is-visible-mobility');
+                    } else {
+                        entry.target.classList.remove('is-visible-mobility');
+                    }
+                });
+            }, { threshold: 0.18 });
+
+            els.forEach(el => io.observe(el));
+        })();
+    </script>
+
+
+    <script src="{% static 'js/header.js'%}"></script>
+    <script defer src="{% static 'js/demo_form.js' %}"></script>
+    {% include 'footer.html' %}
+</body>
+
+</html>

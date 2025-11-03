@@ -1,0 +1,656 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load static %}
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="title" content="CARL Work Plans | Preventive Maintenance Planning & AI Scheduling">
+     <meta name="description"
+        content="Best asset control with CARL Work Plans your all in-one asset management software for planning, analytics, and lifecycle tracking.">
+
+    <meta name="keywords"
+        content="CARL Work Plans, preventive maintenance plans, CMMS scheduling, CARL Optim, CARL Maps, CARL Touch, condition-based maintenance, IoT maintenance">
+    <title>CARL Work Plans</title>
+    <link rel="stylesheet" href="{% static 'css/plans.css' %}">
+    <link rel="stylesheet" href="{% static 'css/home.css' %}">
+    <link rel="stylesheet" href="{% static 'css/factory.css' %}">
+    <link rel="icon" href="{% static 'images/logo1.png' %}">
+    <link rel="stylesheet" href="{% static 'css/footer.css' %}">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+
+<body>
+    {% include 'header.html' %}
+    <main>
+         
+    
+    <header class="hero">
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <h1 class="headline">CARL Work Plans</h1>
+            <p>Plan, schedule, and execute preventive maintenance with confidence, backed by real-time data, maps, and mobile execution.</p>
+            <div class="cta-buttons">
+                <a href="#" class="btn btn-primary js-open-demo reveal-apm-section" style="color: white;">Request a Demo</a>
+                <!-- <a href="#" class="btn btn-secondary js-open-demo reveal-mobility">Explore Sector Solutions</a> -->
+                <!-- <a href="#" class="btn btn-secondary js-open-demo reveal-apm-section">Download Technical Overview</a> -->
+            </div>
+        </div>
+        
+    </header>
+
+        <section class="features-section">
+            <div class="container reveal-mobility">
+                <h2>Elevator Pitch</h2>
+                <p class="subheading reveal-mobility"><strong> CARL Work Plans</strong> is the planning engine inside CARL Source that turns maintenance policy into actionable, scheduled work. Build time-based, meter-based, and condition-based plans, simulate workloads, reserve skills and parts, and publish optimized technician calendars then execute via CARL Touch on Android/iOS with full traceability. Add CARL Optim (AI scheduling), CARL Maps (2D/3D plans & GIS), and CARL IoT (sensor triggers) to go from reactive to predictive.</p>
+
+            </div>
+        </section>
+
+        <section class="who-mobility reveal-mobility">
+            <div class="who-wrap-mobility">
+                <h2 class="who-title-mobility reveal-mobility">Who it’s for</h2>
+
+                <div class="who-grid-mobility">
+                    <!-- Card 1 -->
+                    <article class="who-card-mobility reveal-mobility">
+                        <div class="who-icon-mobility">
+                            <!-- Changed icon for Technicians & Crews -->
+                           <i class="fas fa-calendar-alt role-icon"></i>
+                        </div>
+                        <h3 class="who-card-title-mobility">Maintenance Managers &amp; Planners</h3>
+                        <p class="who-card-text-mobility">
+                            Standardize PM strategies, balance workloads, and assure compliance.
+                        </p>
+                    </article>
+
+                    <!-- Card 2 -->
+                    <article class="who-card-mobility reveal-mobility">
+                        <div class="who-icon-mobility">
+                            <i class="fas fa-user-cog role-icon"></i>
+                        </div>
+                        <h3 class="who-card-title-mobility">Supervisors</h3>
+                        <p class="who-card-text-mobility">
+                            Publish weekly calendars, track progress and SLAs, and reassign on the fly.
+                        </p>
+                    </article>
+
+                    <!-- Card 3 -->
+                    <article class="who-card-mobility reveal-mobility" >
+                        <div class="who-icon-mobility">
+                            <i class="fa-solid fa-building"></i>
+                        </div>
+                        <h3 class="who-card-title-mobility">Technicians</h3>
+                        <p class="who-card-text-mobility">
+                            Receive clear tasks, checklists, and e-signatures on mobile, even offline.
+                        </p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+
+
+        <section class="outcomes-mobility">
+            <div class="outcomes-wrap-mobility">
+                <h2 class="outcomes-title-mobility reveal-mobility">Outcomes that matter</h2>
+
+                <div class="outcomes-list-mobility">
+                    <div class="outcome-mobility reveal-mobility">
+                        <span class="outcome-icon-mobility"><i class="fas fa-wrench list-icon"></i></span>
+                        Fewer breakdowns, longer asset life through planned, preventive work.
+                    </div>
+
+                    <div class="outcome-mobility reveal-mobility">
+                        <span class="outcome-icon-mobility"><i class="fas fa-lightbulb list-icon"></i></span>
+                        Higher planner & crew productivity with AI-assisted scheduling.
+                    </div>
+
+
+                    <div class="outcome-mobility reveal-mobility">
+                        <span class="outcome-icon-mobility"><i class="fas fa-shield-alt list-icon"></i></span>
+                        Full auditability traceable, validated, and signed digital reports.
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="workplans-planning">
+            <div class="workplans-wrap-planning">
+                <h2 class="workplans-heading-planning reveal-planning"><i class="fas fa-cogs icon"></i>  What’s in CARL Work Plans</h2>
+
+                <!-- Tabs -->
+                <div class="tabs-planning reveal-planning" role="tablist" aria-label="Work Plans tabs">
+                    <button class="tab-btn-planning is-active-planning" role="tab" aria-selected="true"
+                        aria-controls="panel-mission-planning" id="tab-mission-planning">
+                        Plan Design & Automation
+                    </button>
+                    <button class="tab-btn-planning" role="tab" aria-selected="false"
+                        aria-controls="panel-values-planning" id="tab-values-planning">
+                        Scheduling & Capacity
+
+                    </button>
+                    <button class="tab-btn-planning" role="tab" aria-selected="false"
+                        aria-controls="panel-services-planning" id="tab-services-planning">
+                        Spatial Context
+                    </button>
+                    <button class="tab-btn-planning" role="tab" aria-selected="false"
+                        aria-controls="panel-mobile-planning" id="tab-services-planning">
+                        Execution on Mobile
+                    </button>
+                </div>
+
+                <!-- Panels -->
+                <div class="panels-planning">
+                    <!-- Mission -->
+                    <article id="panel-mission-planning"
+                        class="panel-planning reveal-planning is-visible-panel-planning" role="tabpanel"
+                        aria-labelledby="tab-mission-planning">
+                        <!-- Plan Design & Automation block -->
+                        <div class="planblock-planning">
+                            <h3 class="planblock-title-planning">Plan Design &amp; Automation</h3>
+                            <p class="planblock-sub-planning">
+                                Build time-, meter-, and condition-based plans to automate your maintenance strategy.
+                            </p>
+
+                            <ul class="planlist-planning">
+                                <li class="planitem-planning">
+                                    <span class="planitem-ico-planning">
+                                        <!-- use your own icon image/svg here -->
+                                        <i class="fas fa-circle-notch list-icon"></i> 
+                                    </span>
+                                    <p class="planitem-text-planning">
+                                        <strong>Plan types:</strong>
+                                        calendar-time, usage-based, and condition/IoT-driven thresholds.
+                                    </p>
+                                </li>
+
+                                <li class="planitem-planning">
+                                    <span class="planitem-ico-planning">
+                                        <i class="fas fa-file-invoice list-icon"></i> 
+                                    </span>
+                                    <p class="planitem-text-planning">
+                                        <strong>Templates &amp; tasks:</strong>
+                                        reusable job plans with labor, tools, authorizations, and checklists.
+                                    </p>
+                                </li>
+
+                                <li class="planitem-planning">
+                                    <span class="planitem-ico-planning">
+                                        <i class="fas fa-truck-loading list-icon"></i>
+                                    </span>
+                                    <p class="planitem-text-planning">
+                                        <strong>Auto-generation of work orders:</strong>
+                                        plans release WOs automatically with assignment rules.
+                                    </p>
+                                </li>
+                            </ul>
+                        </div>
+
+                    </article>
+
+                    <!-- Values -->
+                    <article id="panel-values-planning" class="panel-planning reveal-planning" role="tabpanel"
+                        aria-labelledby="tab-values-planning" hidden>
+                        <!-- Scheduling & Capacity (HTML only) -->
+                        <div class="planblock-planning">
+                            <h3 class="planblock-title-planning">Scheduling &amp; Capacity</h3>
+                            <p class="planblock-sub-planning">
+                                Manage workloads and optimize schedules to maximize crew efficiency.
+                            </p>
+
+                            <ul class="planlist-planning">
+                                <li class="planitem-planning">
+                                    <span class="planitem-ico-planning">
+                                        <!-- replace with your icon -->
+                                        <i class="fas fa-calendar-day list-icon"></i> 
+                                    </span>
+                                    <p class="planitem-text-planning">
+                                        <strong>Graphical planning:</strong>
+                                        drag, drop, and adjust schedules inside CARL Source.
+                                    </p>
+                                </li>
+
+                                <li class="planitem-planning">
+                                    <span class="planitem-ico-planning">
+                                        <i class="fas fa-brain list-icon"></i> 
+                                    </span>
+                                    <p class="planitem-text-planning">
+                                        <strong>AI optimization:</strong>
+                                        propose the best resource schedule considering skills, availability, and SLAs.
+                                    </p>
+                                </li>
+
+                                <li class="planitem-planning">
+                                    <span class="planitem-ico-planning">
+                                        <i class="fas fa-chart-area list-icon"></i>
+                                    </span>
+                                    <p class="planitem-text-planning">
+                                        <strong>Workload simulation:</strong>
+                                        preview plan releases and smooth peaks before publishing.
+                                    </p>
+                                </li>
+                            </ul>
+                        </div>
+
+                    </article>
+
+                    <!-- Services -->
+                    <article id="panel-mobile-planning" class="panel-planning reveal-planning" role="tabpanel"
+                        aria-labelledby="tab-services-planning" hidden>
+                        <!-- Execution on Mobile (HTML only, uses existing -planning classes) -->
+                        <div class="planblock-planning">
+                            <h3 class="planblock-title-planning">
+                                Execution on Mobile
+                                <span class="planblock-badge-planning">(CARL Touch)</span>
+                            </h3>
+
+                            <p class="planblock-sub-planning">
+                                Empower technicians to complete work orders in the field with a powerful mobile app.
+                            </p>
+
+                            <ul class="planlist-planning">
+                                <li class="planitem-planning">
+                                    <span class="planitem-ico-planning">
+                                        <!-- replace with your icon -->
+                                        <i class="fas fa-mobile-alt list-icon"></i>
+                                    </span>
+                                    <p class="planitem-text-planning">
+                                        <strong>Technicians receive work</strong> with priorities &amp; checklists,
+                                        capture photos, meters, and parts.
+                                    </p>
+                                </li>
+
+                                <li class="planitem-planning">
+                                    <span class="planitem-ico-planning">
+                                        <i class="fas fa-signature list-icon"></i>
+                                    </span>
+                                    <p class="planitem-text-planning">
+                                        <strong>Capture client e-signatures,</strong> online or offline.
+                                    </p>
+                                </li>
+                            </ul>
+                        </div>
+
+
+                    </article>
+                    <!-- Services -->
+                    <article id="panel-services-planning" class="panel-planning reveal-planning" role="tabpanel"
+                        aria-labelledby="tab-services-planning" hidden>
+                        <!-- Spatial Context (HTML only, uses same -planning classes) -->
+                        <div class="planblock-planning">
+                            <h3 class="planblock-title-planning">
+                                Spatial Context
+                                <span class="planblock-badge-planning">(optional: CARL Maps)</span>
+                            </h3>
+
+                            <p class="planblock-sub-planning">
+                                Visualize assets and scheduled work on maps, floor plans, and BIM models.
+                            </p>
+
+                            <ul class="planlist-planning">
+                                <li class="planitem-planning">
+                                    <span class="planitem-ico-planning">
+                                        <!-- replace with your icon -->
+                                        <i class="fas fa-map-marked-alt list-icon"></i>
+                                    </span>
+                                    <p class="planitem-text-planning">
+                                        <strong>See assets on 2D/3D maps, plans, BIM,</strong>
+                                        and navigate from site maps down to rooms.
+                                    </p>
+                                </li>
+
+                                <li class="planitem-planning">
+                                    <span class="planitem-ico-planning">
+                                        <i class="fas fa-search-location list-icon"></i>
+                                    </span>
+                                    <p class="planitem-text-planning">
+                                        <strong>Launch work, inspections, and searches</strong>
+                                        directly from the map; geoposition equipment.
+                                    </p>
+                                </li>
+                            </ul>
+                        </div>
+
+                    </article>
+
+                </div>
+            </div>
+        </section>
+
+
+
+<section class="key-features-mobility">
+  <div class="kf-wrap-mobility">
+    <h2 class="kf-title-mobility reveal-mobility">
+      <span class="kf-titleicon-mobility">
+        <!-- use your own SVG/icon if you like -->
+        <i class="fa-solid fa-table-cells-large"></i>
+      </span>
+      Key features
+    </h2>
+
+    <div class="kf-grid-mobility">
+      <!-- 1 -->
+      <article class="kf-card-mobility reveal-mobility">
+        <div class="kf-icon-mobility"><i class="fa-solid fa-file-lines"></i></div>
+        <h3 class="kf-label-mobility">Preventive plan templates</h3>
+      </article>
+
+      <!-- 2 -->
+      <article class="kf-card-mobility reveal-mobility">
+        <div class="kf-icon-mobility"><i class="fa-solid fa-rotate-right"></i></div>
+        <h3 class="kf-label-mobility">Auto WO release &amp; assignments</h3>
+      </article>
+
+      <!-- 3 -->
+      <article class="kf-card-mobility reveal-mobility">
+        <div class="kf-icon-mobility"><i class="fa-solid fa-robot"></i></div>
+        <h3 class="kf-label-mobility">AI scheduling<br>(skills/SLA/travel)</h3>
+      </article>
+
+      <!-- 4 -->
+      <article class="kf-card-mobility reveal-mobility">
+        <div class="kf-icon-mobility"><i class="fa-solid fa-map"></i></div>
+        <h3 class="kf-label-mobility">Maps/BIM/GIS planning</h3>
+      </article>
+
+      <!-- 5 -->
+      <article class="kf-card-mobility reveal-mobility">
+        <div class="kf-icon-mobility"><i class="fa-solid fa-mobile-screen"></i></div>
+        <h3 class="kf-label-mobility">Mobile execution &amp; e-signatures</h3>
+      </article>
+
+      <!-- 6 -->
+      <article class="kf-card-mobility reveal-mobility">
+        <div class="kf-icon-mobility"><i class="fa-solid fa-microchip"></i></div>
+        <h3 class="kf-label-mobility">IoT-driven maintenance</h3>
+      </article>
+    </div>
+  </div>
+</section>
+
+
+<section class="proof-points-planning">
+  <div class="pp-wrap-proof-points-planning">
+    <h2 class="pp-title-proof-points-planning reveal-mobility">
+      <span class="pp-icon-proof-points-planning" aria-hidden="true">
+        <!-- simple inline SVG icon -->
+        <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor">
+          <path d="M12 12a5 5 0 1 0-5-5 5 5 0 0 0 5 5zm0 2c-4.42 0-8 2.24-8 5v1a1 1 0 0 0 1 1h14a1 1 0 0 0 1-1v-1c0-2.76-3.58-5-8-5z"/>
+        </svg>
+      </span>
+      Proof points
+    </h2>
+
+    <div class="pp-grid-proof-points-planning">
+      <article class="pp-card-proof-points-planning reveal-mobility">
+        <h3 class="pp-card-title-proof-points-planning">Preventive plan automation in practice:</h3>
+        <p class="pp-card-text-proof-points-planning">
+          Malteurop case preventive plans automated; jobs uploaded and allocated based on availability.
+        </p>
+      </article>
+
+      <article class="pp-card-proof-points-planning reveal-mobility">
+        <h3 class="pp-card-title-proof-points-planning">Traceability:</h3>
+        <p class="pp-card-text-proof-points-planning">
+          “All information is traceable, validated, signed and accessible in real time.” (Dentaid, regulated environment).
+        </p>
+      </article>
+    </div>
+  </div>
+</section>
+<section class="kpi-highlight">
+  <div class="wrap-kpi-highlight">
+    <h2 class="title-kpi-highlight reveal-mobility">
+      <span class="icon-kpi-highlight" aria-hidden="true">
+        <!-- inline asterisk icon -->
+        <svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor">
+          <path d="M12 2a1 1 0 0 1 1 1v6.09l5.27-3.04a1 1 0 1 1 1 1.73L14 10.82l5.27 3.04a1 1 0 1 1-1 1.73L13 12.91V19a1 1 0 1 1-2 0v-6.09l-5.27 3.04a1 1 0 1 1-1-1.73L10 10.82 4.73 7.78a1 1 0 1 1 1-1.73L11 9.09V3a1 1 0 0 1 1-1z"/>
+        </svg>
+      </span>
+      KPI Highlights
+    </h2>
+
+    <div class="grid-kpi-highlight">
+      <article class="card-kpi-highlight reveal-mobility">
+        <div class="value-kpi-highlight">+50%</div>
+        <div class="label-kpi-highlight">Planning time saved</div>
+      </article>
+
+      <article class="card-kpi-highlight reveal-mobility">
+        <div class="value-kpi-highlight">+30%</div>
+        <div class="label-kpi-highlight">Team productivity</div>
+      </article>
+
+      <article class="card-kpi-highlight reveal-mobility">
+        <div class="value-kpi-highlight">-15%</div>
+        <div class="label-kpi-highlight">Mileage reduction</div>
+      </article>
+    </div>
+
+    <p class="note-kpi-highlight reveal-mobility">
+      *Vendor-reported benefits; results vary by context.
+    </p>
+  </div>
+</section>
+
+
+        <section class="faq-mobility">
+  <div class="faq-wrap-mobility">
+    <h2 class="faq-title-mobility reveal-mobility">
+      <span class="faq-title-icon-mobility"><i class="fas fa-question-circle icon"></i></span> FAQs
+    </h2>
+
+    <!-- Item 1 -->
+    <article class="faq-item-mobility reveal-mobility">
+      <button class="faq-q-mobility " aria-expanded="false">
+        <span>Can CARL Work Plans auto-create work orders?</span>
+        <span class="faq-toggle-mobility" aria-hidden="true"></span>
+      </button>
+      <div class="faq-a-mobility" hidden>
+        Yes plans can automatically release WOs on schedule or thresholds; assignments can be proposed/optimized.
+      </div>
+    </article>
+
+    <!-- Item 2 -->
+    <article class="faq-item-mobility reveal-mobility">
+      <button class="faq-q-mobility" aria-expanded="false">
+        <span> Do technicians need connectivity to complete planned work?</span>
+        <span class="faq-toggle-mobility" aria-hidden="true"></span>
+      </button>
+      <div class="faq-a-mobility" hidden>
+        No CARL Touch supports offline execution with later sync. This is ideal for remote sites or basements with poor connectivity.
+      </div>
+    </article>
+
+    <!-- Item 3 -->
+    <article class="faq-item-mobility reveal-mobility">
+      <button class="faq-q-mobility" aria-expanded="false">
+        <span>Can I see planned work on maps or drawings?</span>
+        <span class="faq-toggle-mobility" aria-hidden="true"></span>
+      </button>
+      <div class="faq-a-mobility" hidden>
+       Yes use CARL Maps for GIS, DWG, and BIM navigation and to launch actions from the map.
+      </div>
+    </article>
+
+  </div>
+        
+      
+</section>
+
+    </main>
+     <script>
+        (function () {
+            const targets = document.querySelectorAll('.reveal-mobility');
+            if (!targets.length) return;
+
+            // Fallback if IntersectionObserver is not supported
+            if (!('IntersectionObserver' in window)) {
+                targets.forEach(el => el.classList.add('is-visible-mobility'));
+                return;
+            }
+
+            const io = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('is-visible-mobility');
+                    } else {
+                        // Remove when out of view so it will animate again on scroll-up
+                        entry.target.classList.remove('is-visible-mobility');
+                    }
+                });
+            }, {
+                threshold: 0.2,            // 20% visible to trigger
+                rootMargin: '0px 0px -5% 0px'
+            });
+
+            targets.forEach(el => io.observe(el));
+        })();
+    </script>
+
+
+    <script>
+        /* IntersectionObserver reveal   shows elements when they enter the viewport,
+           hides them again when they leave (works on scroll down and up). */
+        (function () {
+            const els = document.querySelectorAll('.reveal-mobility');
+            if (!('IntersectionObserver' in window) || !els.length) {
+                els.forEach(el => el.classList.add('is-visible-mobility'));
+                return;
+            }
+
+            const io = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('is-visible-mobility');
+                    } else {
+                        entry.target.classList.remove('is-visible-mobility');
+                    }
+                });
+            }, { threshold: 0.18 });
+
+            els.forEach(el => io.observe(el));
+        })();
+    </script>
+    <script>
+(function () {
+  const items = document.querySelectorAll('.faq-item-mobility');
+
+  items.forEach(item => {
+    const btn = item.querySelector('.faq-q-mobility');
+    const panel = item.querySelector('.faq-a-mobility');
+
+    // For smooth open/close we animate height via inline style
+    const close = () => {
+      panel.style.maxHeight = null;
+      panel.hidden = true;
+      btn.setAttribute('aria-expanded', 'false');
+    };
+
+    const open = () => {
+      panel.hidden = false;                    // must be visible to measure
+      panel.style.maxHeight = panel.scrollHeight + 'px';
+      btn.setAttribute('aria-expanded', 'true');
+    };
+
+    // initialize closed
+    close();
+
+    btn.addEventListener('click', () => {
+      const expanded = btn.getAttribute('aria-expanded') === 'true';
+      if (expanded) {
+        close();
+      } else {
+        open();
+      }
+    });
+
+    // reset height on resize (content reflow)
+    window.addEventListener('resize', () => {
+      if (btn.getAttribute('aria-expanded') === 'true') {
+        panel.style.maxHeight = panel.scrollHeight + 'px';
+      }
+    });
+  });
+})();
+</script>
+    <script>
+        (function () {
+            // ----- Tabs -----
+            const tabsWrap = document.querySelector('.tabs-planning');
+            if (tabsWrap) {
+                const tabs = Array.from(tabsWrap.querySelectorAll('.tab-btn-planning'));
+                const panels = Array.from(document.querySelectorAll('.panel-planning'));
+
+                function activateTab(tab) {
+                    // Update button states
+                    tabs.forEach(btn => {
+                        const isActive = btn === tab;
+                        btn.classList.toggle('is-active-planning', isActive);
+                        btn.setAttribute('aria-selected', isActive ? 'true' : 'false');
+                    });
+
+                    // Show matching panel, hide others
+                    const targetId = tab.getAttribute('aria-controls');
+                    panels.forEach(p => {
+                        if (p.id === targetId) {
+                            p.hidden = false;
+                            p.classList.add('is-visible-panel-planning');
+                        } else {
+                            p.hidden = true;
+                            p.classList.remove('is-visible-panel-planning');
+                        }
+                    });
+                }
+
+                // Click handlers
+                tabs.forEach(btn => {
+                    btn.addEventListener('click', () => activateTab(btn));
+                });
+
+                // Keyboard support (Left/Right)
+                tabsWrap.addEventListener('keydown', (e) => {
+                    const idx = tabs.indexOf(document.activeElement);
+                    if (idx === -1) return;
+                    if (e.key === 'ArrowRight') {
+                        e.preventDefault();
+                        const next = tabs[(idx + 1) % tabs.length];
+                        next.focus(); activateTab(next);
+                    } else if (e.key === 'ArrowLeft') {
+                        e.preventDefault();
+                        const prev = tabs[(idx - 1 + tabs.length) % tabs.length];
+                        prev.focus(); activateTab(prev);
+                    }
+                });
+            }
+
+            // ----- Reveal on scroll (down & up) -----
+            const reveals = document.querySelectorAll('.reveal-planning');
+            if (!reveals.length) return;
+
+            if (!('IntersectionObserver' in window)) {
+                reveals.forEach(el => el.classList.add('is-visible-planning'));
+                return;
+            }
+
+            const io = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('is-visible-planning');
+                    } else {
+                        // remove when out of view so it animates again on scroll-up
+                        entry.target.classList.remove('is-visible-planning');
+                    }
+                });
+            }, { threshold: 0.2 });
+
+            reveals.forEach(el => io.observe(el));
+        })();
+    </script>
+
+    {% include 'footer.html' %}
+</body>
+
+</html>

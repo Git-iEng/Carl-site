@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load static %}
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Carl Compliance & Safety Management</title>
+   <meta name="description"
+        content="Protect assets and operations with CARL’s compliance and safety management software access governance, SSO, encryption, and audit trails built in.">
+  <link rel="stylesheet" href="{% static 'css/compliance.css' %}">
+  <link rel="stylesheet" href="{% static 'css/home.css' %}">
+  <link rel="stylesheet" href="{% static 'css/factory.css' %}">
+  <link rel="icon" href="{% static 'images/logo1.png' %}">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="{% static 'css/footer.css' %}">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <main>
+    {% include 'header.html' %}
+
+    <!-- HERO -->
+    <header class="hero">
+      <div class="hero-overlay"></div>
+      <div class="hero-content">
+        <h1 class="headline">Compliance & Safety Management</h1>
+        <div class="cta-buttons">
+          <a href="#" class="btn btn-primary js-open-demo">Request a Demo</a>
+        </div>
+      </div>
+    </header>
+
+    <!-- KEY FEATURES -->
+    <section class="section-compliance-safety-carl">
+      <div class="container-compliance-safety-carl">
+        <h2 class="section-title-compliance-safety-carl">
+          <i class="fas fa-shield-alt"></i> Key Compliance Features
+        </h2>
+
+        <div class="grid-3-compliance-safety-carl">
+          <article class="card-compliance-safety-carl">
+            <h3 class="card-title-compliance-safety-carl">Access Governance</h3>
+            <ul class="list-compliance-safety-carl">
+              <li>Joiner–Mover–Leaver lifecycle with approvals and auditability.</li>
+              <li>Role-based access control, least-privilege, periodic access reviews.</li>
+              <li>Unique user accounts; use of shared accounts requires strong secondary controls.</li>
+            </ul>
+          </article>
+
+          <article class="card-compliance-safety-carl">
+            <h3 class="card-title-compliance-safety-carl">Security & Identity</h3>
+            <ul class="list-compliance-safety-carl">
+              <li>Federated SSO via customer IdP (SAML v2 / OIDC); MFA enforced by the IdP.</li>
+              <li>Configurable session and inactivity timeouts.</li>
+              <li>Optional IP allow/deny controls and network access restrictions.</li>
+            </ul>
+          </article>
+
+          <article class="card-compliance-safety-carl">
+            <h3 class="card-title-compliance-safety-carl">Encryption</h3>
+            <ul class="list-compliance-safety-carl">
+              <li>TLS 1.2+ (TLS 1.3 preferred) for data in transit.</li>
+              <li>AES-256 or stronger encryption for data at rest, including backups.</li>
+              <li>Secure file transfer supported (e.g., SFTP) where applicable.</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- BENEFITS -->
+    <section class="section-alt-compliance-safety-carl">
+      <div class="container-compliance-safety-carl">
+        <h2 class="section-title-compliance-safety-carl">
+          <i class="fas fa-check-circle"></i> Compliance Benefits
+        </h2>
+
+        <div class="grid-3-compliance-safety-carl">
+          <article class="card-compliance-safety-carl">
+            <h3 class="card-title-compliance-safety-carl">Risk Reduction</h3>
+            <p>Preventive controls, approvals and auditability help reduce operational and security risk.</p>
+          </article>
+          <article class="card-compliance-safety-carl">
+            <h3 class="card-title-compliance-safety-carl">Operational Efficiency</h3>
+            <p>Standardised workflows streamline approvals and simplify evidence collection for audits.</p>
+          </article>
+          <article class="card-compliance-safety-carl">
+            <h3 class="card-title-compliance-safety-carl">Audit-Ready</h3>
+            <p>Comprehensive logs, reviews and reports available to support internal and external audits.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ACCORDION: SECURITY & GOVERNANCE -->
+    <section class="section-compliance-safety-carl">
+      <div class="container-compliance-safety-carl">
+        <h2 class="section-title-compliance-safety-carl">
+          <i class="fas fa-lock"></i> Security & Governance Overview
+        </h2>
+
+        <div class="accordion-compliance-safety-carl" id="acc-core">
+          <!-- Access Control -->
+          <details class="acc-item-compliance-safety-carl" open>
+            <summary class="acc-summary-compliance-safety-carl">Access Control</summary>
+            <div class="acc-panel-compliance-safety-carl">
+              <ul class="list-compliance-safety-carl">
+                <li>Documented access administration with approvals and traceability.</li>
+                <li>Least-privilege, job-aligned roles; periodic recertification of access.</li>
+                <li>Strong credential handling; external users authenticated via IdP.</li>
+                <li>High-privilege access governed through customer identity provider.</li>
+              </ul>
+            </div>
+          </details>
+
+          <!-- Information Security Governance -->
+          <details class="acc-item-compliance-safety-carl">
+            <summary class="acc-summary-compliance-safety-carl">Information Security Governance</summary>
+            <div class="acc-panel-compliance-safety-carl">
+              <ul class="list-compliance-safety-carl">
+                <li>Controls aligned to recognised frameworks (e.g., ISO 27001, SOC 2).</li>
+                <li>Multi-tenant protections including logical isolation, RBAC and encryption.</li>
+                <li>Security control health and status available to support customer monitoring.</li>
+                <li>Contractual clarity on data ownership, roles and exit procedures.</li>
+              </ul>
+            </div>
+          </details>
+
+          <!-- Logging & Monitoring -->
+          <details class="acc-item-compliance-safety-carl">
+            <summary class="acc-summary-compliance-safety-carl">Logging & Monitoring</summary>
+            <div class="acc-panel-compliance-safety-carl">
+              <ul class="list-compliance-safety-carl">
+                <li>Audit logs capture user, action and timestamp with integrity protections.</li>
+                <li>Security monitoring with alerting; KPI and SLA reporting where applicable.</li>
+                <li>Protective controls include IDS/IPS, endpoint protection and anti-DDoS.</li>
+              </ul>
+            </div>
+          </details>
+
+          <!-- Incident Management -->
+          <details class="acc-item-compliance-safety-carl">
+            <summary class="acc-summary-compliance-safety-carl">Incident Management</summary>
+            <div class="acc-panel-compliance-safety-carl">
+              <ul class="list-compliance-safety-carl">
+                <li>Formal incident response procedures with rapid assessment and containment.</li>
+                <li>Customer notification of security or privacy incidents in line with contract.</li>
+                <li>Support for forensic preservation and audit requests under agreed terms.</li>
+              </ul>
+            </div>
+          </details>
+
+          <!-- Network & Application Security -->
+          <details class="acc-item-compliance-safety-carl">
+            <summary class="acc-summary-compliance-safety-carl">Network & Application Security</summary>
+            <div class="acc-panel-compliance-safety-carl">
+              <ul class="list-compliance-safety-carl">
+                <li>Layered defenses including WAF, firewalls, secure proxy and network segmentation.</li>
+                <li>Separation of management and production traffic; hardened services and endpoints.</li>
+                <li>Malware defenses with scheduled scanning and tamper-resistance.</li>
+              </ul>
+            </div>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <!-- BACKUP / DR -->
+    <section class="section-alt-compliance-safety-carl">
+      <div class="container-compliance-safety-carl">
+        <h2 class="section-title-compliance-safety-carl">
+          <i class="fas fa-database"></i> Backup, DR & Business Continuity
+        </h2>
+
+        <div class="grid-2-compliance-safety-carl">
+          <article class="card-compliance-safety-carl">
+            <h3 class="card-title-compliance-safety-carl">Backups & Retention</h3>
+            <ul class="list-compliance-safety-carl">
+              <li>Regular full and incremental backups; encrypted at rest and tested.</li>
+              <li>Schedules and retention configurable to customer policy.</li>
+            </ul>
+          </article>
+
+          <article class="card-compliance-safety-carl">
+            <h3 class="card-title-compliance-safety-carl">Continuity Targets</h3>
+            <ul class="list-compliance-safety-carl">
+              <li>Service recovery aligned to defined RTO/RPO and documented runbooks.</li>
+              <li>Redundancy and contingency plans maintained and periodically exercised.</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- CAPACITY & VULNERABILITY MGMT -->
+    <section class="section-compliance-safety-carl">
+      <div class="container-compliance-safety-carl">
+        <h2 class="section-title-compliance-safety-carl">
+          <i class="fas fa-chart-line"></i> Capacity, Patching & Vulnerability Management
+        </h2>
+
+        <div class="grid-3-compliance-safety-carl">
+          <article class="card-compliance-safety-carl">
+            <h3 class="card-title-compliance-safety-carl">Capacity & Availability Management</h3>
+            <p>Scalable architecture with load balancing and monitoring to sustain peak loads.</p>
+          </article>
+          <article class="card-compliance-safety-carl">
+            <h3 class="card-title-compliance-safety-carl">Patch and Configuration Management</h3>
+            <p>Change control with staged patching, configuration baselines and compliance tracking.</p>
+          </article>
+          <article class="card-compliance-safety-carl">
+            <h3 class="card-title-compliance-safety-carl">Vulnerability Management</h3>
+            <p>Routine scanning, prioritised remediation and verification prior to closure.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECURITY & COMPLIANCE SECTION -->
+    <section class="security-wrap-compliance-safety-carl">
+      <div class="container-compliance-safety-carl">
+        <header class="security-head-compliance-safety-carl">
+          <div class="security-icon-compliance-safety-carl">
+            <i class="fa-solid fa-shield-halved"></i>
+          </div>
+          <h2 class="security-title-compliance-safety-carl">Security &amp; Compliance</h2>
+          <p class="security-subtitle-compliance-safety-carl">
+            Built with controls aligned to recognised standards, CARL helps protect data end-to-end and stay audit-ready.
+          </p>
+          <div class="security-badges-compliance-safety-carl">
+            <img src="{% static 'images/logo/ISO27001.png' %}" alt="ISO/IEC 27001 (hosting infrastructure)" class="security-badge-compliance-safety-carl" />
+            <img src="{% static 'images/logo/soc2.avif' %}" alt="SOC 2 (framework alignment)" class="security-badge-compliance-safety-carl" />
+          </div>
+        </header>
+
+        <div class="security-pills-compliance-safety-carl">
+          <div class="pill-compliance-safety-carl reveal-security-compliance-safety-carl">
+            <!-- <i class="fa-solid fa-user-shield"></i> -->
+            <span>Role-based access &amp; audit trails</span>
+          </div>
+          <div class="pill-compliance-safety-carl reveal-security-compliance-safety-carl" style="--delay-sec:80ms">
+            <!-- <i class="fa-solid fa-cloud"></i> -->
+            <span>Federated SSO (SAML/OIDC) via your IdP</span>
+          </div>
+          <div class="pill-compliance-safety-carl reveal-security-compliance-safety-carl" style="--delay-sec:160ms">
+            <!-- <i class="fa-solid fa-lock"></i> -->
+            <span>TLS in transit &amp; AES-256 at rest</span>
+          </div>
+        </div>
+
+        <div class="security-grid-compliance-safety-carl">
+          <article class="security-card-compliance-safety-carl reveal-security-compliance-safety-carl">
+            <!-- <i class="fa-solid fa-key"></i> -->
+            <h3>Access Governance</h3>
+            <p>JML workflow, least-privilege RBAC, approvals and periodic recertifications.</p>
+          </article>
+
+          <article class="security-card-compliance-safety-carl reveal-security-compliance-safety-carl" style="--delay-sec:60ms">
+            <!-- <i class="fa-solid fa-fingerprint"></i> -->
+            <h3>Identity &amp; SSO</h3>
+            <p>Integrates with enterprise IdP (SAMLv2/OIDC). MFA and password policy enforced by directory.</p>
+          </article>
+
+          <article class="security-card-compliance-safety-carl reveal-security-compliance-safety-carl" style="--delay-sec:120ms">
+            <!-- <i class="fa-solid fa-shield"></i> -->
+            <h3>Network &amp; App Security</h3>
+            <p>WAF, firewalls, IDS/IPS, segmentation, anti-DDoS and hardened endpoints.</p>
+          </article>
+
+          <article class="security-card-compliance-safety-carl reveal-security-compliance-safety-carl">
+            <!-- <i class="fa-solid fa-database"></i> -->
+            <h3>Backups &amp; DR</h3>
+            <p>Encrypted full/incremental backups, tested restores; retention per policy and RPO/RTO.</p>
+          </article>
+
+          <article class="security-card-compliance-safety-carl reveal-security-compliance-safety-carl" style="--delay-sec:60ms">
+            <!-- <i class="fa-solid fa-magnifying-glass-chart"></i> -->
+            <h3>Logging &amp; Monitoring</h3>
+            <p>Auditable logs with integrity protections and KPI reporting.</p>
+          </article>
+
+          <article class="security-card-compliance-safety-carl reveal-security-compliance-safety-carl" style="--delay-sec:120ms">
+            <!-- <i class="fa-solid fa-server"></i> -->
+            <h3>Hosting</h3>
+            <p>Primary in-region hosting with secondary region for disaster recovery.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Simple reveal on scroll (unchanged) -->
+  <script>
+    (function(){
+      const els = document.querySelectorAll('.card-compliance-safety-carl, .section-title-compliance-safety-carl');
+      if(!('IntersectionObserver' in window)) return;
+      const io = new IntersectionObserver((entries)=>{
+        entries.forEach(en=>{ if(en.isIntersecting){ en.target.classList.add('in-compliance-safety-carl'); }});
+      }, {threshold: 0.12});
+      els.forEach(el=>io.observe(el));
+    })();
+  </script>
+
+  <script>
+    (function(){
+      const els = document.querySelectorAll('.reveal-security-compliance-safety-carl, .pill-compliance-safety-carl, .security-card-compliance-safety-carl');
+      if(!('IntersectionObserver' in window) || !els.length){
+        els.forEach(el => el.classList.add('in-security-compliance-safety-carl'));
+        return;
+      }
+      const io = new IntersectionObserver((entries)=>{
+        entries.forEach(en=>{
+          if(en.isIntersecting){
+            en.target.classList.add('in-security-compliance-safety-carl');
+          }
+        });
+      }, {threshold:.16});
+      els.forEach(el=>io.observe(el));
+    })();
+  </script>
+
+  {% include 'footer.html' %}
+</body>
+</html>

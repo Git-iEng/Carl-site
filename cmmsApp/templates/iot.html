@@ -1,0 +1,298 @@
+ <!DOCTYPE html>
+<html lang="en">
+{% load static %}
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CMMS-Software</title>
+  
+
+  <link rel="stylesheet" href="{% static 'css/iot.css' %}">
+  <link rel="icon" href="{% static 'images/logo1.png' %}">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <link rel="stylesheet" href="{% static 'css/footer.css' %}">
+
+</head>
+
+<body>
+  {% include 'header.html' %}
+  <section class="cmms-rcm">
+    <div class="cmms-rcm-content">
+      <h1>Increase efficiency & drive growth</h1>
+      <p>Whether you're a small startup or an established enterprise, our technology will help you save time.</p>
+    </div>
+  </section>
+<section class="cmms-rcm-next-card-iot-device collaboration-card-iot-device">
+    <div class="cmms-rcm-container-card-iot-device">
+        
+        <!-- Left Block -->
+        <div class="cmms-rcm-left-card-iot-device">
+            <h2>Seamless Collaboration</h2>
+            <p>Display a banner at the top or bottom of the page informing visitors that your site uses cookies.</p>
+            <div class="card-card-iot-device">
+                <img src="{% static 'images/iot1.avif' %}" alt="Collaboration Image">
+            </div>
+        </div>
+
+        <!-- Right Block -->
+        <div class="cmms-rcm-right-card-iot-device">
+            <h2>Boost Productivity</h2>
+            <p>Communication is the key to success, and our collaboration features are built to foster effective
+                teamwork.</p>
+            <div class="card-card-iot-device">
+                <img src="{% static 'images/iot2.avif' %}" alt="Productivity Image">
+            </div>
+        </div>
+
+    </div>
+</section>
+
+  <section class="cmms-rcm-business-section">
+    <div class="cmms-rcm-business-container">
+      <div class="cmms-rcm-business-left">
+        <h2>Experience the future of business</h2>
+        <div class="cmms-rcm-business-feature">
+          <h3>Scalable & Secure</h3>
+          <p>Monitor key performance indicators, track user behavior, and unlock valuable insights to optimize your
+            strategies.</p>
+        </div>
+        <div class="cmms-rcm-business-feature">
+          <h3>Integrations Easy</h3>
+          <p>Seamlessly connect with your favorite tools and platforms to streamline workflows, automate tasks.</p>
+        </div>
+        <div class="cmms-rcm-business-feature">
+          <h3>24/7 Support</h3>
+          <p>Clock expert assistance whenever you need it, ensuring your operations run smoothly with zero downtime.</p>
+        </div>
+        <button class="cmms-rcm-business-get-started">Get Started →</button>
+      </div>
+      <div class="cmms-rcm-business-right">
+        <img src="{% static 'images/buisness-new.avif' %}" alt="Team Meeting Image">
+      </div>
+    </div>
+  </section>
+  <section class="cmms-rcm-stacked">
+    <div class="cmms-rcm-stacked__wrap" id="cmmsStackWrap">
+      <div class="cmms-rcm-stacked__grid">
+        <!-- LEFT: copy -->
+        <div class="cmms-rcm-stacked__left">
+          <h2>We’re here for you<br>every step of the way</h2>
+          <p>It is a powerful platform designed to revolutionize the way you manage and operate your business.</p>
+        </div>
+
+        <!-- RIGHT: pinned card stack -->
+        <div class="cmms-rcm-stacked__right">
+          <div class="cmms-rcm-stacked__bg" id="cmmsStackBg"></div>
+
+          <div class="cmms-rcm-stacked__stack" id="cmmsStack">
+            <!-- Card 1 -->
+            <article class="cmms-rcm-stacked__card" data-bg="#d9f99d">
+              <div class="cmms-rcm-stacked__card-top">$15M+</div>
+              <div class="cmms-rcm-stacked__card-sub">Happy global users</div>
+            </article>
+
+            <!-- Card 2 -->
+            <article class="cmms-rcm-stacked__card" data-bg="#e5f2ff">
+              <div class="cmms-rcm-stacked__card-top">35,40+</div>
+              <div class="cmms-rcm-stacked__card-sub">Startups to be connected</div>
+            </article>
+
+            <!-- Card 3 (with image example) -->
+            <article class="cmms-rcm-stacked__card cmms-rcm-stacked__card--media" data-bg="#fde68a">
+              <img src="https://images.unsplash.com/photo-1557800636-894a64c1696f?q=80&w=1600&auto=format&fit=crop"
+                alt="">
+            </article>
+
+            <!-- Card 4 -->
+            <article class="cmms-rcm-stacked__card" data-bg="#e5ecea">
+              <div class="cmms-rcm-stacked__card-top">64+</div>
+              <div class="cmms-rcm-stacked__card-sub">Global Members</div>
+            </article>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+<section class="blogs-wrap-cmms-blogs-iot">
+  <div class="blogs-container-cmms-blogs-iot">
+    <div class="blogs-head-cmms-blogs-iot">
+      <div>
+        <h2>Our latest blog</h2>
+        <p>Automate repetitive tasks, and empower your team to
+          focus on what they do best.</p>
+      </div>
+      <a href="/get-started" class="blogs-cta-cmms-blogs-iot">Get Started
+        <span aria-hidden="true">→</span>
+      </a>
+    </div>
+
+    <div class="blogs-grid-cmms-blogs-iot">
+      <!-- Card 1 -->
+      <article class="blog-card-cmms-blogs-iot">
+        <a class="blog-media-cmms-blogs-iot" href="/blog/our-suite-of-tools" aria-label="Read: Our suite of tools is specifically designed">
+          <img src="{% static 'images/blog1.avif' %}" alt="Team discussing with tablets">
+        </a>
+        <div class="blog-meta-cmms-blogs-iot">Feb 12, 2025</div>
+        <h3 class="blog-title-cmms-blogs-iot">
+          <a href="/blog/our-suite-of-tools">Our suite of tools is specifically designed</a>
+        </h3>
+        <div class="blog-underline-cmms-blogs-iot"></div>
+      </article>
+
+      <!-- Card 2 -->
+      <article class="blog-card-cmms-blogs-iot">
+        <a class="blog-media-cmms-blogs-iot" href="/blog/unlocking-smarter-support" aria-label="Read: Unlocking smarter customer support with AI">
+          <img src="{% static 'images/blog2.avif' %}" alt="Team collaborating around a monitor">
+        </a>
+        <div class="blog-meta-cmms-blogs-iot">Apr 13, 2025</div>
+        <h3 class="blog-title-cmms-blogs-iot">
+          <a href="/blog/unlocking-smarter-support">Unlocking smarter customer support with AI</a>
+        </h3>
+        <div class="blog-underline-cmms-blogs-iot"></div>
+      </article>
+
+      <!-- Card 3 -->
+      <article class="blog-card-cmms-blogs-iot">
+        <a class="blog-media-cmms-blogs-iot" href="/blog/ai-revolutionizing-support" aria-label="Read: How AI Is Revolutionizing Customer Support">
+          <img src="{% static 'images/blog3.avif' %}" alt="Group working with laptops">
+          
+        </a>
+        <div class="blog-meta-cmms-blogs-iot">Apr 20, 2025</div>
+        <h3 class="blog-title-cmms-blogs-iot">
+          <a href="/blog/ai-revolutionizing-support">How AI Is Revolutionizing Customer Support</a>
+        </h3>
+        <div class="blog-underline-cmms-blogs-iot"></div>
+      </article>
+    </div>
+  </div>
+</section>
+<section class="choose-wrap-choose-iot">
+  <div class="choose-container-choose-iot">
+    <div class="choose-head-choose-iot">
+      <h2>Why Choose Us?</h2>
+      <p>Exbit is a powerful platform designed to revolutionize the way
+        you manage and operate your business.</p>
+    </div>
+
+    <div class="choose-grid-choose-iot">
+      <article class="choose-card-choose-iot">
+        <div class="choose-icon-choose-iot">
+          <i class="fa-solid fa-hands-clapping"></i>
+        </div>
+        <h3 class="choose-title-choose-iot">Innovative Solution</h3>
+        <p class="choose-desc-choose-iot">Our team is constantly pushing the most
+          boundaries of what's possible…</p>
+        <a class="choose-link-choose-iot" href="#get-started">
+          Get Started <span class="arrow-choose-iot">→</span>
+        </a>
+      </article>
+      <article class="choose-card-choose-iot">
+        <div class="choose-icon-choose-iot">
+          <i class="fa-solid fa-hands-clapping"></i>
+        </div>
+        <h3 class="choose-title-choose-iot">Customer-Centric Approach</h3>
+        <p class="choose-desc-choose-iot">We prioritize our customers' needs above all else, striving to deliver personalized.</p>
+        <a class="choose-link-choose-iot" href="#get-started">
+          Get Started <span class="arrow-choose-iot">→</span>
+        </a>
+      </article>
+      <article class="choose-card-choose-iot">
+        <div class="choose-icon-choose-iot">
+          <i class="fa-solid fa-hands-clapping"></i>
+        </div>
+        <h3 class="choose-title-choose-iot">Reliability and Security</h3>
+        <p class="choose-desc-choose-iot">With a robust infrastructure and strin-gent security measures in place…</p>
+        <a class="choose-link-choose-iot" href="#get-started">
+          Get Started <span class="arrow-choose-iot">→</span>
+        </a>
+      </article>
+      <article class="choose-card-choose-iot">
+        <div class="choose-icon-choose-iot">
+          <i class="fa-solid fa-hands-clapping"></i>
+        </div>
+        <h3 class="choose-title-choose-iot">Seamless Scalability</h3>
+        <p class="choose-desc-choose-iot">Built to grow with your business to adapt, effortlessly adapts to increase user.…</p>
+        <a class="choose-link-choose-iot" href="#get-started">
+          Get Started <span class="arrow-choose-iot">→</span>
+        </a>
+      </article>
+      
+
+
+      <!-- Repeat 3 more cards -->
+    </div>
+  </div>
+</section>
+
+  <script>
+    (() => {
+      const wrap = document.getElementById('cmmsStackWrap');
+      const stack = document.getElementById('cmmsStack');
+      const bg = document.getElementById('cmmsStackBg');
+      const cards = Array.from(stack.querySelectorAll('.cmms-rcm-stacked__card')); // 4
+
+      // base offsets for stacked look
+      const layers = cards.length;
+      function applyTransforms(activeIndex, tWithin) {
+        cards.forEach((card, i) => {
+          const depth = i - activeIndex; // 0 = active, >0 below, <0 above (already passed)
+          const clamped = Math.max(Math.min(depth, 3), -3);
+
+          // spacing & scale per layer
+          const y = clamped * 24;         // px distance per layer
+          const sc = 1 - Math.abs(clamped) * 0.05;
+          const rx = Math.abs(clamped) * 2; // subtle tilt
+
+          card.style.setProperty('--y', y + 'px');
+          card.style.setProperty('--s', sc);
+          card.style.setProperty('--rx', (clamped > 0 ? 2 : 0) + 'deg');
+          card.style.zIndex = (layers - Math.max(0, clamped)); // keep active on top
+          card.style.opacity = (clamped <= 2) ? 1 : 0; // safety for extra layers
+        });
+
+        // background tint = active card's data-bg
+        const clr = cards[activeIndex]?.dataset.bg || '#0f3e41';
+        bg.style.backgroundColor = clr;
+      }
+
+      function onScroll() {
+        const rect = wrap.getBoundingClientRect();
+        const viewH = window.innerHeight;
+        const scrollable = wrap.offsetHeight - viewH;
+        const passed = Math.min(Math.max(-rect.top, 0), scrollable);
+
+        
+        // progress 0..1 across the whole wrapper
+        const p = scrollable ? passed / scrollable : 0;
+
+        // split into equal segments for each card (4 segments)
+        const segment = 1 / layers;
+        let active = layers - 1 - Math.floor((1 - p) / segment);
+        active = Math.min(Math.max(active, 0), layers - 1);
+
+        // local progress inside current segment (not used heavily here but handy)
+        const start = active * segment;
+        const tWithin = (p - start) / segment;
+
+        applyTransforms(active, tWithin);
+      }
+
+      // init
+      applyTransforms(0, 0);
+      window.addEventListener('scroll', onScroll, { passive: true });
+      window.addEventListener('resize', onScroll);
+      onScroll();
+    })();
+  </script>
+
+
+  {% include 'footer.html' %}
+
+  <script src="{% static 'js/main.js'%}"></script>
+
+</body>
+
+</html>

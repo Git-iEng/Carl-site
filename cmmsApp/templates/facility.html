@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load static %}
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Carl Facility</title>
+   <meta name="description"
+        content="Manage buildings and infrastructure with CARL Source Facility an all-in-one CMMS for maintenance, safety, energy, and service contracts.">
+
+  <!--=============== CSS ===============-->
+  <link rel="stylesheet" href="{% static 'css/home.css' %}">
+  <link rel="stylesheet" href="{% static 'css/factory.css' %}">
+  <link rel="icon" href="{% static 'images/logo1.png' %}">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <link rel="stylesheet" href="{% static 'css/footer.css' %}">
+
+
+</head>
+
+<body>
+  {% include 'header.html' %}
+  <section class="hero-section">
+    <div class="container">
+      <div class="hero-container">
+        <div class="hero-text">
+          <h1 class="hero-title">CARL Source Facility<br></h1>
+          <p class="hero-subtitle">
+            Technical management software for real estate, <br>
+            infrastructure and networks of companies working in the tertiary sector.
+          </p>
+          <div class="hero-buttons">
+            <a href="#" class="btn btn-primary js-open-demo">Request a Demo</a>
+            <!-- <a href="#features" class="btn btn-secondary">See features</a> -->
+          </div>
+        </div>
+
+        <div class="hero-image-wrapper">
+          <img src="{% static 'images/home/facilitynew.png' %}" alt="Bridge infrastructure" class="hero-img">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="features-section">
+    <div class="container">
+      <h2>CMMS solution for real estate</h2>
+      <p class="subheading">A single software tool for the global management of your assets and equipment.</p>
+      <div class="factory-paragraph">
+        <p class="factory-about-text">
+          An expert in operation and maintenance management solutions since 1985, CARL Berger-Levrault designs IT
+          solutions aimed at meeting the challenges of Facility Management. Designed in partnership with the major
+          players in the business (technical and real estate operators, donors, general services, professional
+          associations, etc.), our tools help you to cope with the new constraints of Facility Management. We offer a
+          solution dedicated to the complete management of buildings (establishments open to the public, housing,
+          schools, etc.), points of sale (Retail), infrastructure and networks :<strong> CARL Source Facility</strong>.
+        </p>
+        <p class="factory-about-text">
+          Optimize the maintenance and operation of your real estate assets. General services, technical teams,
+          maintenance operators, property managers… you must ensure your customers are in the best conditions for
+          providing services and operating the resources made available, availability of equipment, compliance with
+          legal obligations, optimization costs, safety and user satisfaction
+        </p>
+      </div>
+
+
+      <div class="factory-container" id="features">
+
+        <div class="factory-overview">
+          <h2>A unique TAM, CMMS and EAM solution to manage your buildings, networks, infrastructure.</h2>
+          <!-- <p>Optimize your maintenance performance, manage your industrial equipment and your general resources</p> -->
+          <img src="{% static 'images/facility-unique.png' %}" alt="CMMS Dashboard" class="factory-img">
+        </div>
+        <div class="factory-advantages">
+          <ul class="factory-list">
+            <li>A repository of assets and equipment: condition records, surface areas, etc.</li>
+            <li>Multi-scale interactivity: DWG diagrams (AutoCAD®), Building Information Models (BIM), and GIS (ArcGIS®
+              or
+              Mapguide).</li>
+            <li>Rental management of buildings and infrastructure (occupiers, lease agreements, issuance of receipts on
+              leases, etc.).</li>
+            <li>Tenant-service management.</li>
+            <li>All types of maintenance (restorative, preventive, predictive, security, etc.).</li>
+            <li>Automatic integration of regulatory reports.</li>
+            <li>Management of service providers (contracts, warranties, etc.).</li>
+            <li>After-sales service processes (customers, price quotes, etc.).</li>
+            <li>Energy and environmental performance.</li>
+            <li>Built-in connectors: BAS, BMS…</li>
+            <li>IoT platform: connected objects, real-time optimization of equipment, predictive maintenance, artificial
+              intelligence.</li>
+          </ul>
+        </div>
+      </div>
+
+
+
+      <div class="factory-container reverse">
+        <div class="factory-overview">
+          <h2>Keep track of your real estate, equipment, plots</h2>
+          <p>CARL Source Facility helps you to structure the knowledge database of your assets throughout their life
+            cycle.</p>
+          <img src="{% static 'images/facility-keep.png' %}" alt="CMMS Dashboard" class="factory-img">
+        </div>
+        <div class="factory-advantages">
+          <!-- <h3>Enjoy the advantages of industry-specific software</h3> -->
+          <ul class="factory-list">
+            <li><strong>Each key element of an asset</strong> (site, building, floor, room, plot, device, etc.) is
+              described on an identity card: condition record, technical characteristics, warranties, multimedia
+              documents, surface areas, depreciation values, occupied plots, geocoded routes & addresses, etc.</li>
+            <li><strong>Interactive and intuitive multi-tree display of your equipment</strong>: functional, location,
+              technical, etc.</li>
+            <li><strong>Graphic navigation</strong>, integration and interactivity of diagrams and maps (GIS), 3D
+              digital models (BIM), geolocation of equipment, etc.</li>
+            <li><strong>Direct access to key information</strong> and to the e-record of devices (history of maintenance
+              work, preventive plans, diagrams and drawings, risks, and precautions to be observed, etc.).</li>
+            <li><strong>Visual representation of energy networks</strong> and utilities: immediate display of the
+              consequences in the event of a failure occurring on a key device.</li>
+            <li><strong>Track rental contracts</strong> (leases for landlords and tenants) from initial signature and
+              walk-through report to receipts for rent and rental charges.</li>
+            <li><strong>Manage tenants</strong> (associations, local authorities, legal entities, etc.) and optimize
+              leased surfaces.</li>
+          </ul>
+        </div>
+      </div>
+      <div class="factory-container">
+        <div class="factory-overview">
+          <h2>Guarantee equipment uptime and personnel safety</h2>
+          <p>CARL Source Facility helps you to guarantee a high level of equipment uptime and ensures user safety</p>
+          <img src="{% static 'images/facility-guarantee.png' %}" alt="CMMS Dashboard" class="factory-img">
+        </div>
+        <div class="factory-advantages">
+          <!-- <h3>Enjoy the advantages of industry-specific software</h3> -->
+          <ul class="factory-list">
+            <li><strong>Help Desk functions</strong> for users to improve responsiveness and their enjoyment of the
+              quality of the service rendered.</li>
+            <li><strong>Analysis and assistance</strong> with troubleshooting by presenting possible solutions according
+              to the symptoms and the identified causes of failure.</li>
+            <li>Take account of <strong>regulatory constraints</strong> and safety registers to facilitate legal
+              compliance.</li>
+            <li>Take account of the <strong>level of certification</strong> of the person(s) involved when assigning
+              work tasks.</li>
+          </ul>
+        </div>
+      </div>
+      <div class="factory-container reverse">
+        <div class="factory-overview" style="text-align: justify;">
+          <h2>Track your service providers and manage your contracts</h2>
+          <p>CARL Source Facility allows you to assess quality and keep the cost of supply contracts and subcontracting
+            under control</p>
+          <!-- <img src="{% static 'images/laptop.jpg' %}" alt="CMMS Dashboard" class="factory-img"> -->
+        </div>
+        <div class="factory-advantages">
+          <!-- <h3>Enjoy the advantages of industry-specific software</h3> -->
+          <ul class="factory-list">
+            <li><strong>Manage purchases and stocks</strong>: purchasing contracts, procurement contracts, supplier
+              qualification and indicators, manufacturer lots, etc.</li>
+            <li><strong>Create a single article and service repository</strong> that includes the conditions negotiated
+              in your contracts.</li>
+            <li><strong>Import supplier catalogues</strong> and price updates.</li>
+            <li><strong>Issue alert</strong> in the event of non-compliance with contractual obligations.</li>
+            <li><strong>Quantified and objective elements</strong> to assess the performance of service providers.</li>
+            <li><strong>Run checks</strong> to verify the actual presence of service providers.</li>
+            <li><strong>Direct access to service providers</strong> verified as per the scope of current contracts.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="factory-container">
+        <div class="factory-overview">
+          <h2>Reconcile quality and budget control</h2>
+          <p>With CARL Source Facility, you can ensure the operational worthiness of equipment while staying on budget
+          </p>
+          <img src="{% static 'images/facility-reconcile.png' %}" alt="CMMS Dashboard" class="factory-img">
+        </div>
+        <div class="factory-advantages">
+          <!-- <h3>Enjoy the advantages of industry-specific software</h3> -->
+           <div style="margin-top: 150px;"></div>
+          <ul class="factory-list">
+            <li><strong>Detailed cost breakdowns</strong> (asset purchases, service providers, design costs, etc.) with
+              the management of approvals.</li>
+            <li><strong>Manage subcontracting</strong>: a single repository system for contracts, alerts in the event of
+              non-compliance with contractual obligations, objective indicators to assess service providers.</li>
+            <li><strong>Alerts in the event of budget overruns.</strong></li>
+            <li><strong>Help in setting budget priorities</strong> through advanced simulations (forecast the annual
+              preventive burden, forecast equipment usage, etc.).</li>
+          </ul>
+        </div>
+      </div>
+      <div class="factory-container reverse">
+        <div class="factory-overview" style="text-align: justify;">
+          <h2>Manage your property maintenance and asset management activities in real time</h2>
+          <p>CARL Source Facility provides the information you would expect from a co-driver so that you can make the
+            right decisions</p>
+          <!-- <img src="{% static 'images/laptop.jpg' %}" alt="CMMS Dashboard" class="factory-img"> -->
+        </div>
+        <div class="factory-advantages">
+          <!-- <h3>Enjoy the advantages of industry-specific software</h3> -->
+          <ul class="factory-list">
+            <li><strong>Immediate display, on the home screen</strong>, of the main operating indicators: equipment
+              currently down, requests pending, purchases to be validated, contracts to be renewed.</li>
+            <li><strong>Alerts in the event of an excessive occurrence</strong> of maintenance work for a given device
+              (range of preventive measures suggested).</li>
+            <li><strong>Optimized predictive maintenance</strong> based on data from the IoT platform dedicated to
+              maintenance.</li>
+            <li><strong>Standardised indicators</strong> in the form of tables and graphs.</li>
+            <li><strong>Graphic themes on maps (GIS)</strong> or diagrams to facilitate the maintenance policy.</li>
+          </ul>
+        </div>
+      </div>
+
+
+
+
+      
+    </div>
+  </section>
+  
+
+  
+  
+
+  
+  
+
+  {% include 'footer.html' %}
+  <!-- Link to Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"></script>
+  <script src="{% static 'js/main.js'%}"></script>
+
+</body>
+
+</html>

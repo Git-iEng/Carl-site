@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load static %}
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Carl City</title>
+   <meta name="description"
+        content="From roads to lighting, CARL Source City helps Australian councils and towns track assets, plan maintenance, and reduce costs efficiently.">
+  <!--=============== CSS ===============-->
+  <link rel="stylesheet" href="{% static 'css/home.css' %}">
+  <link rel="stylesheet" href="{% static 'css/factory.css' %}">
+  <link rel="icon" href="{% static 'images/logo1.png' %}">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <link rel="stylesheet" href="{% static 'css/footer.css' %}">
+
+
+</head>
+
+<body>
+  {% include 'header.html' %}
+  <section class="hero-section">
+    <div class="container">
+      <div class="hero-container">
+        <div class="hero-text">
+          <h1 class="hero-title">CARL Source City<br></h1>
+          <p class="hero-subtitle">
+            CMMS software for Managing and Maintaining <br>
+            Administrative Equipment.
+          </p>
+          <div class="hero-buttons">
+            <a href="#" class="btn btn-primary js-open-demo">Request a Demo</a>
+            <!-- <a href="#" class="btn btn-secondary">See features</a> -->
+          </div>
+        </div>
+
+        <div class="hero-image-wrapper">
+          <img src="{% static 'images/banner/carl-city.png' %}" alt="Bridge infrastructure" class="hero-img">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="features-section">
+    <div class="container">
+      <h2>CMMS for managing local authorities and administrations</h2>
+      <p class="subheading">Optimize the maintenance and operation of the assets or networks of local authorities and
+        administrations.</p>
+      <div class="factory-paragraph">
+
+        <p class="factory-about-text">CARL Berger-Levrault has been designing maintenance and asset management software
+          solutions since 1985 to meet the challenges facing towns and cities. Designed in partnership with the major
+          actors in the field (technical and property operators, landlords, facilities departments, professional
+          associations, etc.), our tools help you meet the new constraints of the Smart City: CARL Source City.</p>
+        <p class="factory-about-text">
+          Optimize the maintenance and operation of the assets or networks of local authorities and administrations. No
+          matter what your administration (ministry, trade union, etc.) or your local authority (municipality, council,
+          region, territory, state, etc.), and no matter the nature of the assets or networks for which you are
+          responsible (parks, gardens, buildings, plots of land, educational establishment, water, sanitation,
+          engineering structures, major infrastructures, public lighting, signaling, roads, etc.), you need to provide
+          citizens with the best terms and conditions of use of the resources at their disposal and ensure legal
+          compliance, all the while optimizing costs.
+        </p>
+
+
+      </div>
+
+
+      <div class="factory-container">
+        <div class="factory-overview">
+          <h2>A single CMMS/TAM solution to manage your buildings, networks, infrastructures and more.</h2>
+          <!-- <p>Optimize your maintenance performance, manage your industrial equipment and your general resources</p> -->
+          <img src="{% static 'images/city-single.png' %}" alt="CMMS Dashboard" class="factory-img">
+        </div>
+        <div class="factory-advantages">
+          <!-- <h3>Enjoy the advantages of industry-specific software</h3> -->
+          <ul class="factory-list">
+            <li>Repository of buildings and infrastructure elements</li>
+            <li>Rental management: Tenants, leases, rent receipts, etc.</li>
+            <li>Repository of equipment: Technical infrastructure, furniture, vehicles, play areas, citizen portal, etc.
+            </li>
+            <li>Network management: Water, sanitation, public lighting, roads, signaling, etc.</li>
+            <li>Multi-scale interactivity: .DWG diagrams (AutoCAD®), Building Information Modeling (BIM), GIS (ArcGIS®
+              or Mapguide) models.</li>
+            <li>Maintenance processes: Troubleshooting, preventive interventions, regulatory inspections, new works,
+              walk-through reports on commencement and termination of tenancy, vandalism, etc.</li>
+            <li>Inclusion of regulatory reports</li>
+            <li>Management of service providers: Contracts, warranties</li>
+            <li>Cost and budget management</li>
+            <li>Energy and environmental performance</li>
+            
+          </ul>
+        </div>
+      </div>
+
+
+
+      <div class="factory-container reverse">
+        <div class="factory-overview">
+          <h2>Managing your assets and networks</h2>
+          <p>CARL Source City helps you to structure the knowledge database of your sites throughout their life cycle
+          </p>
+          <img src="{% static 'images/city-manage.png' %}" alt="CMMS Dashboard" class="factory-img">
+        </div>
+        <div class="factory-advantages">
+          <!-- <h3>Enjoy the advantages of industry-specific software</h3> -->
+          <ul class="factory-list">
+            <li>Each key building or infrastructure element (plot, site, building, floor, room, technical equipment,
+              etc.) is described on an appropriate identity card: Condition record, Technical characteristics,
+              Classifications as a ‘Public Building’, Warranties, Multimedia documents, Surface areas, Depreciation
+              values, Occupied plots, Geocoded routes and addresses, etc.</li>
+            <li>Interactive and intuitive multi-tree display of your equipment: Functional, location, technical, etc.
+            </li>
+            <li>Graphic navigation, integration, and interactivity of diagrams and maps (GIS), 3D digital models (BIM),
+              geolocation of equipment, etc.</li>
+            <li>Direct access to key information and to the e-record of devices: History of maintenance work, Preventive
+              plans, Diagrams and drawings, Risks and precautions to be observed, etc.</li>
+            <li>Visual representation of energy networks and utilities: Immediate display of the consequences in the
+              event of a failure occurring on a critical device.</li>
+            
+          </ul>
+        </div>
+      </div>
+      <div class="factory-container">
+        <div class="factory-overview">
+          <h2>Guarantee equipment uptime and personnel safety</h2>
+          <p>CARL Source City helps you to guarantee a high level of equipment uptime and ensures user safety</p>
+          <!-- <img src="{% static 'images/banner/city.jpg' %}" alt="CMMS Dashboard" class="factory-img"> -->
+        </div>
+        <div class="factory-advantages">
+          <!-- <h3>Enjoy the advantages of industry-specific software</h3> -->
+          <ul class="factory-list">
+            <li>Help Desk functions for citizens to improve responsiveness and their enjoyment of the quality of the
+              service rendered.</li>
+            <li>Analysis and assistance with troubleshooting by presenting possible solutions according to the symptoms
+              and the identified causes of failure.</li>
+            <li>Take account of regulatory constraints and safety registers to facilitate legal compliance.</li>
+            <li>Take account of the level of certification of the person(s) involved when assigning work tasks.</li>
+          </ul>
+        </div>
+      </div>
+      <div class="factory-container reverse">
+        <div class="factory-overview" style="text-align: justify;">
+          <h2>Monitor your service providers and manage your contracts</h2>
+          <p>CARL Source City provides the means to analyze and monitor your suppliers</p>
+          <!-- <img src="{% static 'images/laptop.jpg' %}" alt="CMMS Dashboard" class="factory-img"> -->
+        </div>
+        <div class="factory-advantages">
+          <!-- <h3>Enjoy the advantages of industry-specific software</h3> -->
+          <ul class="factory-list">
+            <li>Manage purchases and stocks: purchasing contracts, procurement contracts, supplier qualification and
+              indicators, manufacturer lots, etc.</li>
+            <li>Create a single article and service repository that includes the conditions negotiated in your
+              contracts.</li>
+            <li>Import supplier catalogs and price updates.</li>
+            <li>Issue alert in the event of non-compliance with contractual obligations.</li>
+            <li>Quantified and objective elements to assess the performance of service providers.</li>
+            <li>Run checks to verify the actual presence of service providers.</li>
+            <li>Direct access to service providers verified as per the scope of current contracts.</li>
+          </ul>
+        </div>
+      </div>
+      <!-- <div class="features-grid">
+        <div class="feature-card">
+          <span class="icon">💬</span>
+          <h3>Comprehensive asset lifecycle solutions</h3>
+          <p>Achieve full visibility and compliance from start to finish.</p>
+        </div>
+
+        <div class="feature-card">
+          <span class="icon">👤</span>
+          <h3>Streamlined maintenance processes</h3>
+          <p>Enhance efficiency with automated, real-time maintenance.</p>
+        </div>
+
+        <div class="feature-card">
+          <span class="icon">✔️</span>
+          <h3>Empower your field teams</h3>
+          <p>Provide technicians with essential tools and data on the go.</p>
+        </div>
+
+        <div class="feature-card">
+          <span class="icon">✴️</span>
+          <h3>Seamless digital integration</h3>
+          <p>Connect systems for unified data and insights.</p>
+        </div>
+      </div> -->
+    </div>
+  </section>
+<!--   
+  <section class="asset-hero-wrap">
+    <div class="asset-hero-flex">
+      <div class="asset-hero-img">
+        <img src="{% static 'images/asset.avif' %}" alt="Asset technician image" />
+      </div>
+      <div class="asset-hero-textbox">
+        <p class="asset-hero-label">YOUR STRATEGIC PARTNER IN ASSET MANAGEMENT.</p>
+        <h1 class="asset-hero-title">
+          Enhance asset<br />
+          reliability<br />
+          and efficiency.
+        </h1>
+        <p class="asset-hero-subtitle">
+          Advanced solutions for infrastructure sectors.
+        </p>
+        <p class="asset-hero-description">
+          Leverage scalable, proven software for optimal results.
+        </p>
+        <a href="#" class="asset-hero-cta">Get started</a>
+      </div>
+    </div>
+  </section> -->
+
+  <!-- <section class="testimonial-section">
+    <div class="testimonial-container">
+      <div class="testimonial-header">
+        <h2>Client success stories</h2>
+        <p>Discover how our solutions transform operations.</p>
+      </div>
+
+      <div class="testimonial-grid">
+        <div class="testimonial-card">
+          <p class="testimonial-quote">
+            “Our asset management has become effortless. We’ve seen a significant drop in downtime and a boost in
+            compliance, making our operations more efficient.”
+          </p>
+          <div class="testimonial-footer">
+            <div class="testimonial-user">
+              <img
+                src="https://cdn.prod.website-files.com/688c8eda82b85f5593a8831c/688c91774c4c9e40458b21d3_fbd5f6d2-98e0-421f-a563-a16743089aea.avif"
+                alt="Taylor Morgan" class="testimonial-avatar" />
+              <div>
+                <strong>Taylor Morgan</strong><br />
+                <span>Asset Reliability Lead, Energy Sector</span>
+              </div>
+            </div>
+            <img
+              src="https://cdn.prod.website-files.com/688c8eda82b85f5593a8831c/688c91774c4c9e40458b21d3_fbd5f6d2-98e0-421f-a563-a16743089aea.avif"
+              alt="Client Logo" class="testimonial-logo" />
+          </div>
+        </div>
+
+        <div class="testimonial-card">
+          <p class="testimonial-quote">
+            “With CARL, we gained complete asset visibility and control. The support team was consistently responsive
+            and results-driven.”
+          </p>
+          <div class="testimonial-footer">
+            <div class="testimonial-user">
+              <img
+                src="https://cdn.prod.website-files.com/688c8eda82b85f5593a8831c/688c91774c4c9e40458b21d3_fbd5f6d2-98e0-421f-a563-a16743089aea.avif"
+                alt="Jordan Lee" class="testimonial-avatar" />
+              <div>
+                <strong>Jordan Lee</strong><br />
+                <span>Operations Manager, Transport Sector</span>
+              </div>
+            </div>
+            <img
+              src="https://cdn.prod.website-files.com/688c8eda82b85f5593a8831c/688c91774c4c9e40458b21d3_fbd5f6d2-98e0-421f-a563-a16743089aea.avif"
+              alt="Client Logo" class="testimonial-logo" />
+          </div>
+        </div>
+      </div>
+    </div>
+  </section> -->
+
+<!--   
+
+  <section class="faq-section">
+    <div class="faq-header">
+      <p class="faq-subtitle">FREQUENTLY ASKED QUESTIONS</p>
+      <h2 class="faq-title">Get the answers you need</h2>
+      <p class="faq-desc">
+        Explore our solutions for asset management, digital transformation, and the CARL platform.
+      </p>
+    </div>
+
+    <div class="faq-grid">
+      <div class="faq-card">
+        <h4>What is enterprise asset management?</h4>
+        <p>Enterprise asset management centralises and streamlines the lifecycle of physical assets, ensuring
+          compliance, efficiency, and reliability for critical infrastructure.</p>
+      </div>
+      <div class="faq-card">
+        <h4>How does CARL integrate with other systems?</h4>
+        <p>CARL connects with SCADA, BMS, GIS, ERP, and IoT platforms for unified data, automated workflows, and
+          real-time operational visibility.</p>
+      </div>
+      <div class="faq-card">
+        <h4>Who benefits from using CARL?</h4>
+        <p>Organisations in utilities, airports, ports, government, energy, mining, transport, and manufacturing with
+          complex asset networks benefit from CARL.</p>
+      </div>
+      <div class="faq-card">
+        <h4>What mobile capabilities are available?</h4>
+        <p>The CARL Touch app enables technicians to access asset data, complete checklists, and work offline for
+          efficient field operations.</p>
+      </div>
+      <div class="faq-card">
+        <h4>How is data migration handled?</h4>
+        <p>We securely migrate asset and maintenance data from legacy systems or spreadsheets, ensuring a seamless
+          transition with minimal disruption.</p>
+      </div>
+      <div class="faq-card">
+        <h4>What support is offered post-implementation?</h4>
+        <p>Ongoing support, training, and system optimisation are provided to ensure continuous improvement and
+          long-term value.</p>
+      </div>
+    </div>
+  </section>
+  <section class="contact-expert-section">
+    <div class="expert-header">
+      <h2>Connect with our asset experts</h2>
+    </div>
+
+    <div class="expert-grid">
+      <div class="expert-card">
+        <img src="{% static 'images/general.avif' %}" alt="Technical Assistance" />
+        <h4>Technical assistance</h4>
+        <p>Get expert support for EAM, maintenance, and integration. Reliable solutions for your operations.</p>
+        <button>Support</button>
+      </div>
+      <div class="expert-card">
+        <img src="{% static 'images/general.avif' %}" alt="Sales Inquiries" />
+        <h4>Sales inquiries</h4>
+        <p>Request demos, pricing, or discuss custom asset management solutions.</p>
+        <button>Demo</button>
+      </div>
+      <div class="expert-card">
+        <img src="{% static 'images/general.avif' %}" alt="General Inquiries" />
+        <h4>General inquiries</h4>
+        <p>Reach out for service info, partnerships, or other topics.</p>
+        <button>Ask</button>
+      </div>
+    </div>
+  </section> -->
+
+  {% include 'footer.html' %}
+  <!-- Link to Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"></script>
+  <script src="{% static 'js/main.js'%}"></script>
+
+</body>
+
+</html>

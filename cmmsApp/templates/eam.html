@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load static %}
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CARL Smarter Asset Management</title>
+     <meta name="description"
+        content="Cloud EAM and CMMS software built for predictive maintenance, uptime, and compliance. Connect ERP, IoT, GIS, and SCADA for complete asset visibility.">
+
+    <link rel="stylesheet" href="{% static 'css/eam.css' %}">
+    <!-- <link rel="stylesheet" href="{% static 'css/home.css' %}">
+  <link rel="stylesheet" href="{% static 'css/factory.css' %}"> -->
+    <link rel="icon" href="{% static 'images/logo1.png' %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="{% static 'css/footer.css' %}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    {% include 'header.html' %}
+
+    {% include 'request_demo_modal.html' %}
+    <header class="hero">
+        <!-- <video autoplay muted loop class="hero-video">
+            <source
+                src="https://assets.mixkit.co/videos/preview/mixkit-circuit-board-with-chips-and-electronic-paths-31835-large.mp4"
+                type="video/mp4">
+            <source
+                src="https://assets.mixkit.co/videos/preview/mixkit-circuit-board-with-chips-and-electronic-paths-31835-large.webm"
+                type="video/webm">
+        </video> -->
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <h1>The Foundation of Smarter Asset Management</h1>
+            <p>Built for compliance. Engineered for uptime.</p>
+            <div class="cta-buttons">
+                <a href="#" class="btn btn-primary js-open-demo reveal-mobility">Request a Demo</a>
+                <a href="/industries/" class="btn btn-secondary reveal-mobility">Explore Sector Solutions</a>
+                <!-- <a href="#" class="btn btn-secondary js-open-demo reveal-mobility">Download Technical Overview</a> -->
+            </div>
+        </div>
+    </header>
+
+
+    <section class="features-section">
+        <div class="container">
+            <h2 class="title-eam-visual-data reveal-mobility" style="color: black;">Key Features</h2>
+            <!-- <p class="subheading">Optimised solutions for infrastructure sectors</p> -->
+
+            <div class="features-grid">
+                <div class="feature-card reveal-mobility">
+                    <span class="icon">☁️</span>
+                    <h3>Cloud-Based</h3>
+                    <p>Secure, scalable access across teams and geographies.</p>
+                </div>
+
+                <div class="feature-card reveal-mobility">
+                    <span class="icon">🧩</span>
+                    <h3>Modular Architecture</h3>
+                    <p>Activate only what you need—customize per site or sector.</p>
+                </div>
+
+                <div class="feature-card reveal-mobility">
+                    <span class="icon">🔐</span>
+                    <h3>ISO 27001-Ready</h3>
+                    <p>Security-first design with audit trails and RBAC.</p>
+                </div>
+
+                <div class="feature-card reveal-mobility">
+                    <span class="icon">🔗</span>
+                    <h3>Seamless Integrations</h3>
+                    <p>ERP, SCADA, GIS, IoT—plug in and go.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section class="benefit-rows">
+        <div class="benefit-rows__wrap">
+            <!-- Row 1 -->
+            <div class="benefit-row reveal-mobility">
+                <h3 class="benefit-row__title">Optimize Operations</h3>
+                <p class="benefit-row__point">
+                    <span class="tick" aria-hidden="true">✓</span>
+                    Predictive maintenance powered by IoT
+                </p>
+            </div>
+
+            <!-- Row 2 -->
+            <div class="benefit-row reveal-mobility">
+                <h3 class="benefit-row__title">Extend Asset Lifecycles</h3>
+                <p class="benefit-row__point">
+                    <span class="tick" aria-hidden="true">✓</span>
+                    Real-time dashboards with drill-down analytics
+                </p>
+            </div>
+
+            <!-- Row 3 -->
+            <div class="benefit-row reveal-mobility">
+                <h3 class="benefit-row__title">Reduce Downtime</h3>
+                <p class="benefit-row__point">
+                    <span class="tick" aria-hidden="true">✓</span>
+                    Automated work orders and SLA tracking
+                </p>
+            </div>
+
+            <!-- Row 4 -->
+            <div class="benefit-row reveal-mobility">
+                <h3 class="benefit-row__title">Ensure Compliance</h3>
+                <p class="benefit-row__point">
+                    <span class="tick" aria-hidden="true">✓</span>
+                    Audit-ready logs and compliance workflows
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <section class="wrap-flowchart reveal-mobility">
+        <h2 class="title-eam-visual-data reveal-mobility" style="color: black;">How CARL Works: Interactive Explainer</h2>
+
+        <div class="rail-flowchart">
+            <div class="node-flowchart reveal-mobility">
+                <h3>Data Ingestion</h3>
+                <p>IoT, SCADA, ERP</p>
+            </div>
+            <span class="arrow-flowchart"></span>
+
+            <div class="node-flowchart reveal-mobility">
+                <h3>Processing Layer</h3>
+                <p>Celery, Django, Channels</p>
+            </div>
+            <span class="arrow-flowchart"></span>
+
+            <div class="node-flowchart reveal-mobility">
+                <h3>Visualization</h3>
+                <p>Plotly Dash, React</p>
+            </div>
+            <span class="arrow-flowchart"></span>
+
+            <div class="node-flowchart reveal-mobility">
+                <h3>Action Layer</h3>
+                <p>Alerts, Work Orders, Reports</p>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- <section id="case-study" class="case-study">
+        <div class="case-study-overlay"></div>
+        <div class="case-study-content container">
+            <p class="testimonial-quote">“CARL helped us reduce downtime by 40% and streamline compliance reporting.”
+            </p>
+            <p class="testimonial-author">— Rajiv Menon, Plant Manager, NTPC</p>
+            <img src="https://via.placeholder.com/150x50/333/fff?text=NTPC_Logo" alt="NTPC Logo"
+                class="testimonial-logo">
+        </div>
+    </section> -->
+    <!-- Visual Data Section -->
+    <section class="section-eam-visual-data">
+        <div class="container-eam-visual-data">
+            <h2 class="title-eam-visual-data reveal-mobility">Visual Data Section</h2>
+
+            <table class="table-eam-visual-data reveal-mobility">
+                <thead class="thead-eam-visual-data">
+                    <tr>
+                        <th class="th-eam-visual-data">Metric</th>
+                        <th class="th-eam-visual-data">Before</th>
+                        <th class="th-eam-visual-data">After</th>
+                        <th class="th-eam-visual-data">Change</th>
+                    </tr>
+                </thead>
+
+                <tbody class="tbody-eam-visual-data reveal-mobility">
+                    <tr class="tr-eam-visual-data">
+                        <td class="td-eam-visual-data">Maintenance Cost</td>
+                        <td class="td-eam-visual-data">$12M</td>
+                        <td class="td-eam-visual-data">$8.6M</td>
+                        <td class="td-eam-visual-data">
+                            <span class="chip-eam-visual-data is-down-eam-visual-data">
+                                <svg viewBox="0 0 20 20" aria-hidden="true">
+                                    <path d="M10 14l-6-8h12l-6 8z" />
+                                </svg>
+                                28%
+                            </span>
+                        </td>
+                    </tr>
+
+                    <tr class="tr-eam-visual-data reveal-mobility">
+                        <td class="td-eam-visual-data">Asset Uptime</td>
+                        <td class="td-eam-visual-data">78%</td>
+                        <td class="td-eam-visual-data">94%</td>
+                        <td class="td-eam-visual-data">
+                            <span class="chip-eam-visual-data is-up-eam-visual-data">
+                                <svg viewBox="0 0 20 20" aria-hidden="true">
+                                    <path d="M10 6l6 8H4l6-8z" />
+                                </svg>
+                                35%
+                            </span>
+                        </td>
+                    </tr>
+
+                    <tr class="tr-eam-visual-data reveal-mobility">
+                        <td class="td-eam-visual-data">Work Order Closure Rate</td>
+                        <td class="td-eam-visual-data">3 days</td>
+                        <td class="td-eam-visual-data">1.5 days</td>
+                        <td class="td-eam-visual-data">
+                            <span class="chip-eam-visual-data is-up-eam-visual-data">
+                                2× faster
+                            </span>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
+    <!--  <section id="solutions" class="section">
+        <h2 class="section-title">Sector Solutions</h2>
+        <div class="solutions-carousel container">
+            <div class="carousel-tabs">
+                <button class="tab-button active" data-tab="utilities">Utilities</button>
+                <button class="tab-button" data-tab="manufacturing">Manufacturing</button>
+                <button class="tab-button" data-tab="transport">Transport</button>
+                <button class="tab-button" data-tab="public-sector">Public Sector</button>
+            </div>
+            <div class="carousel-content">
+                <div class="carousel-card" id="utilities">
+                    <h3>Utilities</h3>
+                    <p>Aging infrastructure, grid stability, regulatory pressure.</p>
+                </div>
+                <div class="carousel-card hidden" id="manufacturing">
+                    <h3>Manufacturing</h3>
+                    <p>Downtime, quality control, supply chain integration.</p>
+                </div>
+                <div class="carousel-card hidden" id="transport">
+                    <h3>Transport</h3>
+                    <p>Fleet maintenance, route optimization, safety compliance.</p>
+                </div>
+                <div class="carousel-card hidden" id="public-sector">
+                    <h3>Public Sector</h3>
+                    <p>Budget constraints, legacy systems, public accountability.</p>
+                </div>
+            </div>
+        </div>
+    </section> -->
+<br>
+    <section id="architecture" class="section container reveal-mobility">
+        <h2 class="title-eam-visual-data reveal-mobility">Platform Architecture Snapshot</h2>
+        <div class="architecture-diagram">
+            <div class="arch-layer layer-1 reveal-mobility" data-tooltip="Sensor data, device logs, and enterprise information.">
+                <h4>Data Layer</h4>
+                <p>IoT, SCADA, ERP</p>
+            </div>
+            <div class="arch-layer layer-2 reveal-mobility" data-tooltip="Real-time processing, task queues, and data handling.">
+                <h4>Processing Layer</h4>
+                <p>Django, Celery, Channels</p>
+            </div>
+            <div class="arch-layer layer-3 reveal-mobility" data-tooltip="Interactive dashboards and a modern user interface.">
+                <h4>Visualization Layer</h4>
+                <p>Plotly Dash, React</p>
+            </div>
+            <div class="arch-layer layer-4 reveal-mobility" data-tooltip="Security controls, access management, and compliance.">
+                <h4>Security Layer</h4>
+                <p>ISO 27001, RBAC, audit logs</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="certifications" class="section container reveal-mobility">
+        <h2 class="section-title reveal-mobility">Certifications & Recognition</h2>
+        <div class="certifications-grid">
+            
+            <img src="../static/images/soc2.png" alt="ISO 27001 Certified">
+            <img src="../static/images/iso.png" alt="Azure Partner">
+                <img src="../static/images/rat1.svg"
+                alt="Smart City Innovation Award" style="max-width: 200px;">
+            <img src="../static/images/rat2.png"
+                alt="Smart City Innovation Award" style="max-width: 200px;">
+            
+        </div>
+    </section>
+
+
+
+    <!-- <section class="cta-mobility">
+        <div class="cta-wrap-mobility">
+            <h2 class="cta-title-mobility reveal-mobility" style="--delay-mobility: 0ms;">
+                Ready to Elevate Your Asset Strategy?
+            </h2>
+
+            <p class="cta-text-mobility reveal-mobility" style="--delay-mobility: 120ms;">
+                CARL isn’t just software—it’s your strategic partner in operational excellence. Let us help you unlock
+                the full potential of your assets with a suite that’s complete, compliant, and built for your sector.
+            </p>
+
+            <div class="cta-buttons1 reveal-mobility">
+                <a href="#" class="btn btn-primary js-open-demo">Request a Demo</a>
+                <a href="#" class="btn btn-secondary js-open-demo"> Download Technical Datasheet</a>
+                <a href="#" class="btn btn-secondary js-open-demo">  Explore Integration
+                    Options</a>
+            </div>
+        </div>
+    </section> -->
+
+    <script>
+        // JavaScript for carousel tabs
+        document.addEventListener('DOMContentLoaded', () => {
+            const tabButtons = document.querySelectorAll('.tab-button');
+            const carouselCards = document.querySelectorAll('.carousel-card');
+
+            tabButtons.forEach(button => {
+                button.addEventListener('click', () => {
+                    // Remove 'active' class from all buttons and 'hidden' from all cards
+                    tabButtons.forEach(btn => btn.classList.remove('active'));
+                    carouselCards.forEach(card => card.classList.add('hidden'));
+
+                    // Add 'active' class to the clicked button
+                    button.classList.add('active');
+
+                    // Show the corresponding card
+                    const targetId = button.dataset.tab;
+                    document.getElementById(targetId).classList.remove('hidden');
+                });
+            });
+        });
+    </script>
+    <script>
+        /* IntersectionObserver reveal — shows elements when they enter the viewport,
+           hides them again when they leave (works on scroll down and up). */
+        (function () {
+            const els = document.querySelectorAll('.reveal-mobility');
+            if (!('IntersectionObserver' in window) || !els.length) {
+                els.forEach(el => el.classList.add('is-visible-mobility'));
+                return;
+            }
+
+            const io = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('is-visible-mobility');
+                    } else {
+                        entry.target.classList.remove('is-visible-mobility');
+                    }
+                });
+            }, { threshold: 0.18 });
+
+            els.forEach(el => io.observe(el));
+        })();
+    </script>
+    <script>
+        (function () {
+            const MARGIN = 20;  // viewport gutters
+            const PAD = 12;     // card's inner offset we use for tooltip alignment
+            const MAXW = 520;   // max tooltip width (should match CSS)
+
+            function place(el) {
+                const vw = window.innerWidth || document.documentElement.clientWidth;
+                const rect = el.getBoundingClientRect();
+                const width = Math.min(MAXW, vw - 2 * MARGIN);
+
+                // Can we fit if we align RIGHT?
+                const roomRightOK = (rect.right - PAD - width) >= MARGIN;
+                // Can we fit if we align LEFT?
+                const roomLeftOK = (rect.left + PAD + width) <= (vw - MARGIN);
+
+                el.classList.remove('tip-left', 'tip-full');
+                if (roomRightOK) {
+                    // default (right) – nothing to add
+                } else if (roomLeftOK) {
+                    el.classList.add('tip-left');
+                } else {
+                    el.classList.add('tip-full'); // stretch between margins
+                }
+            }
+
+            const cards = Array.from(document.querySelectorAll('.arch-layer[data-tooltip]'));
+            cards.forEach(el => {
+                el.addEventListener('mouseenter', () => place(el));
+                el.addEventListener('focus', () => place(el), true);
+            });
+            window.addEventListener('resize', () => cards.forEach(place));
+            window.addEventListener('scroll', () => cards.forEach(place), { passive: true });
+        })();
+    </script>
+
+
+    <script src="{% static 'js/header.js'%}"></script>
+    <script defer src="{% static 'js/demo_form.js' %}"></script>
+    {% include 'footer.html' %}
+</body>
+
+</html>

@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load static %}
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Carl Factory</title>
+   <meta name="description"
+        content="Trusted CMMS software in australia for industrial maintenance and asset management. CARL Source Factory ensures uptime, safety, and full traceability.">
+
+  <!--=============== CSS ===============-->
+  <link rel="stylesheet" href="{% static 'css/home.css' %}">
+  <link rel="stylesheet" href="{% static 'css/factory.css' %}">
+  <link rel="icon" href="{% static 'images/logo1.png' %}">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <link rel="stylesheet" href="{% static 'css/footer.css' %}">
+
+
+</head>
+
+<body>
+  {% include 'header.html' %}
+  <section class="hero-section">
+    <div class="container">
+      <div class="hero-container">
+        <div class="hero-text">
+          <h1 class="hero-title">CARL Source Factory<br></h1>
+          <p class="hero-subtitle">
+            CMMS software for the food, pharmaceutical,<br>
+            aeronautical and automotive industries.
+          </p>
+          <div class="hero-buttons">
+            <a href="#" class="btn btn-primary js-open-demo">Request a Demo</a>
+            <!-- <a href="#" class="btn btn-secondary">See features</a> -->
+          </div>
+        </div>
+
+        <div class="hero-image-wrapper">
+          <img src="{% static 'images/banner/carl-factory.png' %}" alt="Carl Factory" class="hero-img">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="features-section">
+    <div class="container">
+      <h2>CMMS solution dedicated to the industry sector</h2>
+      <p class="subheading">CARL Source Factory
+        Tackle the challenges of Industry 4.0</p>
+      <div class="factory-paragraph">
+        <p class="factory-about-text">
+          An expert in maintenance and asset management software solutions since 1985, CARL Berger-Levrault designs IT
+          solutions to meet the challenges of Industry 4.0. Designed in partnership with the major actors in the sector
+          (French Association of Maintenance Engineers and Managers), our tools help you meet the new challenges of the
+          industry for the future. To do just that, we have developed a comprehensive solution dedicated to the
+          management of production facilities and industrial buildings: <strong>CARL Source Factory</strong>.
+        </p>
+        <p class="factory-about-text">
+          Ensure the best operating conditions for industrial equipment. Maintenance departments, facilities
+          departments, research departments… In an increasingly competitive and demanding environment, you need to
+          guarantee the best operating conditions for your industrial equipment and associated infrastructures
+          (workshops, buildings, networks…): maximum production asset uptime, compliance with legal obligations, quality
+          targets, cost optimization, personnel safety, and satisfaction.
+        </p>
+       
+      </div>
+
+
+      <div class="factory-container">
+        <div class="factory-overview">
+          <h2>A unique CMMS for the industry.</h2>
+          <p>Optimize your maintenance performance, manage your industrial equipment and your general resources</p>
+          <img src="{% static 'images/factory-unique.png' %}" alt="CMMS tab" class="factory-img">
+        </div>
+        <div class="factory-advantages">
+          <h3>Enjoy the advantages of industry-specific software</h3>
+          <ul class="factory-list">
+            <li><strong>Management of <span>maintenance processes</span></strong>: restorative, preventive, forecasting,
+              annual shutdown, safety…</li>
+            <li><strong>Automatic integration of <span>regulatory reports</span></strong>.</li>
+            <li><strong>Traceability of level 1 <span>maintenance work</span></strong> (TPM).</li>
+            <li><strong>Visual schedule of <span>resources</span></strong> (certifications, permits, production
+              constraints, etc.).</li>
+            <li><strong>Monitoring and traceability of <span>fixed equipment and linear assets</span></strong>.</li>
+            <li><strong><span>Multi-scale interactivity</span></strong>: plans, DWG diagrams (AutoCAD®), Building
+              Information Models (BIM), and GIS (ArcGIS®).</li>
+            <li><strong><span>Budget control</span></strong>.</li>
+            <li><strong><span>Customisable visual indicators</span></strong> (MTBF, OEE, etc.).</li>
+            <li><strong>Built-in <span>connectors</span></strong> to ERP, CAPM and MES software…</li>
+            <li><strong><span>IoT platform</span></strong>: connected objects, real-time optimization of equipment,
+              <span>predictive maintenance, artificial intelligence</span>.
+            </li>
+          </ul>
+        </div>
+      </div>
+
+
+
+      <div class="factory-container reverse">
+        <div class="factory-overview">
+          <h2>Guarantee equipment uptime and personnel safety</h2>
+          <p>CARL Source Factory helps you to guarantee a high level of equipment uptime and ensures team safety</p>
+          <img src="{% static 'images/factory-guarantee.png' %}" alt="CMMS Dashboard" class="factory-img">
+        </div>
+        <div class="factory-advantages">
+          <!-- <h3>Enjoy the advantages of industry-specific software</h3> -->
+          <ul class="factory-list">
+            <li>Take account of <strong>regulatory constraints</strong> and safety registers to facilitate legal
+              compliance.</li>
+            <li><strong>Preventive</strong> management aided by alerts (anticipation rules, date optimization, load
+              simulation, etc.).</li>
+            <li>Compliant with the <strong>highest level of traceability constraints</strong> (21 CFR, PART 11
+              Electronic Signatures).</li>
+            <li><strong>Analysis and assistance</strong> with troubleshooting by presenting possible solutions according
+              to the symptoms and the identified causes of failure. These fault trees can be generated automatically
+              according to the history of maintenance work or they can be added after carrying out FMEA studies.</li>
+            <li>Features dedicated to <strong>experts and production agents</strong> to improve the quality of the
+              service provided: work requests, response monitoring, level 1 maintenance, work order follow-up.</li>
+            <li>Contributes to your <strong>TPM approach</strong> and to your production-tracking systems (MES
+              platform).</li>
+            <li><strong>Can manage safety aspects</strong> (ATEX, permits…) and field technician certifications.</li>
+          </ul>
+        </div>
+      </div>
+      <div class="factory-container">
+        <div class="factory-overview">
+          <h2>Track your service providers and manage your contracts</h2>
+          <p>CARL Source Factory allows you to analyze and monitor your suppliers</p>
+          <img src="{% static 'images/factory-track.png' %}" alt="CMMS Dashboard" class="factory-img">
+        </div>
+        <div class="factory-advantages">
+          <!-- <h3>Enjoy the advantages of industry-specific software</h3> -->
+          <ul class="factory-list" >
+            <li><strong>Manage purchases and stocks</strong> (purchasing contracts, supplier qualification and
+              indicators, manufacturer lots, etc.).</li>
+            <li>Create a single item and <strong>service repository</strong> that includes the conditions negotiated in
+              your contracts.</li>
+            <li>Import <strong>supplier catalogues</strong> and price updates.</li>
+            <li><strong>Issue alert</strong> in the event of non-compliance with contractual obligations.</li>
+            <li>Quantified and objective elements to <strong>assess the performance of service providers</strong>.</li>
+            <li>Run checks to verify the <strong>actual presence of service providers</strong>.</li>
+            <li><strong>Direct access to service providers</strong> verified as per the scope of current contracts.</li>
+            <li><strong>Can manage safety aspects</strong> (ATEX, permits…) and field technician certifications.</li>
+          </ul>
+        </div>
+      </div>
+      <div class="factory-container reverse">
+        <div class="factory-overview" style="text-align: justify;">
+          <h2>Manage your maintenance, new works and regulatory diagnostic activities in real time</h2>
+          <p>CARL Source Factory provides the information you expect from a co-driver to make the right decisions</p>
+          <!-- <img src="{% static 'images/laptop.jpg' %}" alt="CMMS Dashboard" class="factory-img"> -->
+        </div>
+        <div class="factory-advantages">
+          <!-- <h3>Enjoy the advantages of industry-specific software</h3> -->
+          <ul class="factory-list">
+            <li><strong>Main operating indicators displayed immediately on the home screen</strong>: equipment currently
+              down, requests pending, purchases to be validated, contracts to be renewed, etc.</li>
+            <li><strong>Alerts in the event of an excessive occurrence</strong> of maintenance work for a given device
+              (range of preventive measures suggested).</li>
+            <li><strong>Optimized predictive maintenance</strong> based on data from the IoT platform dedicated to
+              maintenance.</li>
+            <li><strong>Standardised indicators in the form of tables and graphs.</strong></li>
+            <li><strong>Graphic themes on maps (GIS)</strong> or diagrams to facilitate the maintenance policy.</li>
+          </ul>
+        </div>
+      </div>
+      
+    </div>
+  </section>
+  
+
+  {% include 'footer.html' %}
+  <!-- Link to Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"></script>
+  <script src="{% static 'js/main.js'%}"></script>
+
+</body>
+
+</html>
