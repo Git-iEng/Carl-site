@@ -7,7 +7,7 @@ from django.core.exceptions import ValidationError
 from django.core.mail import get_connection, EmailMultiAlternatives
 from django.utils import timezone
 from django.contrib import messages
-
+from django.contrib.staticfiles.storage import staticfiles_storage
 from pathlib import Path
 from datetime import datetime
 from threading import Thread
@@ -179,9 +179,14 @@ def home(request):
     return render(request, "index.html")
 
 
+def sitemap(request):
+    with staticfiles_storage.open('sitemap.xml') as sitemap_file:
+        return HttpResponse(sitemap_file, content_type='application/xml')
+    
+    
 def request_demo(request):
     return render(request, "request_demo_modal.html")
-
+def factory(request):     return render(request, "factory.html")
 
 def factory(request):     return render(request, "factory.html")
 def healthcare(request):  return render(request, "healthcare.html")
