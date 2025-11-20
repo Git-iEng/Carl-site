@@ -155,4 +155,10 @@ CONTACT_INBOX = CONTACT_RECIPIENTS[0]
 EMAIL_TIMEOUT = 15
 STATICFILES_STORAGE = "whitenoise.storage.CompressedManifestStaticFilesStorage"
 # CSRF_COOKIE_SECURE = True
+<<<<<<< HEAD
 # SESSION_COOKIE_SECURE = True
+=======
+# SESSION_COOKIE_SECURE = True
+
+CSRF_TRUSTED_ORIGINS = ["https://carl.ieng.tech"]
+>>>>>>> 5cff33e (edited settings file for forbidden access commit)
