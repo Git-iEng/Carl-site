@@ -30,26 +30,26 @@ EXCEL_DIR  = os.path.join(settings.BASE_DIR, "data")
 EXCEL_PATH = os.path.join(EXCEL_DIR, "carl_demo_requests.xlsx")
 
 
-def _append_to_excel(row):
-    """Create/append to the Request Demo workbook."""
-    os.makedirs(EXCEL_DIR, exist_ok=True)
-    if os.path.exists(EXCEL_PATH):
-        wb = load_workbook(EXCEL_PATH)
-        ws = wb.active
-    else:
-        wb = Workbook()
-        ws = wb.active
-        ws.title = "Requests"
-        headers = [
-            "Timestamp", "Full Name", "Company", "Email",
-            "Country", "Dial Code", "Phone", "Address",
-            "Message", "Source IP",
-        ]
-        ws.append(headers)
-        for i in range(1, len(headers) + 1):
-            ws.column_dimensions[get_column_letter(i)].width = 24
-    ws.append(row)
-    wb.save(EXCEL_PATH)
+# def _append_to_excel(row):
+#     """Create/append to the Request Demo workbook."""
+#     os.makedirs(EXCEL_DIR, exist_ok=True)
+#     if os.path.exists(EXCEL_PATH):
+#         wb = load_workbook(EXCEL_PATH)
+#         ws = wb.active
+#     else:
+#         wb = Workbook()
+#         ws = wb.active
+#         ws.title = "Requests"
+#         headers = [
+#             "Timestamp", "Full Name", "Company", "Email",
+#             "Country", "Dial Code", "Phone", "Address",
+#             "Message", "Source IP",
+#         ]
+#         ws.append(headers)
+#         for i in range(1, len(headers) + 1):
+#             ws.column_dimensions[get_column_letter(i)].width = 24
+#     ws.append(row)
+#     wb.save(EXCEL_PATH)
 
 
 # ---------- Email helpers ----------
@@ -132,11 +132,11 @@ def request_demo_view(request):
     country_code, dial = (country.split("|", 1) + [""])[:2]
 
     # Excel append
-    _append_to_excel([
-        timezone.now().strftime("%Y-%m-%d %H:%M:%S %Z") or timezone.now().strftime("%Y-%m-%d %H:%M:%S"),
-        full_name, company, email, country_code, dial, phone, address, message,
-        request.META.get("REMOTE_ADDR", ""),
-    ])
+    # _append_to_excel([
+    #     timezone.now().strftime("%Y-%m-%d %H:%M:%S %Z") or timezone.now().strftime("%Y-%m-%d %H:%M:%S"),
+    #     full_name, company, email, country_code, dial, phone, address, message,
+    #     request.META.get("REMOTE_ADDR", ""),
+    # ])
 
     # Build email
     ts = timezone.now().strftime("%Y-%m-%d %H:%M:%S %Z")
@@ -223,9 +223,9 @@ def contact_section(request):
         )
 
         # Append to Excel
-        xlsx_path = Path(
-            getattr(settings, "CONTACT_SUBMISSIONS_XLSX", Path(settings.BASE_DIR) / "contact_submissions.xlsx")
-        )
+        # xlsx_path = Path(
+        #     getattr(settings, "CONTACT_SUBMISSIONS_XLSX", Path(settings.BASE_DIR) / "contact_submissions.xlsx")
+        # )
         append_submission_xlsx(
             xlsx_path,
             [

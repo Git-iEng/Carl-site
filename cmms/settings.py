@@ -128,7 +128,7 @@ MEDIA_ROOT = BASE_DIR / "media"
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 # Where to store the Excel (optional)
-CONTACT_SUBMISSIONS_XLSX = BASE_DIR / "contact_submissions.xlsx"
+#CONTACT_SUBMISSIONS_XLSX = BASE_DIR / "contact_submissions.xlsx"
 
 # Email (configure to your provider)
 
