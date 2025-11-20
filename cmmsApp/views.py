@@ -226,20 +226,20 @@ def contact_section(request):
         # xlsx_path = Path(
         #     getattr(settings, "CONTACT_SUBMISSIONS_XLSX", Path(settings.BASE_DIR) / "contact_submissions.xlsx")
         # )
-        append_submission_xlsx(
-            xlsx_path,
-            [
-                datetime.now().strftime("%Y-%m-%d %H:%M:%S"),
-                cd["first_name"],
-                cd.get("last_name", ""),
-                cd.get("company", ""),
-                cd["email"],
-                resolved_alpha2,
-                resolved_country_name,
-                e164_phone or cd.get("phone", ""),
-                cd.get("message", ""),
-            ],
-        )
+        # append_submission_xlsx(
+        #     xlsx_path,
+        #     [
+        #         datetime.now().strftime("%Y-%m-%d %H:%M:%S"),
+        #         cd["first_name"],
+        #         cd.get("last_name", ""),
+        #         cd.get("company", ""),
+        #         cd["email"],
+        #         resolved_alpha2,
+        #         resolved_country_name,
+        #         e164_phone or cd.get("phone", ""),
+        #         cd.get("message", ""),
+        #     ],
+        # )
 
         # Email body
         subject = "New website contact submission for CARL Software"
