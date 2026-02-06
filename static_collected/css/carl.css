@@ -275,21 +275,21 @@
   font-size: 14px;
   padding: 20px;
   /* margin: 20px; */
-  color: var(--muted-solar);
+  color: var(--muted-carl-software-cmms);
 }
 
 .reviews-brand {
   font-weight: 700;
-  color: var(--ink-solar);
+  color: var(--ink-carl-software-cmms);
   padding: 2px 8px;
   border-radius: 999px;
-  background: var(--white-solar);
-  box-shadow: var(--shadow-soft-solar);
+  background: var(--white-carl-software-cmms);
+  box-shadow: var(--shadow-soft-carl-software-cmms);
 }
 
 .stars-svg {
   display: block;
-  fill: var(--teal-700-solar);
+  fill: var(--teal-700-carl-software-cmms);
   filter: drop-shadow(0 2px 4px rgba(45, 45, 45, 0.336));
 }
 
@@ -462,7 +462,7 @@
 }
 /* ============= CMMS SECTION (LEFT-ALIGNED) ============= */
 .cmms-section{
-  max-width: var(--container-w-solar, 1200px);
+  max-width: var(--container-w-carl-software-cmms, 1200px);
   margin: 0 auto;
   padding: 48px 20px 64px;
 }
@@ -484,17 +484,17 @@
 }
 
 .cmms-title{
-      max-width: var(--container-w-solar, 1000px);
+      max-width: var(--container-w-carl-software-cmms, 1000px);
  font-size: clamp(28px, 3vw, 48px);
   line-height: 1.1;
   font-weight: 800;
-  color: var(--ink-solar, #0b1220);
+  color: var(--ink-carl-software-cmms, #0b1220);
   margin: 0;
 }
 
 .cmms-sub{
   max-width: 56ch;
-  color: var(--muted-solar, #6b7a8c);
+  color: var(--muted-carl-software-cmms, #6b7a8c);
   font-size: 18px;
 }
 
@@ -520,8 +520,8 @@
   gap: 14px;
   background: #fff;
   border: 1px solid rgba(15,27,42,.08);
-  border-radius: var(--radius-xxl-solar, 22px);
-  box-shadow: var(--shadow-soft-solar, 0 10px 30px rgba(0,0,0,.08));
+  border-radius: var(--radius-xxl-carl-software-cmms, 22px);
+  box-shadow: var(--shadow-soft-carl-software-cmms, 0 10px 30px rgba(0,0,0,.08));
   padding: 18px 18px;
 }
 
@@ -537,7 +537,7 @@
 
 .cmms-icon i{
   font-size: 20px;
-  color: var(--teal-700-solar, #0f766e);
+  color: var(--teal-700-carl-software-cmms, #0f766e);
 }
 
 /* Title inside card */
@@ -551,8 +551,8 @@
   gap: 14px;
   background: #fff;
   border: 1px solid rgba(15,27,42,.08);
-  border-radius: var(--radius-xxl-solar, 22px);
-  box-shadow: var(--shadow-soft-solar, 0 10px 30px rgba(0,0,0,.08));
+  border-radius: var(--radius-xxl-carl-software-cmms, 22px);
+  box-shadow: var(--shadow-soft-carl-software-cmms, 0 10px 30px rgba(0,0,0,.08));
   padding: 18px 18px;
   text-decoration: none;               /* make it link-safe */
   color: #0f1b2a;
@@ -561,7 +561,7 @@
 
 /* Hover effect for entire card */
 .cmms-card:hover {
-  background: var(--teal-700-solar, #0f766e);
+  background: var(--teal-700-carl-software-cmms, #0f766e);
   color: #fff;
   transform: translateY(-4px);
   box-shadow: 0 8px 22px rgba(0,0,0,0.15);
@@ -574,7 +574,7 @@
 }
 
 .cmms-card:hover .cmms-icon i {
-  color: var(--teal-700-solar, #0f766e);
+  color: var(--teal-700-carl-software-cmms, #0f766e);
 }
 
 /* Smooth color transition for text */
@@ -600,52 +600,52 @@
 }
 
 /* ================== TYPES (tabs) ================== */
-.section-types-solar-system-types{
-  background: var(--bg-solar);
+.section-types-carl-software-cmms-types{
+  background: var(--bg-carl-software-cmms);
   padding: clamp(28px, 1vw, 36px) 0;
 }
 
-.kicker-solar-system-types{
-  color: var(--teal-700-solar);
+.kicker-carl-software-cmms-types{
+  color: var(--teal-700-carl-software-cmms);
   font-weight: 800;
   letter-spacing: .4px;
   margin: 0 0 6px;
 }
-.title-solar-system-types{
+.title-carl-software-cmms-types{
   margin: 0 0 clamp(16px, 3.6vw, 26px);
-  color: var(--ink-solar);
+  color: var(--ink-carl-software-cmms);
   font-weight: 800;
   font-size: clamp(22px, 3.6vw, 34px);
 }
 
 /* Tabs */
-.tabs-solar-system-types{
+.tabs-carl-software-cmms-types{
   display: flex; gap: 10px; flex-wrap: wrap;
   margin-bottom: clamp(16px, 1vw, 24px);
 }
-.tab-btn-solar-system-types{
+.tab-btn-carl-software-cmms-types{
   display: inline-flex; align-items: center; gap: 8px;
   padding: 10px 14px;
   border-radius: 999px;
-  border: 2px solid var(--cyan-800-solar);
+  border: 2px solid var(--cyan-800-carl-software-cmms);
   background: transparent;
-  color: var(--cyan-800-solar);
+  color: var(--cyan-800-carl-software-cmms);
   font-weight: 600;
   cursor: pointer;
   transition: background .2s ease, color .2s ease, transform .2s ease, border-color .2s;
 }
-.tab-btn-solar-system-types i{ font-size: 18px; }
-.tab-btn-solar-system-types:hover{ transform: translateY(-1px); }
-.tab-btn-solar-system-types.is-active-solar-system-types{
-  background: linear-gradient(135deg, var(--teal-700-solar), var(--cyan-800-solar));
+.tab-btn-carl-software-cmms-types i{ font-size: 18px; }
+.tab-btn-carl-software-cmms-types:hover{ transform: translateY(-1px); }
+.tab-btn-carl-software-cmms-types.is-active-carl-software-cmms-types{
+  background: linear-gradient(135deg, var(--teal-700-carl-software-cmms), var(--cyan-800-carl-software-cmms));
   color: #fff; border-color: transparent;
 }
 
 /* Panels */
-.panel-solar-system-types{ animation: fadeIn-solar-system-types .45s ease both; }
-@keyframes fadeIn-solar-system-types{ from{opacity:0; transform: translateY(8px);} to{opacity:1; transform:none;} }
+.panel-carl-software-cmms-types{ animation: fadeIn-carl-software-cmms-types .45s ease both; }
+@keyframes fadeIn-carl-software-cmms-types{ from{opacity:0; transform: translateY(8px);} to{opacity:1; transform:none;} }
 
-.panel-grid-solar-system-types{
+.panel-grid-carl-software-cmms-types{
   display: grid;
   grid-template-columns: 1.05fr .95fr;
   gap: clamp(18px, 4vw, 40px);
@@ -654,146 +654,146 @@
   border: 1px solid rgba(21,94,117,.18);
   border-radius: 16px;
   padding: clamp(16px, 3.6vw, 26px);
-  box-shadow: var(--shadow-soft-solar);
+  box-shadow: var(--shadow-soft-carl-software-cmms);
   margin-bottom: clamp(16px, 1vw, 24px);
 }
 
-.panel-text-solar-system-types h3{
+.panel-text-carl-software-cmms-types h3{
   margin: 0 0 8px; font-size: clamp(18px, 2.6vw, 22px);
-  color: var(--ink-solar); font-weight: 800;
+  color: var(--ink-carl-software-cmms); font-weight: 800;
 }
-.panel-text-solar-system-types p{
-  margin: 0 0 8px; color: var(--muted-solar);
+.panel-text-carl-software-cmms-types p{
+  margin: 0 0 8px; color: var(--muted-carl-software-cmms);
 }
 
-.bullets-solar-system-types{
+.bullets-carl-software-cmms-types{
   list-style: none; padding: 0; margin: 10px 0 0;
   display: grid; gap: 8px;
 }
-.bullets-solar-system-types li{
+.bullets-carl-software-cmms-types li{
   display: flex; gap: 10px; align-items: flex-start;
-  color: var(--muted-solar); line-height: 1.65;
+  color: var(--muted-carl-software-cmms); line-height: 1.65;
   font-size: clamp(14px, 2vw, 16px);
 }
-.bullets-solar-system-types i{ color: var(--teal-700-solar); margin-top: 2px; }
+.bullets-carl-software-cmms-types i{ color: var(--teal-700-carl-software-cmms); margin-top: 2px; }
 
-.panel-media-solar-system-types{
+.panel-media-carl-software-cmms-types{
   margin: 0;
   border-radius: 12px; overflow: hidden;
   border: 1px solid rgba(21,94,117,.18);
 }
-.panel-media-solar-system-types img{
+.panel-media-carl-software-cmms-types img{
   display: block; width: 100%; height: 100%; object-fit: cover;
 }
 
 /* Feature chips */
-.feature-grid-solar-system-types{
+.feature-grid-carl-software-cmms-types{
   display: flex; flex-wrap: wrap; gap: 10px;
 }
-.feature-chip-solar-system-types{
+.feature-chip-carl-software-cmms-types{
   display: inline-flex; gap: 8px; align-items: center;
   padding: 8px 12px; border-radius: 999px;
   background: #fff;
   border: 1px solid rgba(21,94,117,.18);
-  color: var(--ink-solar);
+  color: var(--ink-carl-software-cmms);
   font-weight: 600; font-size: 13.5px;
 }
-.feature-chip-solar-system-types i{ color: var(--teal-700-solar); }
+.feature-chip-carl-software-cmms-types i{ color: var(--teal-700-carl-software-cmms); }
 
 /* Reveal directions for this section */
-.reveal-left-solar-system-types,
-.reveal-right-solar-system-types,
-.reveal-top-solar-system-types,
-.reveal-bottom-solar-system-types{
+.reveal-left-carl-software-cmms-types,
+.reveal-right-carl-software-cmms-types,
+.reveal-top-carl-software-cmms-types,
+.reveal-bottom-carl-software-cmms-types{
   opacity: 0;
   transform: translate3d(0,0,0);
   transition: opacity 1.05s cubic-bezier(.2,.65,.2,1),
               transform 1.05s cubic-bezier(.2,.65,.2,1);
 }
-.reveal-left-solar-system-types{  transform: translateX(-26px); }
-.reveal-right-solar-system-types{ transform: translateX( 26px); }
-.reveal-top-solar-system-types{   transform: translateY(-26px); }
-.reveal-bottom-solar-system-types{transform: translateY( 26px); }
-.in-view-solar-system.reveal-left-solar-system-types,
-.in-view-solar-system.reveal-right-solar-system-types,
-.in-view-solar-system.reveal-top-solar-system-types,
-.in-view-solar-system.reveal-bottom-solar-system-types{
+.reveal-left-carl-software-cmms-types{  transform: translateX(-26px); }
+.reveal-right-carl-software-cmms-types{ transform: translateX( 26px); }
+.reveal-top-carl-software-cmms-types{   transform: translateY(-26px); }
+.reveal-bottom-carl-software-cmms-types{transform: translateY( 26px); }
+.in-view-carl-software-cmms.reveal-left-carl-software-cmms-types,
+.in-view-carl-software-cmms.reveal-right-carl-software-cmms-types,
+.in-view-carl-software-cmms.reveal-top-carl-software-cmms-types,
+.in-view-carl-software-cmms.reveal-bottom-carl-software-cmms-types{
   opacity: 1; transform: none;
 }
 
 /* Responsive */
 @media (max-width: 1024px){
-  .panel-grid-solar-system-types{ grid-template-columns: 1fr; }
+  .panel-grid-carl-software-cmms-types{ grid-template-columns: 1fr; }
 }
 
 
 /* ============= THEME TOKENS ============= */
 :root{
-  --teal-700-solar: #0f766e;
-  --cyan-800-solar: #155e75;
-  --ink-solar: #0b1220;
-  --muted-solar: #6b7a8c;
-  --bg-solar: #f4f7fb;
-  --card-solar: #0f1b2a;
-  --white-solar: #ffffff;
-  --radius-xxl-solar: 22px;
-  --shadow-soft-solar: 0 10px 30px rgba(0,0,0,.08);
-  --container-w-solar: 1200px;
-  --header-h-solar: 72px; /* for scroll-margin if needed */
+  --teal-700-carl-software-cmms: #0f766e;
+  --cyan-800-carl-software-cmms: #155e75;
+  --ink-carl-software-cmms: #0b1220;
+  --muted-carl-software-cmms: #6b7a8c;
+  --bg-carl-software-cmms: #f4f7fb;
+  --card-carl-software-cmms: #0f1b2a;
+  --white-carl-software-cmms: #ffffff;
+  --radius-xxl-carl-software-cmms: 22px;
+  --shadow-soft-carl-software-cmms: 0 10px 30px rgba(0,0,0,.08);
+  --container-w-carl-software-cmms: 1200px;
+  --header-h-carl-software-cmms: 72px; /* for scroll-margin if needed */
 }
 
-section[id]{ scroll-margin-top: var(--header-h-solar); }
+section[id]{ scroll-margin-top: var(--header-h-carl-software-cmms); }
 
 /* ============= BASE LAYOUT ============= */
-.container-solar-system{
-  width: min(92vw, var(--container-w-solar));
+.container-carl-software-cmms{
+  width: min(92vw, var(--container-w-carl-software-cmms));
   margin-inline: auto;
 }
 
-.section-hero-solar-system{
+.section-hero-carl-software-cmms{
   position: relative;
-  background: var(--bg-solar);
+  background: var(--bg-carl-software-cmms);
   padding-top: 3vw;
   padding: clamp(48px, .2vw, 80px) 0 0;
 }
 
-.grid-hero-solar-system{
+.grid-hero-carl-software-cmms{
   display: grid;
   grid-template-columns: 1.1fr .9fr;
   gap: clamp(24px, 4vw, 48px);
   align-items: center;
 }
 
-.hero-left-solar-system{}
-.hero-right-solar-system{
+
+.hero-right-carl-software-cmms{
   justify-self: end;
 }
 
-.hero-title-solar-system{
+.hero-title-carl-software-cmms{
   font-size: clamp(32px, 5vw, 56px);
   line-height: 1.05;
   letter-spacing: .2px;
-  color: var(--ink-solar);
+  color: var(--ink-carl-software-cmms);
   margin: 0 0 14px;
   font-weight: 800;
 }
-.accent-solar-system{
-  color: var(--teal-700-solar);
+.accent-carl-software-cmms{
+  color: var(--teal-700-carl-software-cmms);
 }
 
-.hero-sub-solar-system{
-  color: var(--muted-solar);
+.hero-sub-carl-software-cmms{
+  color: var(--muted-carl-software-cmms);
   margin: 0 0 26px;
   font-size: clamp(15px, 1.8vw, 18px);
 }
 
-.hero-cta-solar-system{
+.hero-cta-carl-software-cmms{
   display: flex;
   gap: 12px;
 }
 
-.btn-primary-solar-system,
-.btn-ghost-solar-system{
+.btn-primary-carl-software-cmms,
+.btn-ghost-carl-software-cmms{
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -805,24 +805,24 @@ section[id]{ scroll-margin-top: var(--header-h-solar); }
   transition: transform .2s ease, box-shadow .2s ease, background-color .2s ease, color .2s ease, border-color .2s ease;
 }
 
-.btn-primary-solar-system{
-  background: linear-gradient(135deg, var(--teal-700-solar), var(--cyan-800-solar));
-  color: var(--white-solar);
-  box-shadow: var(--shadow-soft-solar);
+.btn-primary-carl-software-cmms{
+  background: linear-gradient(135deg, var(--teal-700-carl-software-cmms), var(--cyan-800-carl-software-cmms));
+  color: var(--white-carl-software-cmms);
+  box-shadow: var(--shadow-soft-carl-software-cmms);
 }
-.btn-primary-solar-system:hover{ transform: translateY(-2px); }
+.btn-primary-carl-software-cmms:hover{ transform: translateY(-2px); }
 
-.btn-ghost-solar-system{
+.btn-ghost-carl-software-cmms{
   background: transparent;
-  border-color: var(--cyan-800-solar);
-  color: var(--cyan-800-solar);
+  border-color: var(--cyan-800-carl-software-cmms);
+  color: var(--cyan-800-carl-software-cmms);
 }
-.btn-ghost-solar-system:hover{
-  background: var(--cyan-800-solar);
-  color: var(--white-solar);
+.btn-ghost-carl-software-cmms:hover{
+  background: var(--cyan-800-carl-software-cmms);
+  color: var(--white-carl-software-cmms);
 }
 
-.hero-img-solar-system{
+.hero-img-carl-software-cmms{
     width: min(520px, 40vw);
   aspect-ratio: 4 / 5;
   object-fit: cover;
@@ -830,7 +830,7 @@ section[id]{ scroll-margin-top: var(--header-h-solar); }
   box-shadow: 0 16px 40px rgba(6, 18, 32, .18);
   display: block;
 }
-.hero-band-solar-system{
+.hero-band-carl-software-cmms{
     display: none; 
   position: absolute;
   left: 50%;
@@ -838,23 +838,23 @@ section[id]{ scroll-margin-top: var(--header-h-solar); }
   bottom: -42px;
   width: min(520px, 40vw);
   height: 100px;
-  background: var(--card-solar);
-  border-bottom-left-radius: var(--radius-xxl-solar);
-  border-bottom-right-radius: var(--radius-xxl-solar);
+  background: var(--card-carl-software-cmms);
+  border-bottom-left-radius: var(--radius-xxl-carl-software-cmms);
+  border-bottom-right-radius: var(--radius-xxl-carl-software-cmms);
   z-index: 0;
 }
-.hero-right-solar-system,
-.hero-left-solar-system { position: relative; z-index: 1; }
+.hero-right-carl-software-cmms,
+.hero-left-carl-software-cmms { position: relative; z-index: 1; }
 
 /* Trusted section */
-.section-trusted-solar-system{
+.section-trusted-carl-software-cmms{
    background: #0f1b2a;         /* deep slate like your screenshot */
   color: #fff;
   padding: clamp(56px, 8vw, 84px) 0;
   margin-top: clamp(28px, 6vw, 60px);
 }
 
-.trusted-heading-solar-system{
+.trusted-heading-carl-software-cmms{
   text-align: center;
   font-size: clamp(18px, 2.2vw, 24px);
   font-weight: 800;
@@ -863,38 +863,38 @@ section[id]{ scroll-margin-top: var(--header-h-solar); }
 }
 
 /* Logo carousel */
-.logos-wrap-solar-system{
+.logos-wrap-carl-software-cmms{
   overflow: hidden;
   position: relative;
   padding: 6px 0;             /* subtle breathing space */
   background: transparent;    /* no panel look */
   border-radius: 0;
 }
-.logos-track-solar-system{
+.logos-track-carl-software-cmms{
    display: inline-flex;
   align-items: center;
   gap: clamp(28px, 4vw, 46px);
   padding-inline: 12px;
-  animation: marquee-solar-system 28s linear infinite;
+  animation: marquee-carl-software-cmms 28s linear infinite;
   will-change: transform;
 }
-.logos-wrap-solar-system:hover .logos-track-solar-system{
+.logos-wrap-carl-software-cmms:hover .logos-track-carl-software-cmms{
   animation-play-state: paused;
 }
 
-.logo-item-solar-system{
+.logo-item-carl-software-cmms{
    height: clamp(22px, 3.2vw, 34px);
   width: auto;
   opacity: .9;
   filter: invert(1) grayscale(1) contrast(1.15);
   transition: opacity .2s ease, transform .2s ease;
 }
-.logo-item-solar-system:hover{
+.logo-item-carl-software-cmms:hover{
   opacity: 1;
   transform: translateY(-2px);
 }
 
-@keyframes marquee-solar-system{
+@keyframes marquee-carl-software-cmms{
   from { transform: translateX(0); }
   to   { transform: translateX(-50%); }
 
@@ -902,72 +902,72 @@ section[id]{ scroll-margin-top: var(--header-h-solar); }
 
 
 /* --- DOTS (pagination) --- */
-.dots-solar-system{
+.dots-carl-software-cmms{
   display: flex;
   justify-content: center;
   gap: 8px;
   margin-top: clamp(10px, 2vw, 14px);
 }
-.dot-solar-system{
+.dot-carl-software-cmms{
   width: 6px; height: 6px;
   background: rgba(255,255,255,.35);
   border-radius: 999px;
   cursor: pointer;
   transition: transform .15s ease, background .2s ease;
 }
-.dot-solar-system.is-active-solar-system{
+.dot-carl-software-cmms.is-active-carl-software-cmms{
   background: rgba(255,255,255,.85);
   transform: scale(1.15);
 }
 
 
 /* ================== TYPES (tabs) ================== */
-.section-types-solar-system-types{
-  background: var(--bg-solar);
+.section-types-carl-software-cmms-types{
+  background: var(--bg-carl-software-cmms);
   padding: clamp(28px, 1vw, 36px) 0;
 }
 
-.kicker-solar-system-types{
-  color: var(--teal-700-solar);
+.kicker-carl-software-cmms-types{
+  color: var(--teal-700-carl-software-cmms);
   font-weight: 800;
   letter-spacing: .4px;
   margin: 0 0 6px;
 }
-.title-solar-system-types{
+.title-carl-software-cmms-types{
   margin: 0 0 clamp(16px, 3.6vw, 26px);
-  color: var(--ink-solar);
+  color: var(--ink-carl-software-cmms);
   font-weight: 800;
   font-size: clamp(22px, 3.6vw, 34px);
 }
 
 /* Tabs */
-.tabs-solar-system-types{
+.tabs-carl-software-cmms-types{
   display: flex; gap: 10px; flex-wrap: wrap;
   margin-bottom: clamp(16px, 1vw, 24px);
 }
-.tab-btn-solar-system-types{
+.tab-btn-carl-software-cmms-types{
   display: inline-flex; align-items: center; gap: 8px;
   padding: 10px 14px;
   border-radius: 999px;
-  border: 2px solid var(--cyan-800-solar);
+  border: 2px solid var(--cyan-800-carl-software-cmms);
   background: transparent;
-  color: var(--cyan-800-solar);
+  color: var(--cyan-800-carl-software-cmms);
   font-weight: 600;
   cursor: pointer;
   transition: background .2s ease, color .2s ease, transform .2s ease, border-color .2s;
 }
-.tab-btn-solar-system-types i{ font-size: 18px; }
-.tab-btn-solar-system-types:hover{ transform: translateY(-1px); }
-.tab-btn-solar-system-types.is-active-solar-system-types{
-  background: linear-gradient(135deg, var(--teal-700-solar), var(--cyan-800-solar));
+.tab-btn-carl-software-cmms-types i{ font-size: 18px; }
+.tab-btn-carl-software-cmms-types:hover{ transform: translateY(-1px); }
+.tab-btn-carl-software-cmms-types.is-active-carl-software-cmms-types{
+  background: linear-gradient(135deg, var(--teal-700-carl-software-cmms), var(--cyan-800-carl-software-cmms));
   color: #fff; border-color: transparent;
 }
 
 /* Panels */
-.panel-solar-system-types{ animation: fadeIn-solar-system-types .45s ease both; }
-@keyframes fadeIn-solar-system-types{ from{opacity:0; transform: translateY(8px);} to{opacity:1; transform:none;} }
+.panel-carl-software-cmms-types{ animation: fadeIn-carl-software-cmms-types .45s ease both; }
+@keyframes fadeIn-carl-software-cmms-types{ from{opacity:0; transform: translateY(8px);} to{opacity:1; transform:none;} }
 
-.panel-grid-solar-system-types{
+.panel-grid-carl-software-cmms-types{
   display: grid;
   grid-template-columns: 1.05fr .95fr;
   gap: clamp(18px, 4vw, 40px);
@@ -976,76 +976,76 @@ section[id]{ scroll-margin-top: var(--header-h-solar); }
   border: 1px solid rgba(21,94,117,.18);
   border-radius: 16px;
   padding: clamp(16px, 3.6vw, 26px);
-  box-shadow: var(--shadow-soft-solar);
+  box-shadow: var(--shadow-soft-carl-software-cmms);
   margin-bottom: clamp(16px, 1vw, 24px);
 }
 
-.panel-text-solar-system-types h3{
+.panel-text-carl-software-cmms-types h3{
   margin: 0 0 8px; font-size: clamp(18px, 2.6vw, 22px);
-  color: var(--ink-solar); font-weight: 800;
+  color: var(--ink-carl-software-cmms); font-weight: 800;
 }
-.panel-text-solar-system-types p{
-  margin: 0 0 8px; color: var(--muted-solar);
+.panel-text-carl-software-cmms-types p{
+  margin: 0 0 8px; color: var(--muted-carl-software-cmms);
 }
 
-.bullets-solar-system-types{
+.bullets-carl-software-cmms-types{
   list-style: none; padding: 0; margin: 10px 0 0;
   display: grid; gap: 8px;
 }
-.bullets-solar-system-types li{
+.bullets-carl-software-cmms-types li{
   display: flex; gap: 10px; align-items: flex-start;
-  color: var(--muted-solar); line-height: 1.65;
+  color: var(--muted-carl-software-cmms); line-height: 1.65;
   font-size: clamp(14px, 2vw, 16px);
 }
-.bullets-solar-system-types i{ color: var(--teal-700-solar); margin-top: 2px; }
+.bullets-carl-software-cmms-types i{ color: var(--teal-700-carl-software-cmms); margin-top: 2px; }
 
-.panel-media-solar-system-types{
+.panel-media-carl-software-cmms-types{
   margin: 0;
   border-radius: 12px; overflow: hidden;
   border: 1px solid rgba(21,94,117,.18);
 }
-.panel-media-solar-system-types img{
+.panel-media-carl-software-cmms-types img{
   display: block; width: 100%; height: 100%; object-fit: cover;
 }
 
 /* Feature chips */
-.feature-grid-solar-system-types{
+.feature-grid-carl-software-cmms-types{
   display: flex; flex-wrap: wrap; gap: 10px;
 }
-.feature-chip-solar-system-types{
+.feature-chip-carl-software-cmms-types{
   display: inline-flex; gap: 8px; align-items: center;
   padding: 8px 12px; border-radius: 999px;
   background: #fff;
   border: 1px solid rgba(21,94,117,.18);
-  color: var(--ink-solar);
+  color: var(--ink-carl-software-cmms);
   font-weight: 600; font-size: 13.5px;
 }
-.feature-chip-solar-system-types i{ color: var(--teal-700-solar); }
+.feature-chip-carl-software-cmms-types i{ color: var(--teal-700-carl-software-cmms); }
 
 /* Reveal directions for this section */
-.reveal-left-solar-system-types,
-.reveal-right-solar-system-types,
-.reveal-top-solar-system-types,
-.reveal-bottom-solar-system-types{
+.reveal-left-carl-software-cmms-types,
+.reveal-right-carl-software-cmms-types,
+.reveal-top-carl-software-cmms-types,
+.reveal-bottom-carl-software-cmms-types{
   opacity: 0;
   transform: translate3d(0,0,0);
   transition: opacity 1.05s cubic-bezier(.2,.65,.2,1),
               transform 1.05s cubic-bezier(.2,.65,.2,1);
 }
-.reveal-left-solar-system-types{  transform: translateX(-26px); }
-.reveal-right-solar-system-types{ transform: translateX( 26px); }
-.reveal-top-solar-system-types{   transform: translateY(-26px); }
-.reveal-bottom-solar-system-types{transform: translateY( 26px); }
-.in-view-solar-system.reveal-left-solar-system-types,
-.in-view-solar-system.reveal-right-solar-system-types,
-.in-view-solar-system.reveal-top-solar-system-types,
-.in-view-solar-system.reveal-bottom-solar-system-types{
+.reveal-left-carl-software-cmms-types{  transform: translateX(-26px); }
+.reveal-right-carl-software-cmms-types{ transform: translateX( 26px); }
+.reveal-top-carl-software-cmms-types{   transform: translateY(-26px); }
+.reveal-bottom-carl-software-cmms-types{transform: translateY( 26px); }
+.in-view-carl-software-cmms.reveal-left-carl-software-cmms-types,
+.in-view-carl-software-cmms.reveal-right-carl-software-cmms-types,
+.in-view-carl-software-cmms.reveal-top-carl-software-cmms-types,
+.in-view-carl-software-cmms.reveal-bottom-carl-software-cmms-types{
   opacity: 1; transform: none;
 }
 
 /* Responsive */
 @media (max-width: 1024px){
-  .panel-grid-solar-system-types{ grid-template-columns: 1fr; }
+  .panel-grid-carl-software-cmms-types{ grid-template-columns: 1fr; }
 }
 
 
@@ -1330,10 +1330,10 @@ section[id]{ scroll-margin-top: var(--header-h-solar); }
 }
 /* ============= FAQ SECTION ============= */
 .faq-section {
-  max-width: var(--container-w-solar);
+  max-width: var(--container-w-carl-software-cmms);
   margin: 0 auto;
   padding: 80px 20px;
-  /* background: var(--bg-solar); */
+  /* background: var(--bg-carl-software-cmms); */
 }
 
 .faq-header {
@@ -1346,19 +1346,19 @@ section[id]{ scroll-margin-top: var(--header-h-solar); }
   font-weight: 700;
   letter-spacing: 0.1em;
   text-transform: uppercase;
-  color: var(--cyan-800-solar);
+  color: var(--cyan-800-carl-software-cmms);
   margin-bottom: 8px;
 }
 
 .faq-title {
   font-size: 36px;
   font-weight: 800;
-  color: var(--ink-solar);
+  color: var(--ink-carl-software-cmms);
   margin: 0;
 }
 
 .faq-desc {
-  color: var(--muted-solar);
+  color: var(--muted-carl-software-cmms);
   font-size: 16px;
   margin-top: 10px;
   max-width: 600px;
@@ -1374,9 +1374,9 @@ section[id]{ scroll-margin-top: var(--header-h-solar); }
 
 /* ============= FAQ CARD (Accordion) ============= */
 .faq-card {
-  background: var(--white-solar);
-  border-radius: var(--radius-xxl-solar);
-  box-shadow: var(--shadow-soft-solar);
+  background: var(--white-carl-software-cmms);
+  border-radius: var(--radius-xxl-carl-software-cmms);
+  box-shadow: var(--shadow-soft-carl-software-cmms);
   overflow: hidden;
   transition: all 0.3s ease;
   border: 1px solid rgba(0,0,0,0.05);
@@ -1389,7 +1389,7 @@ section[id]{ scroll-margin-top: var(--header-h-solar); }
   padding: 20px 60px 20px 24px;
   font-size: 18px;
   font-weight: 700;
-  color: var(--ink-solar);
+  color: var(--ink-carl-software-cmms);
   cursor: pointer;
   transition: color 0.3s ease;
 }
@@ -1403,19 +1403,19 @@ section[id]{ scroll-margin-top: var(--header-h-solar); }
   transform: translateY(-50%);
   font-size: 22px;
   font-weight: 600;
-  color: var(--teal-700-solar);
+  color: var(--teal-700-carl-software-cmms);
   transition: transform 0.3s ease, color 0.3s ease;
 }
 
 /* When active */
 .faq-card.active h4 {
-  color: var(--teal-700-solar);
+  color: var(--teal-700-carl-software-cmms);
 }
 
 .faq-card.active h4::after {
   content: '−';
   transform: translateY(-50%) rotate(180deg);
-  color: var(--teal-700-solar);
+  color: var(--teal-700-carl-software-cmms);
 }
 
 /* Answer text */
@@ -1424,7 +1424,7 @@ section[id]{ scroll-margin-top: var(--header-h-solar); }
   overflow: hidden;
   opacity: 0;
   padding: 0 24px;
-  color: var(--muted-solar);
+  color: var(--muted-carl-software-cmms);
   font-size: 15px;
   line-height: 1.6;
   transition: all 0.4s ease;
@@ -1441,12 +1441,12 @@ section[id]{ scroll-margin-top: var(--header-h-solar); }
 .faq-card:hover {
   box-shadow: 0 10px 25px rgba(0,0,0,0.08);
 }
-/* ============= Testimonials (uses your solar tokens) ============= */
-.testimonials-solar{
-  max-width: var(--container-w-solar);
+/* ============= Testimonials (uses your carl-software-cmms tokens) ============= */
+.testimonials-carl-software-cmms{
+  max-width: var(--container-w-carl-software-cmms);
   margin: 0 auto;
   padding: 56px 20px;
-  /* background: linear-gradient(180deg, var(--bg-solar) 0%, #fafcff 100%); */
+  /* background: linear-gradient(180deg, var(--bg-carl-software-cmms) 0%, #fafcff 100%); */
   overflow: hidden;
 }
 
@@ -1459,7 +1459,7 @@ section[id]{ scroll-margin-top: var(--header-h-solar); }
 }
 
 .testimonials-kicker{
-  color: var(--teal-700-solar);
+  color: var(--teal-700-carl-software-cmms);
   font-weight: 600;
   margin: 0 0 8px 0;
 }
@@ -1468,7 +1468,7 @@ section[id]{ scroll-margin-top: var(--header-h-solar); }
   grid-column: 1 / -1;
   font-size: clamp(24px, 1vw, 36px);
   line-height: 1.2;
-  color: var(--ink-solar);
+  color: var(--ink-carl-software-cmms);
   margin: 0 0 8px 0;
 }
 
@@ -1483,13 +1483,13 @@ section[id]{ scroll-margin-top: var(--header-h-solar); }
   width: 44px; height: 44px;
   border-radius: 10px;
   border: 1px solid rgba(0,0,0,0.08);
-  background: var(--white-solar);
-  box-shadow: var(--shadow-soft-solar);
+  background: var(--white-carl-software-cmms);
+  box-shadow: var(--shadow-soft-carl-software-cmms);
   display: grid; place-items: center;
   cursor: pointer;
   transition: transform .15s ease, background-color .15s ease, border-color .15s ease;
 }
-.t-arrow i{ font-size: 20px; color: var(--ink-solar); }
+.t-arrow i{ font-size: 20px; color: var(--ink-carl-software-cmms); }
 .t-arrow:hover{ transform: translateY(-2px); border-color: rgba(0,0,0,0.12); }
 .t-arrow:active{ transform: translateY(0); }
 
@@ -1507,15 +1507,15 @@ section[id]{ scroll-margin-top: var(--header-h-solar); }
 }
 
 /* Cards */
-.t-card-solar{
-  /* background: var(--white-solar); */
-  border-radius: var(--radius-xxl-solar);
-  /* box-shadow: var(--shadow-soft-solar); */
+.t-card-carl-software-cmms{
+  /* background: var(--white-carl-software-cmms); */
+  border-radius: var(--radius-xxl-carl-software-cmms);
+  /* box-shadow: var(--shadow-soft-carl-software-cmms); */
   padding: 24px;
   border: 1px solid rgba(0,0,0,0.06);
   transition: transform .2s ease, box-shadow .2s ease, border-color .2s ease;
 }
-.t-card-solar:hover{
+.t-card-carl-software-cmms:hover{
   transform: translateY(-4px);
   box-shadow: 0 16px 40px rgba(0,0,0,.10);
   border-color: rgba(0,0,0,0.10);
@@ -1536,17 +1536,17 @@ section[id]{ scroll-margin-top: var(--header-h-solar); }
 }
 
 .t-name{
-  margin: 0; font-size: 16px; color: var(--ink-solar);
+  margin: 0; font-size: 16px; color: var(--ink-carl-software-cmms);
 }
 .t-role{
-  margin: 2px 0 0; font-size: 13px; color: var(--muted-solar);
+  margin: 2px 0 0; font-size: 13px; color: var(--muted-carl-software-cmms);
 }
 .t-brand{
   height: 28px; width: auto; opacity: .9;
 }
 
 .t-quote{
-  color: var(--ink-solar);
+  color: var(--ink-carl-software-cmms);
   font-size: 15px;
   line-height: 1.7;
   margin: 8px 0 18px 0;
@@ -1562,7 +1562,7 @@ section[id]{ scroll-margin-top: var(--header-h-solar); }
 
 .t-stars i{
   font-size: 18px;
-  color: var(--teal-700-solar);
+  color: var(--teal-700-carl-software-cmms);
   margin-right: 4px;
 }
 .t-quote-mark{
@@ -1583,12 +1583,12 @@ section[id]{ scroll-margin-top: var(--header-h-solar); }
     grid-auto-columns: 100%; /* 1 card visible */
   }
 }
-/* ============= Testimonials (uses your solar tokens) ============= */
-.testimonials-solar{
-  max-width: var(--container-w-solar);
+/* ============= Testimonials (uses your carl-software-cmms tokens) ============= */
+.testimonials-carl-software-cmms{
+  max-width: var(--container-w-carl-software-cmms);
   margin: 0 auto;
   padding: 56px 20px;
-  /* background: linear-gradient(180deg, var(--bg-solar) 0%, #fafcff 100%); */
+  /* background: linear-gradient(180deg, var(--bg-carl-software-cmms) 0%, #fafcff 100%); */
   overflow: hidden;
 }
 
@@ -1601,7 +1601,7 @@ section[id]{ scroll-margin-top: var(--header-h-solar); }
 }
 
 .testimonials-kicker{
-  color: var(--teal-700-solar);
+  color: var(--teal-700-carl-software-cmms);
   font-weight: 600;
   margin: 0 0 8px 0;
 }
@@ -1610,7 +1610,7 @@ section[id]{ scroll-margin-top: var(--header-h-solar); }
   grid-column: 1 / -1;
   font-size: clamp(24px, 3.2vw, 36px);
   line-height: 1.2;
-  color: var(--ink-solar);
+  color: var(--ink-carl-software-cmms);
   margin: 0 0 8px 0;
 }
 
@@ -1625,13 +1625,13 @@ section[id]{ scroll-margin-top: var(--header-h-solar); }
   width: 44px; height: 44px;
   border-radius: 10px;
   border: 1px solid rgba(0,0,0,0.08);
-  background: var(--white-solar);
-  box-shadow: var(--shadow-soft-solar);
+  background: var(--white-carl-software-cmms);
+  box-shadow: var(--shadow-soft-carl-software-cmms);
   display: grid; place-items: center;
   cursor: pointer;
   transition: transform .15s ease, background-color .15s ease, border-color .15s ease;
 }
-.t-arrow i{ font-size: 20px; color: var(--ink-solar); }
+.t-arrow i{ font-size: 20px; color: var(--ink-carl-software-cmms); }
 .t-arrow:hover{ transform: translateY(-2px); border-color: rgba(0,0,0,0.12); }
 .t-arrow:active{ transform: translateY(0); }
 
@@ -1649,15 +1649,15 @@ section[id]{ scroll-margin-top: var(--header-h-solar); }
 }
 
 /* Cards */
-.t-card-solar{
-  /* background: var(--white-solar); */
-  border-radius: var(--radius-xxl-solar);
-  /* box-shadow: var(--shadow-soft-solar); */
+.t-card-carl-software-cmms{
+  /* background: var(--white-carl-software-cmms); */
+  border-radius: var(--radius-xxl-carl-software-cmms);
+  /* box-shadow: var(--shadow-soft-carl-software-cmms); */
   padding: 24px;
   border: 1px solid rgba(0,0,0,0.06);
   transition: transform .2s ease, box-shadow .2s ease, border-color .2s ease;
 }
-.t-card-solar:hover{
+.t-card-carl-software-cmms:hover{
   transform: translateY(-4px);
   box-shadow: 0 16px 40px rgba(0,0,0,.10);
   border-color: rgba(0,0,0,0.10);
@@ -1678,17 +1678,17 @@ section[id]{ scroll-margin-top: var(--header-h-solar); }
 }
 
 .t-name{
-  margin: 0; font-size: 16px; color: var(--ink-solar);
+  margin: 0; font-size: 16px; color: var(--ink-carl-software-cmms);
 }
 .t-role{
-  margin: 2px 0 0; font-size: 13px; color: var(--muted-solar);
+  margin: 2px 0 0; font-size: 13px; color: var(--muted-carl-software-cmms);
 }
 .t-brand{
   height: 28px; width: auto; opacity: .9;
 }
 
 .t-quote{
-  color: var(--ink-solar);
+  color: var(--ink-carl-software-cmms);
   font-size: 15px;
   line-height: 1.7;
   margin: 8px 0 18px 0;
@@ -1704,7 +1704,7 @@ section[id]{ scroll-margin-top: var(--header-h-solar); }
 
 .t-stars i{
   font-size: 18px;
-  color: var(--teal-700-solar);
+  color: var(--teal-700-carl-software-cmms);
   margin-right: 4px;
 }
 .t-quote-mark{
