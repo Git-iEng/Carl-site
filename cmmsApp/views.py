@@ -15,6 +15,8 @@ import os, re
 
 from openpyxl import Workbook, load_workbook
 from openpyxl.utils import get_column_letter
+import requests
+from django.conf import settings
 
 from .forms import ContactForm
 from .utils_excel import append_submission_xlsx
@@ -96,6 +98,11 @@ def _send_contact_email_async(subject: str, text_body: str, html_body: str | Non
 def request_demo_view(request):
     if request.method != "POST":
         return redirect("/")
+    
+    # CAPTCHA check
+    if not verify_recaptcha(request):
+        messages.error(request, "Please complete the CAPTCHA.")
+        return redirect(request.META.get("HTTP_REFERER", "/"))
 
     # Pull fields
     full_name = request.POST.get("full_name", "").strip()
@@ -176,7 +183,10 @@ def request_demo_view(request):
 
 
 def home(request):
-    return render(request, "index.html")
+    return render(request, "index.html", {
+        "RECAPTCHA_SITE_KEY": settings.RECAPTCHA_SITE_KEY
+    })
+
 
 
 def sitemap(request):
@@ -185,21 +195,78 @@ def sitemap(request):
     
     
 def request_demo(request):
-    return render(request, "request_demo_modal.html")
-def factory(request):     return render(request, "factory.html")
+    return render(request, "request_demo_modal.html", {
+        "RECAPTCHA_SITE_KEY": settings.RECAPTCHA_SITE_KEY
+    })
 
-def factory(request):     return render(request, "factory.html")
-def healthcare(request):  return render(request, "healthcare.html")
-def facility(request):    return render(request, "facility.html")
-def city(request):        return render(request, "city.html")
-def transport(request):   return render(request, "transport.html")
-def contact(request):     return render(request, "contact.html")
-def iot(request):         return render(request, "iot.html")
-def eam(request):         return render(request, "eam.html")
-def apm(request):         return render(request, "apm.html")
-def mobility(request):    return render(request, "mobility.html")
-def plans(request):       return render(request, "plans.html")
-def about(request):       return render(request, "about.html")
+def factory(request):     
+    return render(request, "factory.html", {
+        "RECAPTCHA_SITE_KEY": settings.RECAPTCHA_SITE_KEY
+    })
+
+
+def factory(request):     
+    return render(request, "factory.html", {
+        "RECAPTCHA_SITE_KEY": settings.RECAPTCHA_SITE_KEY
+    })
+
+def healthcare(request):  
+    return render(request, "healthcare.html", {
+        "RECAPTCHA_SITE_KEY": settings.RECAPTCHA_SITE_KEY
+    })
+
+
+def facility(request):    
+    return render(request, "facility.html", {
+        "RECAPTCHA_SITE_KEY": settings.RECAPTCHA_SITE_KEY
+    })
+
+
+def city(request):        
+    return render(request, "city.html", {
+        "RECAPTCHA_SITE_KEY": settings.RECAPTCHA_SITE_KEY
+    })
+
+
+def transport(request):   
+    return render(request, "transport.html", {
+        "RECAPTCHA_SITE_KEY": settings.RECAPTCHA_SITE_KEY
+    })
+
+
+def contact(request):     
+    return render(request, "contact.html", {
+        "RECAPTCHA_SITE_KEY": settings.RECAPTCHA_SITE_KEY
+    })
+
+def iot(request):         
+    return render(request, "iot.html", {
+        "RECAPTCHA_SITE_KEY": settings.RECAPTCHA_SITE_KEY
+    })
+
+def eam(request):         
+    return render(request, "eam.html", {
+        "RECAPTCHA_SITE_KEY": settings.RECAPTCHA_SITE_KEY
+    })
+
+def apm(request):         
+    return render(request, "apm.html", {
+        "RECAPTCHA_SITE_KEY": settings.RECAPTCHA_SITE_KEY
+    })
+
+def mobility(request):    
+    return render(request, "mobility.html", {
+        "RECAPTCHA_SITE_KEY": settings.RECAPTCHA_SITE_KEY
+    })
+
+def plans(request):       
+    return render(request, "plans.html")
+
+def about(request):       
+    return render(request, "about.html", {
+        "RECAPTCHA_SITE_KEY": settings.RECAPTCHA_SITE_KEY
+    })
+
 def workorder(request):   return render(request, "workorder.html")
 def compliance(request):  return render(request, "compliance.html")
 def cmmsiot(request):       return render(request, "cmms-iot.html")
@@ -211,58 +278,65 @@ def industries(request):     return render(request, "industries.html")
 def contact_section(request):
     form = ContactForm(request.POST or None)
 
-    if request.method == "POST" and not form.is_valid():
-        messages.error(request, "Please correct the highlighted fields and resubmit.")
+    if request.method == "POST":
+        if not form.is_valid():
+            messages.error(request, "Please correct the highlighted fields and resubmit.")
+        elif not verify_recaptcha(request):
+            messages.error(request, "Please complete the CAPTCHA.")
+            return redirect(request.META.get("HTTP_REFERER", "/"))
+        else:
+            cd = form.cleaned_data
 
-    if request.method == "POST" and form.is_valid():
-        cd = form.cleaned_data
+            e164_phone, resolved_alpha2, resolved_country_name = normalize_phone_and_country(
+                cd.get("phone", ""), cd.get("country", "")
+            )
 
-        # Normalize phone & resolve country name
-        e164_phone, resolved_alpha2, resolved_country_name = normalize_phone_and_country(
-            cd.get("phone", ""), cd.get("country", "")
-        )
+            subject = "New website contact submission for CARL Software"
+            text_body = "\n".join(
+                [
+                    "New contact submission for CARL Software:",
+                    f"Name: {cd['first_name']} {cd.get('last_name','')}".strip(),
+                    f"Company: {cd.get('company','')}",
+                    f"Email: {cd['email']}",
+                    f"Country: {resolved_country_name or country_name_from_alpha2(resolved_alpha2) or cd.get('country','')}",
+                    f"Phone: {e164_phone or cd.get('phone','')}",
+                    "",
+                    "Message:",
+                    cd.get("message", ""),
+                ]
+            )
 
-        # Append to Excel
-        # xlsx_path = Path(
-        #     getattr(settings, "CONTACT_SUBMISSIONS_XLSX", Path(settings.BASE_DIR) / "contact_submissions.xlsx")
-        # )
-        # append_submission_xlsx(
-        #     xlsx_path,
-        #     [
-        #         datetime.now().strftime("%Y-%m-%d %H:%M:%S"),
-        #         cd["first_name"],
-        #         cd.get("last_name", ""),
-        #         cd.get("company", ""),
-        #         cd["email"],
-        #         resolved_alpha2,
-        #         resolved_country_name,
-        #         e164_phone or cd.get("phone", ""),
-        #         cd.get("message", ""),
-        #     ],
-        # )
+            _send_contact_email_async(subject, text_body, None)
+            return redirect(reverse("cmmsApp:contact_thanks"))
 
-        # Email body
-        subject = "New website contact submission for CARL Software"
-        text_body = "\n".join(
-            [
-                "New contact submission for CARL Software:",
-                f"Name: {cd['first_name']} {cd.get('last_name','')}".strip(),
-                f"Company: {cd.get('company','')}",
-                f"Email: {cd['email']}",
-                f"Country: {resolved_country_name or country_name_from_alpha2(resolved_alpha2) or cd.get('country','')}",
-                f"Phone: {e164_phone or cd.get('phone','')}",
-                "",
-                "Message:",
-                cd.get("message", ""),
-            ]
-        )
-
-        _send_contact_email_async(subject, text_body, None)
-
-        return redirect(reverse("cmmsApp:contact_thanks"))
-
-    return render(request, "contact_section.html", {"form": form, "sent": request.GET.get("sent")})
-
+    return render(request, "contact_section.html", {
+        "form": form,
+        "sent": request.GET.get("sent"),
+        "RECAPTCHA_SITE_KEY": settings.RECAPTCHA_SITE_KEY,
+    })
 
 def contact_thanks(request):
     return render(request, "contact_thanks.html", {})
+
+def verify_recaptcha(request):
+    captcha_response = (request.POST.get("g-recaptcha-response") or "").strip()
+    print("captcha_response:", captcha_response)
+    print("captcha length:", len(captcha_response) if captcha_response else 0)
+    if not captcha_response:
+        print("reCAPTCHA failed: no captcha response")
+        return False
+    data = {
+        "secret": settings.RECAPTCHA_SECRET_KEY,
+        "response": captcha_response,
+    }
+    try:
+        response = requests.post(
+            "https://www.google.com/recaptcha/api/siteverify",
+            data=data,
+            timeout=10
+        )
+        result = response.json()
+        return result.get("success", False)
+    except requests.RequestException as e:
+        print("reCAPTCHA request error:", str(e))
+        return False

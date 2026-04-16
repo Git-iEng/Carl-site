@@ -151,7 +151,10 @@
           <label class="cmms-contact-form-label2">Enter your message</label>
           <textarea name="{{ form.message.name }}" rows="6" class="cmms-contact-form-textarea2"></textarea>
         </div>
-
+        <div class="form-captcha" style="margin-top: 16px;">
+            <div class="g-recaptcha" data-sitekey="{{ RECAPTCHA_SITE_KEY }}"></div>
+        </div>
+<br>
         <button type="submit" id="contactSubmit" class="cmms-contact-form-submit2">
           Submit
         </button>
@@ -269,7 +272,7 @@
   </style>
 
   <div id="toast-root" class="toast-root" aria-live="polite"></div>
-
+<script src="https://www.google.com/recaptcha/api.js" async defer></script>
   <script>
     function showToast(msg, type = 'info', ms = 3500) {
       const root = document.getElementById('toast-root');
