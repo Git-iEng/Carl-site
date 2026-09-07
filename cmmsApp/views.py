@@ -21,6 +21,11 @@ from django.conf import settings
 from .forms import ContactForm
 from .utils_excel import append_submission_xlsx
 from .utils_contact import normalize_phone_and_country, country_name_from_alpha2
+from .utils_security import (
+    get_client_ip, is_spam_submission, is_disposable_email,
+    generate_form_token, get_ip_debug_info, get_ip_location,
+)
+from django_ratelimit.decorators import ratelimit
 
 
 # ---------- Validation patterns ----------
@@ -95,10 +100,18 @@ def _send_contact_email_async(subject: str, text_body: str, html_body: str | Non
 
 
 # ---------- Views ----------
+@ratelimit(key=lambda group, request: get_client_ip(request), rate="5/h", block=True)
 def request_demo_view(request):
     if request.method != "POST":
         return redirect("/")
-    
+
+    # Honeypot + time-trap check (silent bot filter, runs before CAPTCHA)
+    spam, reason = is_spam_submission(request)
+    if spam:
+        print(f"SPAM BLOCKED (request_demo): reason={reason} ip={get_client_ip(request)}")
+        # Pretend success so bots don't learn which check tripped
+        return redirect(reverse("cmmsApp:contact_thanks"))
+
     # CAPTCHA check
     if not verify_recaptcha(request):
         messages.error(request, "Please complete the CAPTCHA.")
@@ -123,6 +136,8 @@ def request_demo_view(request):
         validate_email(email)
     except ValidationError:
         errors["email"] = "Enter a valid email."
+    if email and is_disposable_email(email):
+        errors["email"] = "Please use a permanent business email address."
     if not PHONE_RE.match(phone):
         errors["phone"] = "Enter a valid phone number."
     if not country:
@@ -147,11 +162,36 @@ def request_demo_view(request):
 
     # Build email
     ts = timezone.now().strftime("%Y-%m-%d %H:%M:%S %Z")
+    client_ip = get_client_ip(request)
+    ip_debug = get_ip_debug_info(request)
+    location = get_ip_location(client_ip)  # {} for private/local IPs
+
+    network_lines = [
+        f"Public/WAN IP: {ip_debug['forwarded_ip']}",
+    ]
+    if location:
+        network_lines += [
+            f"Country: {location.get('country', 'unknown')}",
+            f"Region: {location.get('region', 'unknown')}",
+            f"City: {location.get('city', 'unknown')}",
+            f"ISP: {location.get('isp', 'unknown')}",
+        ]
+    else:
+        network_lines.append("Location: unavailable (private/local IP or lookup failed)")
+    network_lines += [
+        f"Server-seen IP (REMOTE_ADDR): {ip_debug['server_seen_ip']}",
+    ]
+    if not ip_debug["proxy_header_present"]:
+        network_lines.append("NOTE: no X-Forwarded-For/CF-Connecting-IP header received — check Nginx proxy config")
+
+    network_block = "\n".join(network_lines)
+
     subject = "New CARL Demo Request"
     text_body = (
         "A new CARL demo request was submitted.\n\n"
-        f"Submitted: {ts}\n"
-        f"IP: {request.META.get('REMOTE_ADDR','')}\n\n"
+        f"Submitted: {ts}\n\n"
+        "Network Information:\n"
+        f"{network_block}\n\n"
         f"Full name: {full_name}\n"
         f"Company: {company}\n"
         f"Email: {email}\n"
@@ -161,9 +201,31 @@ def request_demo_view(request):
         "Message:\n"
         f"{message or '(none)'}\n"
     )
+    html_network_rows = f"""
+          <tr><td><b>Public/WAN IP</b></td><td>{ip_debug['forwarded_ip']}</td></tr>
+    """
+    if location:
+        html_network_rows += f"""
+          <tr><td><b>Country</b></td><td>{location.get('country', 'unknown')}</td></tr>
+          <tr><td><b>Region</b></td><td>{location.get('region', 'unknown')}</td></tr>
+          <tr><td><b>City</b></td><td>{location.get('city', 'unknown')}</td></tr>
+          <tr><td><b>ISP</b></td><td>{location.get('isp', 'unknown')}</td></tr>
+        """
+    else:
+        html_network_rows += """
+          <tr><td><b>Location</b></td><td>unavailable (private/local IP or lookup failed)</td></tr>
+        """
+    html_network_rows += f"""
+          <tr><td><b>Server-seen IP</b></td><td>{ip_debug['server_seen_ip']}</td></tr>
+    """
+
     html_body = f"""
         <h2 style="margin:0 0 8px">New CARL Demo Request</h2>
-        <p style="margin:0 0 12px;color:#334">Submitted {ts} from {request.META.get('REMOTE_ADDR','')}</p>
+        <p style="margin:0 0 12px;color:#334">Submitted {ts}</p>
+        <p style="margin:0 0 4px"><b>Network Information</b></p>
+        <table cellpadding="6" cellspacing="0" style="border-collapse:collapse;background:#f9fbfc;margin-bottom:12px">
+          {html_network_rows}
+        </table>
         <table cellpadding="6" cellspacing="0" style="border-collapse:collapse;background:#f9fbfc">
           <tr><td><b>Full name</b></td><td>{full_name}</td></tr>
           <tr><td><b>Company</b></td><td>{company}</td></tr>
@@ -275,38 +337,183 @@ def erpsync(request):     return render(request, "erpsync.html")
 def industries(request):     return render(request, "industries.html")
 
 
+@ratelimit(key=lambda group, request: get_client_ip(request), rate="5/h", block=True)
 def contact_section(request):
     form = ContactForm(request.POST or None)
 
     if request.method == "POST":
+        spam, reason = is_spam_submission(request)
+        if spam:
+            print(f"SPAM BLOCKED (contact_section): reason={reason} ip={get_client_ip(request)}")
+            # Pretend success so bots don't learn which check tripped
+            return redirect(reverse("cmmsApp:contact_thanks"))
+
         if not form.is_valid():
             messages.error(request, "Please correct the highlighted fields and resubmit.")
+
         elif not verify_recaptcha(request):
             messages.error(request, "Please complete the CAPTCHA.")
             return redirect(request.META.get("HTTP_REFERER", "/"))
+
         else:
             cd = form.cleaned_data
 
             e164_phone, resolved_alpha2, resolved_country_name = normalize_phone_and_country(
-                cd.get("phone", ""), cd.get("country", "")
+                cd.get("phone", ""),
+                cd.get("country", "")
+            )
+
+            # --------------------------------------------------
+            # Network / WAN information
+            # --------------------------------------------------
+            client_ip = get_client_ip(request)
+            ip_debug = get_ip_debug_info(request)
+            location = get_ip_location(client_ip)
+
+            network_lines = [
+                f"Public/WAN IP: {ip_debug['forwarded_ip']}",
+            ]
+
+            if location:
+                network_lines += [
+                    f"Country: {location.get('country', 'unknown')}",
+                    f"Region: {location.get('region', 'unknown')}",
+                    f"City: {location.get('city', 'unknown')}",
+                    f"ISP: {location.get('isp', 'unknown')}",
+                ]
+            else:
+                network_lines.append(
+                    "Location: unavailable (private/local IP or lookup failed)"
+                )
+
+            network_lines.append(
+                f"Server-seen IP (REMOTE_ADDR): {ip_debug['server_seen_ip']}"
+            )
+
+            if not ip_debug["proxy_header_present"]:
+                network_lines.append(
+                    "NOTE: no X-Forwarded-For/CF-Connecting-IP header received "
+                    "— check Nginx proxy config"
+                )
+
+            network_block = "\n".join(network_lines)
+
+            country_display = (
+                resolved_country_name
+                or country_name_from_alpha2(resolved_alpha2)
+                or cd.get("country", "")
             )
 
             subject = "New website contact submission for CARL Software"
+
+            # Plain-text email
             text_body = "\n".join(
                 [
                     "New contact submission for CARL Software:",
-                    f"Name: {cd['first_name']} {cd.get('last_name','')}".strip(),
-                    f"Company: {cd.get('company','')}",
+                    "",
+                    "Network Information:",
+                    network_block,
+                    "",
+                    f"Name: {cd['first_name']} {cd.get('last_name', '')}".strip(),
+                    f"Company: {cd.get('company', '')}",
                     f"Email: {cd['email']}",
-                    f"Country: {resolved_country_name or country_name_from_alpha2(resolved_alpha2) or cd.get('country','')}",
-                    f"Phone: {e164_phone or cd.get('phone','')}",
+                    f"Country: {country_display}",
+                    f"Phone: {e164_phone or cd.get('phone', '')}",
                     "",
                     "Message:",
-                    cd.get("message", ""),
+                    cd.get("message", "") or "(none)",
                 ]
             )
 
-            _send_contact_email_async(subject, text_body, None)
+            # HTML network information
+            html_network_rows = f"""
+                <tr>
+                    <td><b>Public/WAN IP</b></td>
+                    <td>{ip_debug['forwarded_ip']}</td>
+                </tr>
+            """
+
+            if location:
+                html_network_rows += f"""
+                    <tr>
+                        <td><b>Country</b></td>
+                        <td>{location.get('country', 'unknown')}</td>
+                    </tr>
+                    <tr>
+                        <td><b>Region</b></td>
+                        <td>{location.get('region', 'unknown')}</td>
+                    </tr>
+                    <tr>
+                        <td><b>City</b></td>
+                        <td>{location.get('city', 'unknown')}</td>
+                    </tr>
+                    <tr>
+                        <td><b>ISP</b></td>
+                        <td>{location.get('isp', 'unknown')}</td>
+                    </tr>
+                """
+            else:
+                html_network_rows += """
+                    <tr>
+                        <td><b>Location</b></td>
+                        <td>unavailable (private/local IP or lookup failed)</td>
+                    </tr>
+                """
+
+            html_network_rows += f"""
+                <tr>
+                    <td><b>Server-seen IP</b></td>
+                    <td>{ip_debug['server_seen_ip']}</td>
+                </tr>
+            """
+
+           
+
+            html_body = f"""
+                <div style="font-family:Arial,Helvetica,sans-serif;max-width:700px;color:#222;">
+                    <h2 style="margin:0 0 8px;">New CARL Software Contact Submission</h2>
+
+                    <p style="margin:0 0 4px;"><b>Network Information</b></p>
+                    <table cellpadding="6" cellspacing="0"
+                           style="border-collapse:collapse;background:#f9fbfc;margin-bottom:12px;">
+                        {html_network_rows}
+                    </table>
+
+                 
+
+                    <p style="margin:12px 0 4px;"><b>Contact Information</b></p>
+                    <table cellpadding="6" cellspacing="0"
+                           style="border-collapse:collapse;background:#f9fbfc;">
+                        <tr>
+                            <td><b>Name</b></td>
+                            <td>{cd['first_name']} {cd.get('last_name', '')}</td>
+                        </tr>
+                        <tr>
+                            <td><b>Company</b></td>
+                            <td>{cd.get('company', '')}</td>
+                        </tr>
+                        <tr>
+                            <td><b>Email</b></td>
+                            <td>{cd['email']}</td>
+                        </tr>
+                        <tr>
+                            <td><b>Country</b></td>
+                            <td>{country_display}</td>
+                        </tr>
+                        <tr>
+                            <td><b>Phone</b></td>
+                            <td>{e164_phone or cd.get('phone', '')}</td>
+                        </tr>
+                    </table>
+
+                    <p style="margin:12px 0 4px;"><b>Message</b></p>
+                    <pre style="white-space:pre-wrap;font-family:Arial,Helvetica,sans-serif;">
+{cd.get('message', '') or '(none)'}
+                    </pre>
+                </div>
+            """
+
+            _send_contact_email_async(subject, text_body, html_body)
             return redirect(reverse("cmmsApp:contact_thanks"))
 
     return render(request, "contact_section.html", {
