@@ -118,6 +118,9 @@
 (function () {
   const root = document.getElementById("thanksToastRoot");
 
+  // Mark that the contact form was successfully submitted.
+  sessionStorage.setItem("contactFormSubmitted", "1");
+
   function showThanksToast(message, type = "info", ms = 4500) {
     if (!root || !message) return;
 

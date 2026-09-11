@@ -790,7 +790,50 @@
         }
       });
 
+      function clearFormAfterSuccessfulSubmission() {
+        if (sessionStorage.getItem("contactFormSubmitted") !== "1") {
+          return;
+        }
+
+        sessionStorage.removeItem("contactFormSubmitted");
+
+        // Clear fields restored by browser Back / bfcache.
+        form.reset();
+
+        form.querySelectorAll(
+          'input:not([type="hidden"]):not([type="submit"]):not([type="button"]), textarea'
+        ).forEach(function (field) {
+          field.value = "";
+        });
+
+        form.querySelectorAll("select").forEach(function (select) {
+          select.selectedIndex = 0;
+        });
+
+        resetEmailVerification();
+
+        if (
+          window.grecaptcha &&
+          typeof window.grecaptcha.reset === "function"
+        ) {
+          try {
+            window.grecaptcha.reset();
+          } catch (error) {
+            // Safe to ignore if reCAPTCHA is not ready yet.
+          }
+        }
+      }
+
       resetEmailVerification();
+
+      // pageshow fires when the user returns from the Thank You page.
+      window.addEventListener(
+        "pageshow",
+        clearFormAfterSuccessfulSubmission
+      );
+
+      // Also handle a normal navigation/reload back to this page.
+      clearFormAfterSuccessfulSubmission();
 
       [0, 100, 300, 700, 1200].forEach(function (delay) {
         setTimeout(function () {
