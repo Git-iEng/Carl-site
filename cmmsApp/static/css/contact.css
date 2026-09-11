@@ -139,7 +139,7 @@
 .cmms-contact-form-input2,
 .cmms-contact-form-textarea2{
   border:0; border-bottom:1px solid rgba(0,0,0,.18);
-  padding:12px 0; outline:none; font-size:16px; color:#121212;
+ outline:none; font-size:16px; color:#121212;
   background:transparent;
   transition:border-color .2s ease, box-shadow .2s ease;
 }

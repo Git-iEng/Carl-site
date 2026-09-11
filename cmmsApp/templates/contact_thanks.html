@@ -11,6 +11,9 @@
   </div>
 </section>
 
+<!-- CHANGE BY JYOTI - 11-Sep-2026: Django toast messages -->
+<div id="thanksToastRoot" class="thanks-toast-root" aria-live="polite" aria-atomic="true"></div>
+
 <style>
 .thanks-wrap {
   min-height: 60vh;
@@ -19,6 +22,7 @@
   padding: 3rem 1rem;
   background: #f7f9fc;
 }
+
 .thanks-card {
   background: #fff;
   max-width: 640px;
@@ -28,35 +32,157 @@
   box-shadow: 0 10px 30px rgba(18, 38, 63, .08);
   text-align: center;
 }
+
 .thanks-icon {
-  width: 64px; height: 64px; line-height: 64px;
+  width: 64px;
+  height: 64px;
+  line-height: 64px;
   margin: 0 auto 12px;
   border-radius: 50%;
-  background: #e8f5ed; color: #137a3a; font-size: 28px; font-weight: 700;
+  background: #e8f5ed;
+  color: #137a3a;
+  font-size: 28px;
+  font-weight: 700;
 }
-.thanks-actions { display: flex; gap: 12px; justify-content: center; margin-top: 16px; flex-wrap: wrap; }
-.btn { display:inline-block; padding:.7rem 1.1rem; border-radius:10px; text-decoration:none; }
-.btn-primary { background:#0f766e;; color:#fff; }
-.btn-ghost { border:1px solid #cfd6e3; color:#234a85; background:#fff; }
+
+.thanks-actions {
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+  margin-top: 16px;
+  flex-wrap: wrap;
+}
+
+.btn {
+  display: inline-block;
+  padding: .7rem 1.1rem;
+  border-radius: 10px;
+  text-decoration: none;
+}
+
+.btn-primary {
+  background: #0f766e;
+  color: #fff;
+}
+
+.btn-ghost {
+  border: 1px solid #cfd6e3;
+  color: #234a85;
+  background: #fff;
+}
+
+.thanks-toast-root {
+  position: fixed;
+  top: 18px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 10000;
+  width: min(92vw, 430px);
+}
+
+.thanks-toast {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 13px 15px;
+  margin-bottom: 10px;
+  border-radius: 10px;
+  color: #fff;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, .18);
+  font: 600 14px/1.4 system-ui, -apple-system, "Segoe UI", sans-serif;
+}
+
+.thanks-toast--success {
+  background: #0c8c73;
+}
+
+.thanks-toast--error {
+  background: #d72c2c;
+}
+
+.thanks-toast--info {
+  background: #0b2239;
+}
+
+.thanks-toast__close {
+  border: 0;
+  background: transparent;
+  color: #fff;
+  cursor: pointer;
+  font-size: 18px;
+}
 </style>
 
 <script>
-  // Hook up "Download again" if we have a stored URL
-  (function() {
-    const retry = document.getElementById('retryDownload');
-    const url = sessionStorage.getItem('lastDownloadURL');
-    if (url) {
-      retry.addEventListener('click', (e) => {
-        e.preventDefault();
-        const a = document.createElement('a');
-        a.href = url; a.download = ""; document.body.appendChild(a); a.click(); a.remove();
-      });
-    } else {
-      retry.style.display = 'none';
-    }
-  })();
+(function () {
+  const root = document.getElementById("thanksToastRoot");
+
+  function showThanksToast(message, type = "info", ms = 4500) {
+    if (!root || !message) return;
+
+    const toast = document.createElement("div");
+    toast.className =
+      "thanks-toast thanks-toast--" +
+      (type === "success" ? "success" : type === "error" ? "error" : "info");
+
+    const text = document.createElement("span");
+    text.textContent = message;
+
+    const close = document.createElement("button");
+    close.type = "button";
+    close.className = "thanks-toast__close";
+    close.setAttribute("aria-label", "Close");
+    close.textContent = "×";
+
+    toast.appendChild(text);
+    toast.appendChild(close);
+    root.appendChild(toast);
+
+    const timer = window.setTimeout(function () {
+      toast.remove();
+    }, ms);
+
+    close.addEventListener("click", function () {
+      window.clearTimeout(timer);
+      toast.remove();
+    });
+  }
+
+  {% for message in messages %}
+    showThanksToast(
+      "{{ message|escapejs }}",
+      "{{ message.tags|default:'info'|escapejs }}"
+    );
+  {% endfor %}
+
+  const retry = document.getElementById("retryDownload");
+  const url = sessionStorage.getItem("lastDownloadURL");
+
+  if (retry && url) {
+    retry.addEventListener("click", function (event) {
+      event.preventDefault();
+
+      const a = document.createElement("a");
+      a.href = url;
+      a.download = "";
+      document.body.appendChild(a);
+      a.click();
+      a.remove();
+    });
+  } else if (retry) {
+    retry.style.display = "none";
+  }
+})();
 </script>
+
 <!-- Google Tag Manager (noscript) -->
-<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TKQV8LKX"
-height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<noscript>
+  <iframe
+    src="https://www.googletagmanager.com/ns.html?id=GTM-TKQV8LKX"
+    height="0"
+    width="0"
+    style="display:none;visibility:hidden">
+  </iframe>
+</noscript>
 <!-- End Google Tag Manager (noscript) -->
