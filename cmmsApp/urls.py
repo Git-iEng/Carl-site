@@ -1,5 +1,5 @@
 from django.urls import path
-from . import views
+from . import views, resource_views
 
 app_name = "cmmsApp"
 
@@ -90,6 +90,21 @@ urlpatterns = [
         "api/contact/verify-email-otp/",
         views.verify_email_otp,
         name="verify_email_otp",
+    ),
+        path(
+        "resources/",
+        resource_views.resources,
+        name="resources",
+    ),
+    path(
+        "resources/<slug:slug>/",
+        resource_views.resource_detail,
+        name="resource_detail",
+    ),
+    path(
+        "resources/<slug:slug>/download/",
+        resource_views.resource_download,
+        name="resource_download",
     ),
 
 

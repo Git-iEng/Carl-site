@@ -176,9 +176,9 @@ EMAIL_HOST_USER = 'test@ieng.tech'  # Your email address
 EMAIL_HOST_PASSWORD = 'test@iEng'  # Your email password
 DEFAULT_FROM_EMAIL = EMAIL_HOST_USER
 CONTACT_RECIPIENTS = [
-    "shila@iengaust.com.au",
+   "shila@iengaust.com.au",
      "test@ieng.tech",
-     "aarti@iengaust.com.au"
+    "aarti@iengaust.com.au"
     #"jyoti@iengaust.com.au"
 ]
 CONTACT_RECIPIENTS = [ "shila@iengaust.com.au","test@ieng.tech","aarti@iengaust.com.au"]

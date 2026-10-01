@@ -1,0 +1,116 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>{% block title %}Resources | CARL{% endblock %}</title>
+
+    <link rel="icon" href="{% static 'images/logo1.png' %}">
+    <link rel="stylesheet" href="{% static 'css/home.css' %}">
+    <link rel="stylesheet" href="{% static 'css/header.css' %}">
+    <link rel="stylesheet" href="{% static 'css/footer.css' %}">
+
+    <style>
+        .resource-main {
+            box-sizing: border-box;
+            max-width: 900px;
+            min-height: 65vh;
+            margin: 0 auto;
+            padding: 140px 24px 60px;
+            color: #172d48;
+        }
+
+        .resource-main h1 {
+            font-size: clamp(28px, 5vw, 40px);
+            line-height: 1.25;
+            margin-bottom: 20px;
+        }
+
+        .resource-main h2 {
+            margin-bottom: 16px;
+        }
+
+        .resource-main p {
+            line-height: 1.65;
+            margin-bottom: 20px;
+        }
+
+        .resource-main .card {
+            margin-top: 28px;
+            margin-bottom: 24px;
+            padding: 32px;
+            background: #ffffff;
+            border: 1px solid #dde4ed;
+            border-radius: 16px;
+            box-shadow: 0 8px 30px rgba(23, 45, 72, 0.08);
+        }
+
+        .resource-main label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 600;
+        }
+
+        .resource-main input:not([type="hidden"]) {
+            box-sizing: border-box;
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #aebdce;
+            border-radius: 6px;
+            font: inherit;
+        }
+
+        .resource-main button,
+        .resource-main .button {
+            display: inline-block;
+            padding: 14px 22px;
+            border: 0;
+            border-radius: 6px;
+            background: #1556a2;
+            color: #ffffff;
+            font: inherit;
+            text-decoration: none;
+            cursor: pointer;
+        }
+
+        .resource-main .note {
+            font-size: 14px;
+            color: #52657c;
+        }
+
+        .resource-main .errorlist {
+            color: #a11;
+            margin-bottom: 12px;
+            padding-left: 20px;
+        }
+
+        @media (max-width: 1118px) {
+            .resource-main {
+                padding-top: 95px;
+            }
+        }
+
+        @media (max-width: 600px) {
+            .resource-main {
+                padding-inline: 16px;
+            }
+
+            .resource-main .card {
+                padding: 24px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    {% include 'header.html' %}
+
+    <main class="resource-main">
+        {% block content %}{% endblock %}
+    </main>
+
+    {% include 'footer.html' %}
+</body>
+</html>

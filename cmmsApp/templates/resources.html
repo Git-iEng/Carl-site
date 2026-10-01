@@ -1,0 +1,31 @@
+{% extends "resource_base.html" %}
+
+{% block title %}
+    Resources | CARL · iEngineering
+{% endblock %}
+
+{% block content %}
+    <h1>Resources for your team</h1>
+
+    <p>
+        Explore iEngineering’s downloadable guides
+        and benchmark packs.
+    </p>
+
+    {% for slug, resource in resources.items %}
+        <article class="card">
+            <h2>{{ resource.title }}</h2>
+
+            <p>{{ resource.description }}</p>
+
+            <a
+                class="button"
+                href="{% url 'cmmsApp:resource_detail' slug=slug %}"
+            >
+                Get your free copy
+            </a>
+        </article>
+    {% empty %}
+        <p>New resources will be available soon.</p>
+    {% endfor %}
+{% endblock %}

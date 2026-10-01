@@ -1,0 +1,194 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>{{ resource.title }} | CARL Resources</title>
+
+    <link rel="icon" href="{% static 'images/logo1.png' %}">
+    <link rel="stylesheet" href="{% static 'css/home.css' %}">
+    <link rel="stylesheet" href="{% static 'css/about.css' %}">
+    <link rel="stylesheet" href="{% static 'css/mobility.css' %}">
+    <link rel="stylesheet" href="{% static 'css/footer.css' %}">
+
+    <style>
+        .resource-form-card {
+            max-width: 650px;
+            margin-top: 28px;
+            padding: 32px;
+            background: #ffffff;
+            border: 1px solid #dde4ed;
+            border-radius: 16px;
+            box-shadow: 0 8px 30px rgba(23, 45, 72, 0.08);
+        }
+
+        .resource-form-card h3 {
+            margin-bottom: 16px;
+            color: #102a43;
+        }
+
+        .resource-form-card p {
+            margin-bottom: 20px;
+            line-height: 1.65;
+        }
+
+        .resource-form-card label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 600;
+            color: #102a43;
+        }
+
+        .resource-form-card input:not([type="hidden"]) {
+            box-sizing: border-box;
+            width: 100%;
+            padding: 13px;
+            border: 1px solid #aebdce;
+            border-radius: 6px;
+            font: inherit;
+        }
+
+        .resource-download-button {
+            display: inline-block;
+            padding: 14px 24px;
+            border: 0;
+            border-radius: 8px;
+            background: #173f59;
+            color: #ffffff;
+            font: inherit;
+            text-decoration: none;
+            cursor: pointer;
+        }
+
+        .resource-download-button:hover {
+            background: #102a43;
+        }
+
+        .resource-form-card .resource-note {
+            color: #64748b;
+            font-size: 14px;
+        }
+
+        .resource-form-card .errorlist {
+            color: #b42318;
+            margin-bottom: 12px;
+            padding-left: 20px;
+        }
+
+        @media (max-width: 600px) {
+            .resource-form-card {
+                padding: 22px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    {% include 'header.html' %}
+
+    <!-- Same banner structure and background as About Us -->
+   {% static "images/banner/about.png" as resource_banner %}
+
+<section
+    class="cmms-contact-form-section"
+    style="background-image: url('{{ resource_banner }}'); background-size: cover; background-position: center; background-repeat: no-repeat;"
+>
+        <div class="cmms-contact-form-overlay"></div>
+
+        <div class="cmms-contact-form-container">
+            <a href="#resource-form" style="color: white;">
+                <span class="cmms-contact-form-badge">
+                    <span class="cmms-contact-form-dot"></span>
+                    Resources
+                </span>
+            </a>
+
+            <h1 class="cmms-contact-form-title">
+                CARL Resources
+            </h1>
+        </div>
+    </section>
+
+    <!-- Form appears directly; no resource listing page -->
+    <section class="cmms-contact-form-wrap" id="resource-form">
+        <div class="cmms-contact-form-inner">
+
+            <!--<span class="cmms-contact-form-badge2">
+                <span class="cmms-contact-form-dot2"></span>
+                Benchmark Pack
+            </span>
+
+           <h2 class="title-meet-ieng-about">
+                {{ resource.title }}
+            </h2>
+
+            <p class="about-text-abou-ieng">
+                {{ resource.description }}
+            </p>-->
+
+            <div class="resource-form-card">
+                {% if unlocked %}
+                    <h3>Your Benchmark Pack is ready</h3>
+
+                    <p>
+                        Thank you for submitting your details.
+                        Download your PDF below.
+                    </p>
+
+                    <a
+                        class="resource-download-button"
+                        href="{% url 'cmmsApp:resource_download' slug=slug %}"
+                    >
+                        Download PDF
+                    </a>
+                {% else %}
+                    <h3>Get More Details</h3>
+
+                    <p>
+                        Enter your details to access the
+                        Benchmark Pack.
+                    </p>
+
+                    <form method="post">
+                        {% csrf_token %}
+
+                        {{ form.non_field_errors }}
+                        {{ form.website }}
+
+                        <p>
+                            {{ form.full_name.label_tag }}
+                            {{ form.full_name }}
+                            {{ form.full_name.errors }}
+                        </p>
+
+                        <p>
+                            {{ form.email.label_tag }}
+                            {{ form.email }}
+                            {{ form.email.errors }}
+                        </p>
+
+                        <p>
+                            {{ form.company.label_tag }}
+                            {{ form.company }}
+                            {{ form.company.errors }}
+                        </p>
+
+                        
+                        <button
+                            type="submit"
+                            class="resource-download-button"
+                        >
+                            Access Benchmark Pack
+                        </button>
+                    </form>
+                {% endif %}
+            </div>
+
+        </div>
+    </section>
+
+    {% include 'footer.html' %}
+</body>
+</html>
